@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.http import HttpResponse, HttpResponseRedirect
 
 urlpatterns = [
+    url(r'^$', lambda r: HttpResponseRedirect('nest/')),
     url(r'^admin/', admin.site.urls),
     url(r'^nest/', include('nest.urls')),
+    url(r'^robots.txt$', 
+    lambda r: HttpResponse("User-agent: *\nDisallow: /", 
+    content_type = "text/plain")),
 ]
