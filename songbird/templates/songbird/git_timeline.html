@@ -1,4 +1,33 @@
 {% extends "songbird/base.html" %}
+
+{% block head %}
+<link href="/static/css/timeline.css" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
 <p>Timeline</p>
+<ul class="timeline left-axis">
+    <li>
+        <div class="timeline-badge">
+            <img src="http://gitlab.oit.duke.edu/uploads/user/avatar/1275/avatar.png" 
+                class="img-responsive img-circle"/>
+        </div>
+        <div class="timeline-panel">
+            <div>
+                <p>Commit Title 1</p>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="timeline-badge">
+            <img src="http://gitlab.oit.duke.edu/uploads/user/avatar/1275/avatar.png" 
+                class="img-responsive img-circle"/>
+        </div>
+        <div class="timeline-panel">
+            <div>
+                <p>Commit Title 2</p>
+            </div>
+        </div>
+    </li>
+</ul>
 {% endblock %}
