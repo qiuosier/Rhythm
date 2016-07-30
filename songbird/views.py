@@ -6,4 +6,17 @@ def index(request):
 
 
 def timeline(request):
-    return render(request, 'songbird/git_timeline.html', {})
+    branches = [
+        {
+            'name': 'Development',
+        },
+        {
+            'name': 'Testing',
+        },
+        {
+            'name': 'Production',
+        },
+    ]
+    return render(request, 'songbird/git_timeline.html', {
+        'branches': branches,
+    })

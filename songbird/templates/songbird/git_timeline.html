@@ -5,28 +5,73 @@
 {% endblock %}
 
 {% block content %}
-<p>Timeline</p>
 <ul class="timeline left-axis">
+    {% for branch in branches %}
+    <div class="vertical-line line-{{ forloop.counter }} line-{{ forloop.counter }}-bg"></div>
+    <div class="title line-{{ forloop.counter }} line-{{ forloop.counter }}-color">
+        <strong>{{ branch.name }}</strong>
+    </div>
+    {% endfor %}
     <li>
-        <div class="timeline-badge">
+        <div class="timeline-badge line-1-indent line-1-bg">
             <img src="http://gitlab.oit.duke.edu/uploads/user/avatar/1275/avatar.png" 
                 class="img-responsive img-circle"/>
         </div>
-        <div class="timeline-panel">
-            <div>
-                <p>Commit Title 1</p>
-            </div>
+        <div class="horizontal-line line-1-indent line-1-bg"></div>
+        <div class="timeline-panel line-1-color">
+            Commit Title 1
         </div>
     </li>
     <li>
-        <div class="timeline-badge">
+        <div class="timeline-badge line-3-indent line-3-bg">
             <img src="http://gitlab.oit.duke.edu/uploads/user/avatar/1275/avatar.png" 
                 class="img-responsive img-circle"/>
         </div>
-        <div class="timeline-panel">
-            <div>
-                <p>Commit Title 2</p>
-            </div>
+        <div class="horizontal-line line-3-indent line-3-bg"></div>
+        <div class="timeline-panel line-3-color">
+            Commit Title 2
+        </div>
+    </li>
+    <li>
+        <div class="timeline-badge line-3-indent line-3-bg">
+            <img src="http://gitlab.oit.duke.edu/uploads/user/avatar/1275/avatar.png" 
+                class="img-responsive img-circle"/>
+        </div>
+        <div class="horizontal-line line-3-indent line-3-bg"></div>
+        <div class="merge-2 right-2 merge-col-1"></div>
+        <div class="timeline-panel line-3-color">
+            Merged Testing into Production
+        </div>
+    </li>
+    <li>
+        <div class="timeline-badge line-2-indent line-2-bg">
+            <img src="http://gitlab.oit.duke.edu/uploads/user/avatar/1275/avatar.png" 
+                class="img-responsive img-circle"/>
+        </div>
+        <div class="horizontal-line line-2-indent line-2-bg"></div>
+        <div class="merge-1 right-1 merge-col-1"></div>
+        <div class="timeline-panel line-2-color">
+            Merged Development into Testing
+        </div>
+    </li>
+    <li>
+        <div class="timeline-badge line-1-indent line-1-bg">
+            <img src="http://gitlab.oit.duke.edu/uploads/user/avatar/1275/avatar.png" 
+                class="img-responsive img-circle"/>
+        </div>
+        <div class="horizontal-line line-1-indent line-1-bg"></div>
+        <div class="timeline-panel line-1-color">
+            Commit Title 4
+        </div>
+    </li>
+    <li>
+        <div class="timeline-badge line-1-indent line-1-bg">
+            <img src="http://gitlab.oit.duke.edu/uploads/user/avatar/1275/avatar.png" 
+                class="img-responsive img-circle"/>
+        </div>
+        <div class="horizontal-line line-1-indent line-1-bg"></div>
+        <div class="timeline-panel line-1-color">
+            Commit Title 5
         </div>
     </li>
 </ul>
