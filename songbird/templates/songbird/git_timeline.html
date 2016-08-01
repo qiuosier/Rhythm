@@ -24,6 +24,9 @@
         {% endif %}
         <div class="timeline-panel line-{{ commit.branch }}-color">
             {{ commit.title }}
+            <div class="pull-right">
+                {{ commit.time }}
+            </div>
         </div>
     </li>
     {% endfor %}

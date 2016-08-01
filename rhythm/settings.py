@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = DJANGO_SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine/')
+DEBUG = not os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine/')
 
 ALLOWED_HOSTS = ['*']
 
