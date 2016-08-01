@@ -93,3 +93,6 @@ ENV/
 
 # package library
 lib/
+
+# private settings
+private.py
