@@ -8,7 +8,9 @@ import datetime
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Welcome to Songbird, a messenger of Qiu's Sparrow.")
+    return render(request, 'songbird/default.html', {
+        'message': "Welcome to Songbird, a messenger of Qiu's Sparrow.",
+    })
 
 
 def timeline(request):
@@ -60,4 +62,6 @@ def timeline(request):
             'branches': branches,
             'commits': commits,
         })
-    return HttpResponseBadRequest("Looks like you missed something")
+    return render(request, 'songbird/default.html', {
+        'message': "Looks like you missed something",
+    })
