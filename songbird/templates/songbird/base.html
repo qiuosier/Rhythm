@@ -42,7 +42,7 @@
                 </li>
                 {% else %}
                 <li id="sign-out">
-                    <a href="{% url 'authentication:logout' %}">Sign out {{ request.session.given_name }}</a>
+                    <a href="{% url 'authentication:logout' %}">Sign out {{ request.session.user_id }}</a>
                 </li>
                 {% endif %}
             </ul>
