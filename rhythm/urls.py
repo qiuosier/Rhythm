@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^nest/', include('nest.urls')),
     url(r'^songbird/', include('songbird.urls')),
     url(r'^auth/', include('authentication.urls')),
+    url(r'^files/', include('files.urls')),
     url(r'^robots.txt$', 
     lambda r: HttpResponse("User-agent: *\nDisallow: /", 
     content_type = "text/plain")),

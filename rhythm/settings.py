@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'nest',
     'songbird',
     'authentication',
+    'files',
 ]
 
 MIDDLEWARE_CLASSES = [

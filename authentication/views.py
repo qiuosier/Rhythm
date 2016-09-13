@@ -9,7 +9,7 @@ import os
 def login(request):
     oauth_flow = flow_from_clientsecrets(
         os.path.join(settings.BASE_DIR, 'authentication' ,'client_secrets.json'),
-        scope='profile',
+        scope=['profile','email'],
         redirect_uri=request.build_absolute_uri().split('?')[0]
     )
     code = request.GET.get('code', '')
@@ -21,6 +21,7 @@ def login(request):
     except FlowExchangeError:
         return HttpResponse('Failed to upgrade the authorization code.')
     request.session['user_id'] = credentials.id_token['sub']
+    request.session['email'] = credentials.id_token['email']
     request.session['credentials'] = credentials
     return HttpResponseRedirect('/songbird/')
 
