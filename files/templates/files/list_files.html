@@ -1,4 +1,4 @@
-{% extends "viewer/base.html" %}
+{% extends "songbird/base.html" %}
 {% load staticfiles %}
 {% load files_filters %}
 
@@ -7,9 +7,8 @@
     {% if request.session.email %}
         <h3>Files uploaded by {{ request.session.email }}!</h3>
         <!-- File Upload Form -->
-        <form action="{% url 'files:upload' %}" method="POST">
+        <form action="{{ upload_url }}" method="POST">
             {% csrf_token %}
-            <input type="hidden" name="user_id" value="{{ request.session.user_id }}" />
             <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width: 0%;">
                 </div>
@@ -41,7 +40,7 @@
                     <tr>
                         <td><input type="checkbox" name="item-checkbox-{{ forloop.counter }}" value=""></td>
                         <td>{{ file.name|get_filename }}</td>
-                        <td>{{ file.updated }}</td>
+                        <td>{{ file.time }}</td>
                         <td>
                             {{ file.size }}
                         </td>
@@ -52,9 +51,9 @@
         </form>
     </div>
 </div>
-{% endblock content %}
+{% endblock %}
 
-{% block scripts %}
+{% block script %}
 <script>
 $(window).load(function(){
     $("#check-all-checkbox").click(function() {
@@ -64,16 +63,7 @@ $(window).load(function(){
 
 // File Upload Script
 function formSubmitSuccess () {
-    var response;
-    try {
-        response = JSON.parse(this.responseText);
-        if (response.success) {
-            location.reload(true);
-        }
-    } catch (error) {
-        console.log(error);
-        console.log(this.responseText);
-    }
+    location.reload(true);
 }
 
 function formUploadProgress (oEvent) {
@@ -108,5 +98,4 @@ function ajaxFormSubmit (oForm) {
 }
 
 </script>
-
 {% endblock %}

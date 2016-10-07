@@ -38,11 +38,11 @@ a.no-link {
 }
 
 /* File upload elements */
-.fileUploadWrap {
+.file-upload-wrap {
     position: relative;
     overflow: hidden;
 }
-.fileUploadWrap input#fileUpload {
+.file-upload-wrap input#file-upload-input {
     position: absolute;
     top: 0;
     right: 0;
@@ -52,10 +52,6 @@ a.no-link {
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0);
-}
-.bar {
-    height: 5px;
-    background: cornflowerblue;
 }
 
 
