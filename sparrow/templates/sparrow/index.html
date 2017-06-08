@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+    <style>
+    .demo-layout-transparent {
+      background: url('{% static 'test/iis.png' %}') center / cover;
+    }
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+      /* This background is dark, so we set text to white. Use 87% black instead if
+         your background is light. */
+      color: white;
+    }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{% static 'mdl/material.min.css' %}">
+    <script defer src="{% static 'mdl/material.min.js' %}"></script>
+</head>
+<body>
+
+
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Bird Nest</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation -->
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Sparrow</a>
+                <a class="mdl-navigation__link" href="">Skylark</a>
+                <a class="mdl-navigation__link" href="">Swan</a>
+                <a class="mdl-navigation__link" href="">Swift</a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Bird Nest</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Sparrow</a>
+        <a class="mdl-navigation__link" href="">Skylark</a>
+        <a class="mdl-navigation__link" href="">Swan</a>
+        <a class="mdl-navigation__link" href="">Swift</a>
+    </nav>
+    </div>
+    <main class="mdl-layout__content">
+    </main>
+</div>
+
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+</body>
+</html>
+
+
+
+

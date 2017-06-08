@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'songbird',
     'authentication',
     'files',
+    'sparrow',
 ]
 
 MIDDLEWARE_CLASSES = [
