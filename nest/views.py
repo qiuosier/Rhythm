@@ -8,8 +8,11 @@ def index(request):
 
 
 def activate(request):
-    r = urlfetch.fetch('http://qiu.azurewebsites.net', method='GET', deadline=20)
-    if r.status_code == 200:
-        return HttpResponse("Nest activated successfully.")
-    else:
-        return HttpResponseBadRequest("Status Code: " + str(r.status_code))
+    try:
+        r = urlfetch.fetch('http://qiu.azurewebsites.net', method='GET', deadline=20)
+        if r.status_code == 200:
+            return HttpResponse("Nest activated successfully.")
+        else:
+            return HttpResponseBadRequest("Status Code: " + str(r.status_code))
+    except Exception as ex:
+        return HttpResponse("Exception.")
