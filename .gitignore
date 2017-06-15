@@ -97,6 +97,3 @@ lib/
 # private settings
 private.py
 client_secrets.json
-
-# static files
-/static
