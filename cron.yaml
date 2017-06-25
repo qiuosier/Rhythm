@@ -1,4 +1,4 @@
-# cron:
+cron:
 # - description: activate nest
 #   url: /nest/activate/
 #   schedule: every 10 mins
