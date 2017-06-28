@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'nest',
     'songbird',
     'authentication',
-    'files',
     'sparrow',
 ]
 
