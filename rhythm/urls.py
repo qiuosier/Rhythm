@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.http import HttpResponse, HttpResponseRedirect
 
 urlpatterns = [
-    url(r'^$', lambda r: HttpResponseRedirect('sparrow/')),
+    url(r'^$', lambda r: HttpResponseRedirect('nest/')),
     url(r'^admin/', admin.site.urls),
     url(r'^nest/', include('nest.urls')),
     url(r'^songbird/', include('songbird.urls')),

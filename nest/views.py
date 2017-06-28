@@ -1,10 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest
 from google.appengine.api import urlfetch
+from .data.home_page import CAROUSEL_DATA, BIRDS
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the nest app index with app engine standard environment.")
+    return render(request, "nest/index.html", {
+        'carousel_data': CAROUSEL_DATA,
+        'birds': BIRDS,
+    })
 
 
 def activate(request):
