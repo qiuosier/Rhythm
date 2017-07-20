@@ -13,22 +13,22 @@ textarea {
     max-width: 800px;
 }
 
-
-
-/* Home Page */
-#myBirds {
-    display: none;
+.page-content {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
-.bird-rectangle {
-    height: 200px;
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
-.bird-logo-wrapper {
-    text-align: center;
-    padding-top: 15px;
-}
-.bird-logo {
-    width: 100px;
+
+.mdl-card__media-title {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    color: white;
 }
 
 /* Paragraph */

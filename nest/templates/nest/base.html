@@ -35,19 +35,17 @@
             </nav>
         </div>
         <main class="mdl-layout__content">
-            <div class="page-content">
-                {% block content %} 
-                {% endblock %} 
-            </div>
+            {% block content %} 
+            {% endblock %}
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">&copy; 2016 - Qiu Qin</div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </footer>
         </main>
-        <footer class="mdl-mini-footer">
-            <div class="mdl-mini-footer__left-section">
-                <div class="mdl-logo">&copy; 2016 - Qiu Qin</div>
-                <ul class="mdl-mini-footer__link-list">
-                    <li><a href="#">Privacy</a></li>
-                </ul>
-            </div>
-        </footer>
     </div>
     
 </body>

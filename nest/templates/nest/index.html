@@ -19,7 +19,7 @@
             {% else %}
             <div class="item">
             {% endif %}
-            <img src="{{ entry.image }}" alt="" class="bs-img-responsive" />
+            <img src="{{ entry.image }}" alt="" class="img-responsive" />
                 <div class="carousel-caption">
                     <p>
                         {{ entry.key }} - {{ entry.description}} <br />
@@ -35,29 +35,35 @@
         </div>
     </div>
 </div>
-<div id="myBirds" class="row">
-    {% for bird in birds %}
-    <div class="col-md-3 col-xs-6 bird-rectangle text-center">
-        <div class="bird-logo-wrapper">
-            <a href="{{ bird.link }}"><img class="bird-logo img-circle fade" src="{{ bird.image }}" /></a>
-        </div>
-        <a href="{{ bird.link }}">
-            <h4>
-                {{ bird.name }} | {{ bird.description }}
-            </h4>
-        </a>
+<div class="page-content">
+    <div class="mdl-grid" id="myBirds">
+        {% for bird in birds %}
+            <div class="mdl-cell mdl-cell--3-col-desktop mdl-card mdl-shadow--4dp">
+                <div class="mdl-card__media">
+                    <img class="img-responsive" src="{{ bird.image }}" alt="" />
+                    <div class="mdl-card__media-title">
+                        {{ bird.name }}
+                    </div>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    {{ bird.description }}
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ bird.link }}">
+                        More
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
-
 <script>
     $(document).ready(function () {
         // set image wraper initial height
-        var imageHeight = $('header').outerWidth() * 700 / 1920 / 3;
+        var imageHeight = $('header').outerWidth() * 700 / 1920 / 2;
         $("#myCarouselWrapper").css({
             'height': imageHeight + 'px'
         });
-        $("#myBirds").fadeIn(800);
     });
 
     $(window).resize(function () {
