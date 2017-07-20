@@ -4,47 +4,51 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="{% static 'mdl/material.min.css' %}">
-    <link rel="stylesheet" href="{% static 'basic/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'nest/site.css' %}">
+    <title>{{ title }} - Qiu's Bird Nest</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
+    <link rel="stylesheet" href="{% static 'nest/site.css' %}" />
+    <link rel="stylesheet" href="{% static 'nest/carousel.css' %}" />
     <script src="{% static 'basic/jquery.min.js' %}"></script>
     <script src="{% static 'basic/bootstrap.min.js' %}"></script>
-    <script defer src="{% static 'mdl/material.min.js' %}"></script>
-
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/" class="navbar-brand">Qiu's Bird Nest</a>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Qiu's Bird Nest</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    {% include "nest/mdl_nav.html" %}
+                </nav>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="">Footprint</a></li>
-                    <li><a href="">Gallery</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">About</a></li>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Qiu's Bird Nest</span>
+            <nav class="mdl-navigation">
+                {% include "nest/mdl_nav.html" %}
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                {% block content %} 
+                {% endblock %} 
+            </div>
+        </main>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo">&copy; 2016 - Qiu Qin</div>
+                <ul class="mdl-mini-footer__link-list">
+                    <li><a href="#">Privacy</a></li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        {% block content %}
-        {% endblock %}
-        <hr />
-        <footer>
-            <p>&copy; 2016 - Qiu Qin</p>
         </footer>
     </div>
-
+    
 </body>
 </html>

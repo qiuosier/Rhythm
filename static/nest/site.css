@@ -1,19 +1,7 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-html {
-  overflow-y: scroll;
-}
-
-h5 {
-    font-weight: bold;
-}
-
-/* Wrapping element */
+﻿/* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
+    margin-top: 50px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -25,48 +13,12 @@ textarea {
     max-width: 800px;
 }
 
-/* Carousel */
-.carousel-caption {
-    z-index: 10 !important;
-    padding-left: 10%;
-    padding-right: 10%;
-    right: 0%;
-    left: 0%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 3px 3px rgba(255, 240, 160, 0.60);
-}
 
-.carousel-caption p {
-    font-size: 16px;
-    line-height: 1.4;
-}
 
-#myCarouselWrapper{
-    background: #FFFFFF;
-}
-
+/* Home Page */
 #myBirds {
     display: none;
 }
-
-#myCarousel{
-    opacity:0;
-    filter: alpha(opacity=0);
-}
-
-@media (max-width: 768px) {
-    .carousel-inner > .item.active {
-        overflow:hidden;
-    }
-    .carousel-inner > .item img 
-    {
-        height: 280px;
-        object-fit: cover;
-    }
-}
-
-/* Home Page */
 
 .bird-rectangle {
     height: 200px;
@@ -163,4 +115,10 @@ blockquote p {
 
 .blog-entry {
     display:none
+}
+
+.demo-content {
+  border-radius: 2px;
+  padding: 80px 56px;
+  margin-bottom: 80px;
 }

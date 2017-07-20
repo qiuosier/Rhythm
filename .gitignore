@@ -100,3 +100,6 @@ lib/
 # private settings
 private.py
 client_secrets.json
+
+# NPM
+/static/node_modules/

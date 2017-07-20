@@ -1,5 +1,6 @@
 {% extends "nest/base.html" %}
 {% block content %}
+
 <div id="myCarouselWrapper" class="row">
     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
         <ol class="carousel-indicators">
@@ -18,15 +19,16 @@
             {% else %}
             <div class="item">
             {% endif %}
-            <img src="{{ entry.image }}" alt="" class="img-responsive" />
+            <img src="{{ entry.image }}" alt="" class="bs-img-responsive" />
                 <div class="carousel-caption">
                     <p>
                         {{ entry.key }} - {{ entry.description}} <br />
                         <small>Photo by Qiu, {{ entry.date }}</small>
                     </p>
-                    <a class="btn btn-default btn-default btn-sm" href="{{ entry.link }}">
+                    <a class="mdc-button mdc-button--accent mdc-button--raised" href="{{ entry.link }}">
                         Learn More
                     </a>
+                    <p></p>
                 </div>
             </div>
             {% endfor %}
@@ -50,9 +52,8 @@
 
 <script>
     $(document).ready(function () {
-        fluidContainer();
         // set image wraper initial height
-        var imageHeight = $('.navbar').outerWidth() * 700 / 1920 / 3;
+        var imageHeight = $('header').outerWidth() * 700 / 1920 / 3;
         $("#myCarouselWrapper").css({
             'height': imageHeight + 'px'
         });
@@ -60,7 +61,6 @@
     });
 
     $(window).resize(function () {
-        fluidContainer();
         setImageHeight();
     });
 
@@ -69,7 +69,7 @@
         setTimeout(function () {
             // Animate image height
             // Mininum height is set to 280px in css.
-            var imageHeight = Math.max(280, $('.navbar').outerWidth() * 700 / 1920);
+            var imageHeight = Math.max(280, $('header').outerWidth() * 700 / 1920);
             $("#myCarouselWrapper").animate({
                 height: imageHeight + 'px'
             }, 1000, function () {
@@ -80,32 +80,13 @@
         }, 1000);
     })
 
-    function fluidContainer() {
-        // Override the width of the container in the layout template
-        // Credits: http://jsfiddle.net/iamnotsam/E3RQp/1/
-        var $c = $('.container'),
-            $w = $('#myCarouselWrapper'),
-            totalWidth = $('.navbar').outerWidth(),
-            wellWidth = $c.outerWidth(),
-            diff = totalWidth - wellWidth,
-            marg = -Math.floor(diff / 2) - 10  + 'px';
-        $w.each(function () {
-            $(this).css({
-                'margin-left': marg,
-                'margin-right': marg
-            });
-        })
-    }
-
     function setImageHeight() {
         // Set the height of the carousel image.
         // Mininum height is set to 280px in css.
-        var imageHeight = Math.max(280, $('.navbar').outerWidth() * 700 / 1920);
+        var imageHeight = Math.max(280, $('header').outerWidth() * 700 / 1920);
         $("#myCarouselWrapper").css({
             'height': imageHeight + 'px'
         })
     }
-
 </script>
-
 {% endblock %}

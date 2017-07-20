@@ -11,6 +11,12 @@ def index(request):
     })
 
 
+def about(request):
+    return render(request, "nest/about.html", {
+        
+    })
+
+
 def activate(request):
     try:
         r = urlfetch.fetch('http://qiu.azurewebsites.net', method='GET', deadline=20)
