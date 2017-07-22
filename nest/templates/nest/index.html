@@ -25,8 +25,8 @@
                         {{ entry.key }} - {{ entry.description}} <br />
                         <small>Photo by Qiu, {{ entry.date }}</small>
                     </p>
-                    <a class="mdc-button mdc-button--accent mdc-button--raised" href="{{ entry.link }}">
-                        Learn More
+                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="{{ entry.link }}">
+                        More
                     </a>
                     <p></p>
                 </div>
@@ -40,10 +40,7 @@
         {% for bird in birds %}
             <div class="mdl-cell mdl-cell--3-col-desktop mdl-card mdl-shadow--4dp">
                 <div class="mdl-card__media">
-                    <img class="img-responsive" src="{{ bird.image }}" alt="" />
-                    <div class="mdl-card__media-title">
-                        {{ bird.name }}
-                    </div>
+                    <img class="img-full-width img-responsive" src="{{ bird.image }}" alt="" />
                 </div>
                 <div class="mdl-card__supporting-text">
                     {{ bird.description }}

@@ -22,26 +22,26 @@ CAROUSEL_DATA = [
 BIRDS = [
     {
         'name': 'Sparrow',
-        'description': 'Code',
+        'description': 'Sparrow\'s Ideas',
         'link': '/sparrow',
-        'image': '/static/images/logo/Sparrow.jpg',
+        'image': '/static/images/cards/Small_IMGP0376.jpg',
     },
     {
         'name': 'Swift',
-        'description': 'Blog',
+        'description': 'The Swift Blog',
         'link': '/sparrow',
-        'image': '/static/images/logo/Swift.jpg',
+        'image': '/static/images/cards/Small_IMGP4601.jpg',
     },
     {
         'name': 'Skylark',
-        'description': 'Apreture',
+        'description': 'The Skylark Gallery',
         'link': '/sparrow',
-        'image': '/static/images/logo/Skylark.jpg',
+        'image': '/static/images/cards/Small_IMGP0439.jpg',
     },
     {
         'name': 'Swan',
-        'description': 'Journey',
+        'description': 'Journey with Swan',
         'link': '/sparrow',
-        'image': '/static/images/logo/Swan.jpg',
+        'image': '/static/images/cards/Small_KaruolaGlacier.jpg',
     }
 ]
