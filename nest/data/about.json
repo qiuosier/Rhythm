@@ -1,0 +1,81 @@
+{
+    "title": "Qiu Qin",
+    "address": [
+        "101 Science Drive",
+        "2195 CIEMAS, BOX 3382",
+        "Durham, NC 27708"
+    ],
+    "experience": [
+        {
+            "position": "Bioinformatician II",
+            "employer": "Duke University",
+            "time": "June 2016-Present",
+            "location": "Durham, NC",
+            "description": ""
+        },
+        {
+            "position": "Research Assistant",
+            "employer": "The Research Foundation for State University of New York",
+            "time": "May 2013-June 2016",
+            "location": "Binghamton, NY",
+            "description": ""
+        },
+        {
+            "position": "Teaching Assistant",
+            "employer": "State University of New York at Binghamton",
+            "time": "August 2011-May 2013",
+            "location": "Binghamton, NY",
+            "description": ""
+        },
+        {
+            "position": "Volunteer",
+            "employer": "Tibet Department of Water Resources",
+            "time": "July 2010-July 2011",
+            "location": "Lhasa, Tibet, China",
+            "description": ""
+        }
+    ],
+    "education": [
+        {
+            "degree": "Ph. D.",
+            "major": "Electrical Engineering",
+            "school": "State University of New York at Binghamton",
+            "location": "Binghamton, NY",
+            "time": "August 2011-December 2015",
+            "description": [
+                "Dissertation: Cost-Effective Solutions to Maintaining Smart Grid Reliability",
+                "Advisor: Dr. N. Eva Wu"
+            ]
+        },
+        {
+            "degree": "M. S.",
+            "major": "Systems Engineering",
+            "school": "Xi'an Jiaotong University",
+            "location": "Xi'an, China",
+            "time": "August 2007-July 2010",
+            "description": [
+                "Thesis: Multi-Agent-Based Crowd Dynamics Simulation",
+                "Advisor: Dr. Junhu Wei"
+            ]
+        },
+        {
+            "degree": "B. Eng.",
+            "major": "Automation",
+            "school": "Guangdong University of Technology",
+            "location": "Guangzhou, China",
+            "time": "August 2007-July 2010",
+            "description": ""
+        }
+    ],
+    "publications": [
+        "N. Eva Wu; Qiu Qin, “Secondary protective control for mitigation of protection misoperations in electric power systems”, Journal of Modern Power Systems and Clean Energy, Volume 4, July 2016, Issue 3, pp 427–439.",
+        "Qiu Qin; N. Eva Wu, “A multiple model filtering approach to transmission line fault diagnosis”, Control Engineering Practice, Volume 52, July 2016, Pages 93-102.",
+        "Qiu Qin; N. Eva Wu, “Control effectiveness of FACTS devices in power systems”, Proceedings of 2016 American Control Conference, July 2016, Boston, MA.",
+        "Qiu Qin; N. Eva Wu, “A hybrid simulation study on wide area measurement feedback for enhanced tolerance to protection misoperations”, Proceedings of 9th IFAC Symposium on Fault Detection, Supervision and Safety for Technical Processes, Sep. 2015, Paris France.",
+        "Qiu Qin; N. Eva Wu, “Recloser allocation and placement for rural distribution system”, Proceedings of 2015 IEEE Power & Energy Society General Meeting, Jul. 2015, Denver, CO.",
+        "N. Eva Wu; Qiu Qin; Mustafa Salman, “Maximally secure mitigation of protection misoperations in power systems”, Proceedings of 2015 American Control Conference (ACC), Jul. 2015, Chicago, IL.",
+        "Qiu Qin; N. Eva Wu, “Recloser and sectionalizer placement for reliability improvement using discrete event simulation”, Proceedings of 2014 IEEE Power & Energy Society General Meeting, Jul. 2014, National Harbor, MD.",
+        "Qiu Qin; N. Eva Wu, “Control reconfigurability-based placement strategy for FACTS devices”, Proceedings of 2013 American Control Conference (ACC), Jun. 2013, Washington DC.",
+        "Qiu Qin; Junhu Wei, “An agent-based approach for crowd dynamics simulation”, Proceedings of 2010 IEEE International Conference on Intelligent Computing and Intelligent Systems, Oct. 2010, Xiamen, China."
+    ]
+}

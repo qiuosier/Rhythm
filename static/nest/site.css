@@ -24,6 +24,15 @@ textarea {
     height: auto;
 }
 
+.text-right {
+    text-align: right;
+}
+
+.no-spacing {
+    margin: 0;
+    padding: 0;
+}
+
 .mdl-card__media-title {
     position: absolute;
     right: 20px;
@@ -34,6 +43,8 @@ textarea {
 .img-full-width {
     width: 100%;
 }
+
+
 
 /* Paragraph */
 p.normal {
@@ -121,8 +132,15 @@ blockquote p {
     display:none
 }
 
-.demo-content {
-  border-radius: 2px;
-  padding: 80px 56px;
-  margin-bottom: 80px;
+.paper-content {
+    width: 850px;
+    border-radius: 2px;
+    padding: 50px 100px;
+    margin: 30px auto;
+    text-align: justify;
 }
+
+.latex-font 
+h1, h2, h3, h4, h5, h6{
+    font-family: "latex-font";
+} 

@@ -10,7 +10,7 @@ def index(request):
     return load_data_and_render(request, "index")
 
 
-def load_data_and_render(request, name):
+def load_data_and_render(request, file_name):
     """Loads data from a JSON file and renders a template.
     The JSON file and HTML template should have the same filename (different extensions, json and html).
     JSON files are stored in the "nest/data" folder.
@@ -23,13 +23,13 @@ def load_data_and_render(request, name):
     Returns: HTTP Response.
 
     """
-    json_file = os.path.join(settings.BASE_DIR, "nest", "data", name + ".json")
+    json_file = os.path.join(settings.BASE_DIR, "nest", "data", file_name + ".json")
     if os.path.exists(json_file):
         with open(json_file) as f:
             data = json.load(f)
     else:
         data = {}
-    return render(request, "nest/" + name + ".html", data)
+    return render(request, "nest/" + file_name + ".html", data)
 
 
 def activate(request):
