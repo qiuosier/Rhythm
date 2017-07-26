@@ -11,7 +11,7 @@
             <div class="mdl-cell mdl-cell--6-col">
                 <h2>Qiu Qin</h2>
             </div>
-            <div class="mdl-cell mdl-cell--6-col text-right">
+            <div class="mdl-cell mdl-cell--6-col text-right-desktop">
                 <p>
                     {% for line in address %}
                         {{ line }}<br />
@@ -22,20 +22,21 @@
         <h5>Experience</h5>
         <div class="mdl-grid">
         {% for ex in experience %}
-            <div class="mdl-cell mdl-cell--6-col">
-                <p>
+            <div class="mdl-cell mdl-cell--6-col no-spacing">
+                <p class="no-spacing">
                     {{ ex.position }}<br />
                     {{ ex.employer }}
                 </p>
             </div>
-            <div class="mdl-cell mdl-cell--6-col text-right">
-                <p>
+            <div class="mdl-cell mdl-cell--6-col no-spacing text-right-desktop">
+                <p class="no-spacing">
                     {{ ex.time }}<br />
                     {{ ex.location }}
                 </p>
             </div>
+            <div class="mdl-cell mdl-cell--12-col"></div>
         {% endfor %}
-        
+        </div>
         <h5>Education</h5>
         <div class="mdl-grid">
         {% for edu in education %}
@@ -45,26 +46,29 @@
                     {{ edu.school }}
                 </p>
             </div>
-            <div class="mdl-cell mdl-cell--6-col text-right no-spacing">
+            <div class="mdl-cell mdl-cell--6-col no-spacing text-right-desktop">
                 <p class="no-spacing">
                     {{ edu.time }}<br />
                     {{ edu.location }}
                 </p>
             </div>
             <div class="mdl-cell mdl-cell--12-col no-spacing">
-                <p class="no-spacing">
+                <ul class="no-spacing">
                     {% for line in edu.description %}
-                        {{ line }}<br />
+                        <li>{{ line }}</li>
                     {% endfor %}
-                </p>
+                </ul>
             </div>
-            <hr />
+            <div class="mdl-cell mdl-cell--12-col"></div>
         {% endfor %}
+        
         </div>
         <h5>Publications</h5>
+        <div class="mdl-grid">
         {% for publication in publications %}
         <p>{{ publication }}</p>
         {% endfor%}
+        </div>
     </div>
 </div>
 {% endblock %}

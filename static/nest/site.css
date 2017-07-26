@@ -6,16 +6,24 @@
     padding-right: 15px;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 800px;
-}
-
 .page-content {
     max-width: 1280px;
     margin: 0 auto;
+}
+
+.paper-content {
+    width: 850px;
+    border-radius: 2px;
+    padding: 50px 100px;
+    margin: 30px auto;
+    text-align: justify;
+}
+@media (max-width: 900px) {
+    .paper-content {
+        width: auto;
+        padding: 30px 20px;
+        margin: 10px 10px;
+    }
 }
 
 .img-responsive {
@@ -24,15 +32,31 @@ textarea {
     height: auto;
 }
 
-.text-right {
+.img-full-width {
+    width: 100%;
+}
+
+.text-right-desktop {
     text-align: right;
+}
+@media (max-width: 900px) {
+    .text-right-desktop {
+        text-align: left;
+    }
 }
 
 .no-spacing {
-    margin: 0;
-    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
+.spacer-15px {
+    height: 15px;
+}
+
+/* MDL related */
 .mdl-card__media-title {
     position: absolute;
     right: 20px;
@@ -40,11 +64,10 @@ textarea {
     color: white;
 }
 
-.img-full-width {
-    width: 100%;
-}
-
-
+.latex-font 
+h1, h2, h3, h4, h5, h6{
+    font-family: "latex-font";
+} 
 
 /* Paragraph */
 p.normal {
@@ -131,16 +154,3 @@ blockquote p {
 .blog-entry {
     display:none
 }
-
-.paper-content {
-    width: 850px;
-    border-radius: 2px;
-    padding: 50px 100px;
-    margin: 30px auto;
-    text-align: justify;
-}
-
-.latex-font 
-h1, h2, h3, h4, h5, h6{
-    font-family: "latex-font";
-} 
