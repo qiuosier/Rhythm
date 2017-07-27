@@ -59,7 +59,7 @@ def page(request, file_name):
     Returns: HTTP Response.
 
     """
-    input_file = os.path.join(settings.BASE_DIR, "data", file_name + ".md")
+    input_file = os.path.join(settings.BASE_DIR, "data", "markdown", file_name + ".md")
     if os.path.exists(input_file):
         with open(input_file) as f:
             text = f.read()
