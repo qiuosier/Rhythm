@@ -1,0 +1,177 @@
+﻿/* Heading size */
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page-content {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.paper-content {
+    width: 850px;
+    border-radius: 2px;
+    padding: 50px 100px;
+    margin: 30px auto;
+    text-align: justify;
+}
+@media (max-width: 900px) {
+    .paper-content {
+        width: auto;
+        padding: 30px 20px;
+        margin: 10px 10px;
+    }
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-full-width {
+    width: 100%;
+}
+
+.text-right-desktop {
+    text-align: right;
+}
+@media (max-width: 900px) {
+    .text-right-desktop {
+        text-align: left;
+    }
+}
+
+.no-spacing {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.spacer-15px {
+    height: 15px;
+}
+
+/* MDL related */
+.mdl-card__media-title {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    color: white;
+}
+
+.latex-font h1,
+.latex-font h2,
+.latex-font h3,
+.latex-font h4,
+.latex-font h5,
+.latex-font h6 {
+    font-family: "latex-font";
+} 
+
+/* Paragraph */
+p.normal {
+    font-style: normal;
+}
+
+p.italic {
+    font-style: italic;
+}
+
+p.oblique {
+    font-style: oblique;
+}
+
+/* Image Caption */
+.image-wrapper {
+    position:relative;
+}
+
+.image-caption {
+    position: absolute;
+    z-index: 10;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+    left: 0%;
+    bottom: 15px;
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 3px 3px rgba(255, 240, 160, 0.60);
+}
+
+.image-caption p {
+    font-size: 12px;
+    line-height: 1.2;
+    margin-bottom: 0px;
+}
+
+.image-caption-bottom {
+    z-index: 10;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+    left: 0%;
+    bottom: 15px;
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 3px 3px rgba(255, 240, 160, 0.60);
+    width: 100%;
+}
+
+/* Quotes */
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+blockquote p {
+  font-weight: normal;
+  font-size: small;
+}
+
+/* Fade when mouse over*/
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+    opacity: 0.5;
+}
+
+.blog-entry {
+    display:none
+}

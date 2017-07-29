@@ -1,0 +1,13 @@
+{% extends "nest/base.html" %}
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'nest/latex.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="page-content">
+    <div class="paper-content mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 latex-font">
+        {{ html_content|safe }}
+    </div>
+</div>
+{% endblock %}

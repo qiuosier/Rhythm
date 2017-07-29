@@ -94,5 +94,12 @@ ENV/
 # package library
 lib/
 
+# VS settings
+/.vscode/
+
 # private settings
 private.py
+client_secrets.json
+
+# NPM
+/static/node_modules/

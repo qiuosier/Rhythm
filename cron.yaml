@@ -1,7 +1,1 @@
 cron:
-- description: activate nest
-  url: /nest/activate/
-  schedule: every 10 mins
-  retry_parameters:
-    min_backoff_seconds: 30
-    max_doublings: 5

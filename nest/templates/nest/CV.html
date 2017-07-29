@@ -1,0 +1,74 @@
+{% extends "nest/base.html" %}
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'nest/latex.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="page-content">
+    <div class="paper-content mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 latex-font">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col">
+                <h1>Qiu Qin</h1>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col text-right-desktop">
+                <p>
+                    {% for line in address %}
+                        {{ line }}<br />
+                    {% endfor %}
+                </p>
+            </div>
+        </div>
+        <h5>Experience</h5>
+        <div class="mdl-grid">
+        {% for ex in experience %}
+            <div class="mdl-cell mdl-cell--6-col no-spacing">
+                <p class="no-spacing">
+                    {{ ex.position }}<br />
+                    {{ ex.employer }}
+                </p>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col no-spacing text-right-desktop">
+                <p class="no-spacing">
+                    {{ ex.time }}<br />
+                    {{ ex.location }}
+                </p>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col"></div>
+        {% endfor %}
+        </div>
+        <h5>Education</h5>
+        <div class="mdl-grid">
+        {% for edu in education %}
+            <div class="mdl-cell mdl-cell--6-col no-spacing">
+                <p class="no-spacing">
+                    {{ edu.degree }} {{ edu.major }}<br />
+                    {{ edu.school }}
+                </p>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col no-spacing text-right-desktop">
+                <p class="no-spacing">
+                    {{ edu.time }}<br />
+                    {{ edu.location }}
+                </p>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col no-spacing">
+                <ul class="no-spacing">
+                    {% for line in edu.description %}
+                        <li>{{ line }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col"></div>
+        {% endfor %}
+        
+        </div>
+        <h5>Publications</h5>
+        <div class="mdl-grid">
+        {% for publication in publications %}
+        <p>{{ publication }}</p>
+        {% endfor%}
+        </div>
+    </div>
+</div>
+{% endblock %}
