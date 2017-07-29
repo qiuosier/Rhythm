@@ -1,0 +1,354 @@
+﻿/* Timeline */
+.timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+}
+
+/* This will draw a vertical line */
+.timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: #666666;
+    margin-right: -1.5px;
+}
+
+/* Location of the timeline */
+/* left-axis: timeline is on the left and panels are on the right */
+.timeline.left-axis:before {
+    left: 25px;
+}
+/* center-axis: timeline is centered and panels are on both side of the axis */
+.timeline.center-axis:before {
+    left: 50%;
+}
+
+/* Draw the center timeline between panels */
+.timeline.center-axis .center-axis-line {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #666666;
+    height: 380px;
+    width: 3px;
+    right: -3px;
+    z-index: -1;
+}
+.timeline.center-axis > li.right-panel .center-axis-line {
+   right:auto;
+   left: 0px;
+}
+
+/* Set margins between panels */
+.timeline > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline > li:after {
+    clear: both;
+}
+
+/* Left panels */
+.timeline.center-axis > li {
+    width: 50%;
+    float: left;
+    clear: left;
+}
+
+/* Right panels */
+.timeline.center-axis > li.right-panel{
+    float: right; 
+    clear: right;
+}
+
+/* Panel border and shadow */
+.timeline > li .timeline-panel {
+    border: 1px solid #999999;
+    border-radius: 2px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+/* Panel width for single column panels */
+.timeline.left-axis > li .timeline-panel {
+    width: calc( 100% - 75px );
+    float: right;
+    padding: 15px;
+}
+
+/* Panel width and height for double column panels*/
+.timeline.center-axis > li .timeline-panel {
+    width: calc( 100% - 115px );
+    float: left;
+    height: 360px;
+    margin-left: 70px;
+}
+.timeline.center-axis > li.right-panel .timeline-panel {
+    float: right;
+    margin-right: 70px;
+}
+
+/* Draw the little triangles */
+/* Shared settings */
+.timeline > li .timeline-panel:before {
+    position: absolute;
+    top: 26px;
+    display: inline-block;
+    content: " ";
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+.timeline > li .timeline-panel:after {
+    position: absolute;
+    top: 27px;
+    display: inline-block;
+    content: " ";
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+}
+
+/* Triangle on the left of the panel */
+.timeline.left-axis > li .timeline-panel:before {
+    left: -15px;
+    border-right: 15px solid #999999;
+    border-left: 0 solid #999999;
+}
+.timeline.left-axis > li .timeline-panel:after {
+    left: -14px;
+    border-right: 14px solid #fff;
+    border-left: 0 solid #fff;
+}
+/* Triangle on the right of the panel */
+.timeline.center-axis > li .timeline-panel:before {
+    right: -15px;
+    border-left: 15px solid #999999;
+    border-right: 0 solid #999999;
+}
+.timeline.center-axis > li .timeline-panel:after {
+    right: -14px;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+}
+/* Triangle on the left of the panel */
+.timeline.center-axis > li.right-panel .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+    top: 100px;
+}
+.timeline.center-axis > li.right-panel .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+    top: 101px;
+}
+
+/* Badge */
+.timeline > li .timeline-badge {
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    background-color: #999999;
+    z-index: 100;
+    top: 16px;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+/* Text size inside the badge */
+.timeline > li .timeline-badge p{
+    font-size: 1.0em;
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+/* Icon size inside the badge */
+.timeline > li .timeline-badge i{
+    font-size: 1.4em;
+}
+/* Badge positions */
+.timeline.left-axis > li .timeline-badge {
+    left: 1px;
+    margin-right: -25px;
+}
+.timeline.center-axis > li .timeline-badge {
+    right: -27px;
+}
+.timeline.center-axis > li.right-panel .timeline-badge {
+    left: -23px;
+    top: 91px;
+}
+
+/* This will make the panels on the right a bit lower than those on the left*/
+.timeline.center-axis > li:nth-child(2) {
+    margin-top: 60px;
+}
+
+/* Wrap the image, hide overflow */
+.timeline.center-axis > li .timeline-image {
+    position:absolute;
+    left: 0px;
+    overflow:hidden;
+    width:100%;
+    height:100%;
+}
+/* Center the image horizontally if the parent div is smaller than the image*/
+.timeline.center-axis > li .timeline-image img {
+    position:absolute;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+}
+/* Image caption */
+.timeline.center-axis > li .image-caption {
+    width:300px;
+}
+.timeline.center-axis > li.right-panel .image-caption {
+    right: 0px;
+    left: auto;
+    top: 15px;
+    bottom: auto;
+}
+
+/* Empty space */
+.timeline-empty-panel {
+    height: 50px;
+}
+
+/* Switch to single column on small screen */
+@media (max-width: 992px) {
+    .timeline.center-axis > li:nth-child(2) {
+        margin-top: 10px;
+    }
+    /* Timeline position */
+    .timeline.center-axis:before {
+        left: 40px;
+    }
+    .timeline.center-axis .center-axis-line {
+        left: 40px;
+        right: auto;
+    }
+    .timeline.center-axis > li.right-panel .center-axis-line {
+        left: 40px;
+        right:auto;
+    }
+
+    /* Panel width */
+    .timeline.center-axis > li {
+        padding-right: 20px;
+        width:100%;
+        max-width: 620px;
+    }
+    .timeline.center-axis > li .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+    /* All items float left */
+    .timeline.center-axis > li.right-panel {
+        float: left;
+        clear: left;
+    }
+    /* All panels float right */
+    .timeline.center-axis > li .timeline-panel {
+        float: right;
+        margin-left: 70px;
+        margin-right: auto !important;
+    }
+    /* Triangle on the left */
+    .timeline.center-axis > li .timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+    .timeline.center-axis > li .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+
+    /* Badge position */
+    .timeline.center-axis > li .timeline-badge {
+        left: 16px;
+        margin-left: 0;
+        top: 15px;
+    }
+    .timeline.center-axis > li.right-panel .timeline-badge {
+        left: 16px;
+    }
+}
+
+@media (max-width: 460px) {
+    .timeline {
+        padding:0px;
+    }
+    /* Hide timeline axis */
+    .timeline.center-axis:before {
+        display:none;
+    }
+    .timeline.center-axis .center-axis-line {
+        display:none;
+    }
+    .timeline.center-axis > li.right-panel .center-axis-line {
+        display:none;
+    }
+
+    /* Panel width */
+    .timeline.center-axis > li {
+        padding-right: 20px;
+    }
+    .timeline > li .timeline-panel {
+        width: calc(100% - 35px)!important;
+        width: -moz-calc(100% - 35px)!important;
+        width: -webkit-calc(100% - 35px)!important;
+        margin-left: 0px!important;
+    }
+    .timeline.left-axis > li .timeline-panel {
+        margin-top: 40px;
+    }
+
+    /* Hide triangles */
+    .timeline.left-axis > li .timeline-panel:before {
+        display:none;
+    }
+    .timeline.left-axis > li .timeline-panel:after {
+        display:none;
+    }
+
+    /* Badge position */
+    .timeline.center-axis > li .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 15px;
+    }
+    .timeline.center-axis > li.right-panel .timeline-badge {
+        left: 15px;
+    }
+
+    /* Image caption */
+    .timeline.center-axis > li .image-caption {
+        width:80%;
+        padding-right: 20px;
+        bottom:15px !important;
+        top:auto !important;
+    }
+}

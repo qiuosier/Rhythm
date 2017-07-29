@@ -81,8 +81,12 @@ h4 {
     color: white;
 }
 
-.latex-font 
-h1, h2, h3, h4, h5, h6{
+.latex-font h1,
+.latex-font h2,
+.latex-font h3,
+.latex-font h4,
+.latex-font h5,
+.latex-font h6 {
     font-family: "latex-font";
 } 
 

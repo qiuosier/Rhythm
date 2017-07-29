@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound
+from django.template.loader import get_template
+from django.template import TemplateDoesNotExist
 from google.appengine.api import urlfetch
 from django.conf import settings
 import os
@@ -44,7 +46,11 @@ def load_data_and_render(request, file_name):
 
     """
     html_file = "nest/" + file_name + ".html"
-    # TODO: Check if template exists.
+    try:
+        get_template(html_file)
+    except TemplateDoesNotExist:
+        message = "Template \"%s\" does not exist." % html_file
+        return HttpResponseNotFound(message)
     return render(request, html_file, load_json(file_name))
 
 
