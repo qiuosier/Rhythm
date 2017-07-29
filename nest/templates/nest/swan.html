@@ -11,12 +11,14 @@
         <ul class="timeline center-axis" id="swan-timeline">
             {% for entry in journeys %}
             <li class="{% cycle 'left-panel' 'right-panel' %}">
-                <div class="timeline-badge">
-                    <p>{{ entry.year }}</p>
-                </div>
+                <a href="{% url 'nest:rhythm' 'entry.key' %}">
+                    <div class="timeline-badge mdl-shadow--2dp">
+                        <p>{{ entry.year }}</p>
+                    </div>
+                </a>
                 <div class="center-axis-line"></div>
                 <a href="{% url 'nest:rhythm' 'entry.key' %}">
-                    <div class="timeline-panel">
+                    <div class="timeline-panel mdl-shadow--2dp">
                         <div class="timeline-image">
                             <img src="{% static 'images/swan/home/Small_'|add:entry.key|add:'.jpg' %}" />
                         </div>

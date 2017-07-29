@@ -76,9 +76,14 @@
 .timeline > li .timeline-panel {
     border: 1px solid #999999;
     border-radius: 2px;
-    position: relative;
-    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    position: relative; 
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.timeline > li .timeline-panel:hover {
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,.25), 
+                0 3px 14px 2px rgba(0,0,0,.22), 
+                0 5px 5px -3px rgba(0,0,0,.2);
 }
 
 /* Panel width for single column panels */
@@ -172,7 +177,14 @@
     border-top-left-radius: 50%;
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
+.timeline > li .timeline-badge:hover {
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,.14), 
+                0 3px 14px 2px rgba(0,0,0,.12), 
+                0 5px 5px -3px rgba(0,0,0,.2);
+}
+
 /* Text size inside the badge */
 .timeline > li .timeline-badge p{
     font-size: 1.0em;
