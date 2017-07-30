@@ -44,6 +44,21 @@ h4 {
     }
 }
 
+.nest-cards-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.nest-image-card {
+    height: 200px;
+}
+
+.nest-card-title {
+    margin-left: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
 .img-responsive {
     display: block;
     max-width: 100%;
@@ -72,14 +87,6 @@ h4 {
 
 .spacer-15px {
     height: 15px;
-}
-
-/* MDL related */
-.mdl-card__media-title {
-    position: absolute;
-    right: 20px;
-    top: 50px;
-    color: white;
 }
 
 .latex-font h1,

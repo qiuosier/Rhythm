@@ -1,0 +1,21 @@
+{% extends "nest/base.html" %}
+
+{% block content %}
+<div class="nest-cards-content">
+    {% for card in cards %}
+    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+        <div class="mdl-card__media mdl-color-text--grey-50 nest-image-card" style="background-image: url(/static/images/{{ card.image }});">
+            <h3 class="nest-card-title">{{ card.title }}</h3>
+        </div>
+        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+            {% for line in card.description %}
+            <p>{{ line }}</p>
+            {% endfor %}
+        </div>
+        <div class="mdl-card__actions">
+            <a href="#" class="mdl-button mdl-color-text--blue">Read More</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
