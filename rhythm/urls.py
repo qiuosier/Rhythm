@@ -22,8 +22,5 @@ urlpatterns = [
     lambda r: HttpResponse("User-agent: *\nDisallow: /", 
     content_type = "text/plain")),
     url(r'^admin/', admin.site.urls),
-    url(r'^songbird/', include('songbird.urls')),
-    url(r'^auth/', include('authentication.urls')),
-    url(r'^sparrow/', include('sparrow.urls')),
     url(r'^', include('nest.urls')),
 ]

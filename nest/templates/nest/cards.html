@@ -4,16 +4,17 @@
 <div class="nest-cards-content">
     {% for card in cards %}
     <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
-        <div class="mdl-card__media mdl-color-text--grey-50 nest-image-card" style="background-image: url(/static/images/{{ card.image }});">
-            <h3 class="nest-card-title">{{ card.title }}</h3>
+        <div class="mdl-card__media mdl-color-text--grey-50 nest-cards-image" style="background-image: url(/static/images/{{ card.image }});">
+            <div class="nest-cards-image-caption">{{ card.caption }}</div>
         </div>
-        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-            {% for line in card.description %}
-            <p>{{ line }}</p>
-            {% endfor %}
+        <div class="mdl-card__supporting-text mdl-color-text--black mdl-card--border">
+            <h4 class="nest-cards-title no-spacing">{{ card.title }}</h4>
+        </div>
+        <div class="mdl-card__supporting-text mdl-color-text--grey-600 mdl-card--border">
+            {{ card.description }}
         </div>
         <div class="mdl-card__actions">
-            <a href="#" class="mdl-button mdl-color-text--blue">Read More</a>
+            <a href="{{ card.link }}" class="mdl-button mdl-color-text--blue">Read More</a>
         </div>
     </div>
     {% endfor %}

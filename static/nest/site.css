@@ -49,13 +49,20 @@ h4 {
     margin: 0 auto;
 }
 
-.nest-image-card {
+.nest-cards-image {
     height: 200px;
 }
 
-.nest-card-title {
-    margin-left: 20px;
-    margin-top: 50px;
+.nest-cards-image-caption {
+    color: white;
+    font-size: smaller;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.75);
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.nest-cards-title {
     font-weight: bold;
 }
 

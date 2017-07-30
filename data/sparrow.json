@@ -3,10 +3,26 @@
         {
             "key": "astrology",
             "title": "The Astrology Collection, My Personal Projects",
-            "description": [
-                "Astrology is a collection of my ideas and personal projects. I like to built things in my spare time. Writing computer programs is a great way to build things. However, engineering is more than software..."
-            ],
-            "image": "cards/NYCLights.jpg"
+            "description": "Astrology is a collection of my ideas and personal projects. I like to built things in my spare time. Writing computer programs is a great way to build things. However, engineering is more than software...",
+            "image": "cards/NYCLights.jpg",
+            "caption": "Lights, New York City",
+            "link": ""
+        },
+        {
+            "key": "apps",
+            "title": "Application Projects",
+            "description": "I helped different people to implement various applications, like database, or websites. These projects are usually more reliable and intended to improve the productivity.",
+            "image": "cards/MontaukPoint.jpg",
+            "caption": "Montauk Point, NY",
+            "link": ""
+        },
+        {
+            "key": "research",
+            "title": "Research Projects",
+            "description": "Being in the school for a long time, I also work on exploratory projects. These projects may not become applications eventually. However, they help us explore the unknown territories",
+            "image": "cards/AreciboObservatory.jpg",
+            "caption": "Arecibo Observatory, PR",
+            "link": ""
         }
     ]
 }
