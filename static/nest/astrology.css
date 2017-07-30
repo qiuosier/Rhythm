@@ -1,0 +1,21 @@
+﻿/* Astrology Color */
+
+.timeline-badge.Taurus {
+    background-color: darkorange !important;
+}
+
+.timeline-badge.Gemini {
+    background-color: mediumpurple !important;
+}
+
+.timeline-badge.Libra {
+    background-color: lightsteelblue !important;
+}
+
+.timeline-badge.Sagittarius {
+    background-color: forestgreen !important;
+}
+
+.timeline-badge.Capricorn {
+    background-color: cornflowerblue !important;
+}

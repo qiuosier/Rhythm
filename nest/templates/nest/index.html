@@ -1,4 +1,10 @@
 {% extends "nest/base.html" %}
+{% load staticfiles %}
+
+{% block head %} 
+<link rel="stylesheet" href="{% static 'nest/bs_carousel.css' %}" />
+{% endblock %}
+
 {% block content %}
 
 <div id="myCarouselWrapper" class="row">

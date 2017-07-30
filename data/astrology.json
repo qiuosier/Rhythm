@@ -1,0 +1,77 @@
+{
+    "projects": [
+        {
+            "name": "Aries",
+            "summary": ""
+        },
+        {
+            "name": "Taurus",
+            "summary": "A windows PE application to backup/restore system images.",
+            "time": "2009",
+            "tags": [
+                "2009",
+                "C++"
+            ]
+        },
+        {
+            "name": "Gemini",
+            "summary": "A set of small programs doing small things.",
+            "tags": [
+                "2015",
+                "Python"
+            ]
+        },
+        {
+            "name": "Cancer",
+            "summary": ""
+        },
+        {
+            "name": "Leo",
+            "summary": ""
+        },
+        {
+            "name": "Virgo",
+            "summary": ""
+        },
+        {
+            "name": "Libra",
+            "summary": "A universal Windows platform app for viewing/annotating PDFs.",
+            "tags": [
+                "2016",
+                "C#",
+                "Windows App",
+                "PDF",
+                "Inking"
+            ]
+        },
+        {
+            "name": "Scorpio",
+            "summary": ""
+        },
+        {
+            "name": "Sagittarius",
+            "summary": "An Adobe Lightroom plugin to GeoTag photos with Google location history data.",
+            "tags":[
+                "2017",
+                "Lua",
+                "Lightroom"
+            ]
+        },
+        {
+            "name": "Capricorn",
+            "summary": "Snake, the once-popular game in grandfather's Nokia cellphone.",
+            "tags":[
+                "2006",
+                "C#"
+            ]
+        },
+        {
+            "name": "Aquarius",
+            "summary": ""
+        },
+        {
+            "name": "Pisces",
+            "summary": ""
+        }
+    ]
+}
