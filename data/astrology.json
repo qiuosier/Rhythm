@@ -1,5 +1,7 @@
 {
-    "projects": [
+    "title": "The Astrology Collection",
+    "image_location": "images/zodiac/",
+    "events": [
         {
             "name": "Aries",
             "summary": ""
@@ -7,7 +9,7 @@
         {
             "name": "Taurus",
             "summary": "A windows PE application to backup/restore system images.",
-            "time": "2009",
+            "year": "2009",
             "tags": [
                 "2009",
                 "C++"
@@ -16,6 +18,7 @@
         {
             "name": "Gemini",
             "summary": "A set of small programs doing small things.",
+            "year": "2015",
             "tags": [
                 "2015",
                 "Python"
@@ -36,6 +39,7 @@
         {
             "name": "Libra",
             "summary": "A universal Windows platform app for viewing/annotating PDFs.",
+            "year": "2016",
             "tags": [
                 "2016",
                 "C#",
@@ -51,6 +55,7 @@
         {
             "name": "Sagittarius",
             "summary": "An Adobe Lightroom plugin to GeoTag photos with Google location history data.",
+            "year": "2017",
             "tags":[
                 "2017",
                 "Lua",
@@ -60,6 +65,7 @@
         {
             "name": "Capricorn",
             "summary": "Snake, the once-popular game in grandfather's Nokia cellphone.",
+            "year": "2006",
             "tags":[
                 "2006",
                 "C#"

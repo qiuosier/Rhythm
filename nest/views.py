@@ -85,6 +85,10 @@ def cards(request, filename):
     return load_data_and_render(request, filename, "cards")
 
 
+def timeline(request, filename):
+    return load_data_and_render(request, filename, "timeline")
+
+
 def activate(request):
     try:
         r = urlfetch.fetch('http://qiu.azurewebsites.net', method='GET', deadline=20)
