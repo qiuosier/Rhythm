@@ -39,9 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'nest',
-    'songbird',
-    'authentication',
-    'sparrow',
 ]
 
 MIDDLEWARE_CLASSES = [
