@@ -1,0 +1,47 @@
+<div class="mdl-grid">
+    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+        <div class="mdl-card__media mdl-color-text--grey-50 nest-cards-image" style="background-image: url(/static/images/{{ card.image }});">
+            <div class="nest-cards-image-caption">{{ card.caption }}</div>
+        </div>
+        <div class="mdl-card__supporting-text mdl-color-text--grey-800 mdl-card--border">
+            <h4 class="nest-cards-title no-spacing">{{ card.title }}</h4>
+        </div>
+        <div class="mdl-card__supporting-text mdl-color-text--grey-600 mdl-card--border">
+            {{ card.description }}
+        </div>
+        <div class="mdl-card__supporting-text">
+            <ul class="timeline left-axis">
+                {% for project in card.events %}
+                    <li>
+                        {% if project.summary %}
+                            <a href="{% url 'nest:page' project.name %}">
+                                <div class="timeline-badge mdl-shadow--2dp {{ project.name }}">
+                                    <img src="/static/images/zodiac/icon-zodiac-{{ project.name }}.png" />
+                                </div>
+                            </a>
+                            <div class="timeline-panel mdl-shadow--2dp">
+                                <div>
+                                    <h4><a href="{% url 'nest:page' project.name %}">{{ project.name }}</a></h4>
+                                </div>
+                                <div>
+                                    {% for tag in project.tags %}
+                                    <span class="label label-primary">{{ tag }}</span>
+                                    {% endfor %}
+                                </div> 
+                                <div>
+                                    <p>{{ project.summary }}</p>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="timeline-badge">
+                                <img src="/static/images/zodiac/icon-zodiac-{{ project.name }}.png" />
+                            </div>
+                            <div class="timeline-empty-panel"></div>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+

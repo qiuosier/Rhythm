@@ -14,7 +14,7 @@
                 <a href="{% url 'nest:page' event.key %}">
                     <div class="timeline-badge mdl-shadow--2dp">
                         {% if event.icon %}
-                        <img src="{% static image_location|add:event.icon %}" />
+                        <img src="{{ event.icon }}" />
                         {% else %}
                         <p>{{ event.year }}</p>
                         {% endif %}
