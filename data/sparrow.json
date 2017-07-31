@@ -14,7 +14,7 @@
             "description": "I helped different people to implement various applications, like database, or websites. These projects are usually more reliable and intended to improve the productivity.",
             "image": "cards/MontaukPoint.jpg",
             "caption": "Montauk Point, NY",
-            "link": ""
+            "link": "/timeline/applications/"
         },
         {
             "key": "research",
@@ -22,7 +22,7 @@
             "description": "Being in the school for a long time, I also work on exploratory projects. These projects may not become applications eventually. However, they help us explore the unknown territories",
             "image": "cards/AreciboObservatory.jpg",
             "caption": "Arecibo Observatory, PR",
-            "link": ""
+            "link": "/timeline/research/"
         }
     ]
 }

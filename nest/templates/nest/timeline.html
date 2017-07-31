@@ -6,12 +6,12 @@
 {% endblock %}
 
 {% block content %}
-<div class="page-content">
+<div class="nest-timeline-content">
     <h3>{{ title }}</h3>
     <ul class="timeline left-axis">
         {% for event in events %}
             <li>
-                <a href="{% url 'nest:page' event.name %}">
+                <a href="{% url 'nest:page' event.key %}">
                     <div class="timeline-badge mdl-shadow--2dp">
                         {% if event.icon %}
                         <img src="{% static image_location|add:event.icon %}" />
@@ -21,7 +21,7 @@
                     </div>
                 </a>
                 <div class="timeline-panel mdl-shadow--2dp">
-                    <h4 class="no-spacing"><a href="{% url 'nest:page' event.name %}">{{ event.name }}</a></h4>
+                    <h4 class="no-spacing"><a href="{% url 'nest:page' event.key %}">{{ event.title }}</a></h4>
                     <div>
                         {% for tag in event.tags %}
                         <span class="label label-primary">{{ tag }}</span>

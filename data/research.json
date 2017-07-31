@@ -1,0 +1,44 @@
+{
+    "title": "Research",
+    "summary": "",
+    "image_location": "",
+    "events": [
+        {
+            "key": "QPOST",
+            "title": "Cost Effective Solutions to Maintaining Smart Grid Reliability",
+            "summary": "This project investigated the modeling, simulation and control of eletric power systems, including both the distribution and transmission systems. For the distribution system, we worked with the data from New York State Electric & Gas (NYSEG) to identify critical locations for installing power switching equipments. For the transmission system, we built hybrid simulation to incorporate discrete events and the fluctuations continuous states. Based on the simulation model, we designed fault diagnosis algorithm and proposed a data-driven decision making model to improve the reliability.",
+            "year": "2015",
+            "tags": [
+                "MATLAB",
+                "Simulink",
+                "Power Systems",
+                "Simulation",
+                "Fault-Tolerant Control",
+                "Kalman Filter",
+                "Markov Model",
+                "Optimization"
+            ]
+        },
+        {
+            "key": "chaos",
+            "title": "Modeling and Simulation of Pedestrians",
+            "summary": "This project integrates perception, cognitive control, path planning, reactive movement appearance and characteristics components in an agent model. With the agent-based simulation, We reproduced several self-emerge phenomena of pedestrian flows in public environment.",
+            "year": "2010",
+            "tags": [
+                "C++",
+                "QT",
+                "Agent-Based System",
+                "Cross-Platform",
+                "Simulation"
+            ]
+        },
+        {
+            "key": "gm",
+            "title": "Distributed Simulation in Vehicle Manufacturing",
+            "summary": "This project investigated the network communication protocols, data transfer and conversion of different commercial software.",
+            "year": "2009",
+            "tags": [
+            ]
+        }
+    ]
+}

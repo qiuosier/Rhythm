@@ -1,16 +1,12 @@
-﻿
-
-
-/* Timeline */
+﻿/* Timeline */
 .timeline {
     list-style: none;
     padding: 20px 0 20px;
     position: relative;
 }
 
-.timeline .timeline-panel .timeline-title {
-    margin-top: 0;
-    margin-bottom: 0;
+.timeline .timeline-panel p {
+    text-align: justify;
 }
 
 /* This will draw a vertical line */
