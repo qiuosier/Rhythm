@@ -9,6 +9,11 @@
     text-align: justify;
 }
 
+.timeline .timeline-panel-title {
+    font-size: 18px;
+    /* text-transform: uppercase; */
+}
+
 /* This will draw a vertical line */
 .timeline:before {
     top: 0;

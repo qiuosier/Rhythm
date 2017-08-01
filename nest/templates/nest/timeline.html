@@ -8,31 +8,6 @@
 {% block content %}
 <div class="nest-timeline-content">
     <h3>{{ title }}</h3>
-    <ul class="timeline left-axis">
-        {% for event in events %}
-            <li>
-                <a href="{% url 'nest:page' event.key %}">
-                    <div class="timeline-badge mdl-shadow--2dp">
-                        {% if event.icon %}
-                        <img src="{{ event.icon }}" />
-                        {% else %}
-                        <p>{{ event.year }}</p>
-                        {% endif %}
-                    </div>
-                </a>
-                <div class="timeline-panel mdl-shadow--2dp">
-                    <h4 class="no-spacing"><a href="{% url 'nest:page' event.key %}">{{ event.title }}</a></h4>
-                    <div>
-                        {% for tag in event.tags %}
-                        <span class="label label-primary">{{ tag }}</span>
-                        {% endfor %}
-                    </div> 
-                    <div>
-                        <p>{{ event.summary }}</p>
-                    </div>
-                </div>
-            </li>
-        {% endfor %}
-    </ul>
+    {% include "nest/component/left_axis_timeline.html" %}
 </div>
 {% endblock %}

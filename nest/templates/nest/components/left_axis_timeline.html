@@ -11,7 +11,7 @@
                 </div>
             </a>
             <div class="timeline-panel mdl-shadow--2dp">
-                <h4 class="no-spacing"><a href="{% url 'nest:page' event.key %}">{{ event.title }}</a></h4>
+                <h4 class="no-spacing timeline-panel-title"><a href="{% url 'nest:page' event.key %}">{{ event.title }}</a></h4>
                 <div>
                     {% for tag in event.tags %}
                     <span class="label label-primary">{{ tag }}</span>

@@ -21,7 +21,7 @@
                             </a>
                             <div class="timeline-panel mdl-shadow--2dp">
                                 <div>
-                                    <h4><a href="{% url 'nest:page' project.name %}">{{ project.name }}</a></h4>
+                                    <h4 class="no-spacing timeline-panel-title"><a href="{% url 'nest:page' project.name %}">{{ project.name }}</a></h4>
                                 </div>
                                 <div>
                                     {% for tag in project.tags %}

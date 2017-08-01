@@ -89,11 +89,32 @@
     "application_card": {
         "key": "apps",
         "title": "Application Projects",
-        "description": "I helped different people to implement various applications, like database, or websites. These projects are usually more reliable and intended to improve the productivity.",
+        "description": "I worked with different people to implement various applications, like database, or websites. These projects are usually more reliable and intended to improve the productivity.",
         "image": "cards/MontaukPoint.jpg",
         "caption": "Montauk Point, NY",
         "events": [
-
+            {
+                "key": "crowdseq",
+                "title": "CrowdSeq Website",
+                "summary": "This website allow users to add annotation to genes and variants.",
+                "year": "2017",
+                "tags": [
+                    "Python",
+                    "Django",
+                    "Javascript"
+                ]
+            },
+            {
+                "key": "who",
+                "title": "Pathology Data Collection and Review System",
+                "summary": "We developed a web-based approach to pathology review that enables the integration of pathology data including high resolution images, reports and genomics data in a single easy to use resource.",
+                "year": "2017",
+                "tags": [
+                    "Python",
+                    "Django",
+                    "Javascript"
+                ]
+            }
         ]
     },
     "research_card": {
@@ -105,7 +126,7 @@
         "events": [
             {
                 "key": "QPOST",
-                "title": "Cost Effective Solutions to Maintaining Smart Grid Reliability",
+                "title": "Smart Grid Reliability",
                 "summary": "This project investigated the modeling, simulation and control of eletric power systems, including both the distribution and transmission systems. For the distribution system, we worked with the data from New York State Electric & Gas (NYSEG) to identify critical locations for installing power switching equipments. For the transmission system, we built hybrid simulation to incorporate discrete events and the fluctuations continuous states. Based on the simulation model, we designed fault diagnosis algorithm and proposed a data-driven decision making model to improve the reliability.",
                 "year": "2015",
                 "tags": [
