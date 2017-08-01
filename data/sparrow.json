@@ -1,4 +1,5 @@
 {
+    "title": "Sparrow",
     "astrology_card": {
         "key": "astrology",
         "title": "The Astrology - My Personal Ideas",
@@ -95,9 +96,39 @@
         "events": [
             {
                 "key": "crowdseq",
-                "title": "CrowdSeq Website",
-                "summary": "This website allow users to add annotation to genes and variants.",
+                "title": "CrowdSeq, Annotating Genes and Variants",
+                "summary": "This project consist of a database, a web server, a set of REST APIs and mobile apps (iOS and Android). It allow users search for genes/variants, view the existing anntations and add their own annotations. The annotations are generally based on the studies between genes, variants and diseases.",
                 "year": "2017",
+                "tags": [
+                    "Python",
+                    "Django",
+                    "Javascript",
+                    "Google Cloud Platform",
+                    "Database",
+                    "REST API",
+                    "iOS App",
+                    "Android App"
+                ]
+            },
+            {
+                "key": "davelab_db",
+                "title": "Database for Genomic Sequencing and Analysis",
+                "summary": "This project develops a database, web interface and APIs for tracking patient samples throughout genomic sequencing and analysis process.",
+                "year": "2017",
+                "tags": [
+                    "Python",
+                    "Django",
+                    "Javascript",
+                    "Google Cloud Platform",
+                    "Database",
+                    "REST API"
+                ]
+            },
+            {
+                "key": "who",
+                "title": "Pathology Data Collection and Review System",
+                "summary": "We developed a web-based approach to pathology review that enables the integration of pathology data including high resolution images, reports and genomics data in a single easy to use resource.",
+                "year": "2016",
                 "tags": [
                     "Python",
                     "Django",
@@ -105,14 +136,27 @@
                 ]
             },
             {
-                "key": "who",
-                "title": "Pathology Data Collection and Review System",
-                "summary": "We developed a web-based approach to pathology review that enables the integration of pathology data including high resolution images, reports and genomics data in a single easy to use resource.",
-                "year": "2017",
+                "key": "congdon_db",
+                "title": "Database for Appraisal Business",
+                "summary": "Developed a Microsoft Access database (with VBA) to replace an IBM approach database.",
+                "year": "2015",
                 "tags": [
-                    "Python",
-                    "Django",
-                    "Javascript"
+                    "MS Access",
+                    "VBA",
+                    "Google Maps API",
+                    "Database"
+                ]
+            },
+            {
+                "key": "abet_db",
+                "title": "ABET Accreditation Document Database",
+                "summary": "Developed curriculum database with Microsoft Access, SQL and VBA scripts to store curriculum data and documents.",
+                "year": "2012",
+                "tags": [
+                    "MS Access",
+                    "VBA",
+                    "Google Maps API",
+                    "Database"
                 ]
             }
         ]
@@ -159,6 +203,8 @@
                 "summary": "This project investigated the network communication protocols, data transfer and data conversion between different commercial software.",
                 "year": "2009",
                 "tags": [
+                    "C++",
+                    "Simulation"
                 ]
             }
         ]
