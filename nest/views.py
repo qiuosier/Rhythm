@@ -82,7 +82,7 @@ def page(request, filename):
 
 
 def cards(request, filename):
-    return load_data_and_render(request, filename, "cards")
+    return load_data_and_render(request, "cards/" + filename, "cards")
 
 
 def timeline(request, filename):
