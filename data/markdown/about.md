@@ -6,21 +6,21 @@ I intended to make my bird nest look great in any screen with responsive design.
 
 ![Responsive Design](../../static/images/markdown/ResponsiveDesign.jpg)
 
-# My Little Birds
+## My Little Birds
 
-## Swift
+### Swift
 It was February 13th 2006, one day before the Valentine's Day, I used "Swift" to name my blog on MSN live space. Now live space no longer live, and Swift moved to Wordpress. I haven't really write anything since I started my PhD. Working towards a PhD does not keep me busy. But, there are just so many distractions...
 
-## Skylark
+### Skylark
 Skylark started its journey in 2010, as Wordpress does not provide a gallery. I used Aperture to sync the pictures with Flickr. As Apple no longer update Aperture, I moved my pictures to Lightroom. Since then, I was too lazy to reconnect Flickr...
 
-## Sparrow
+### Sparrow
 Sparrow was used to host my works, with a history that can be traced back to 2009. Linkedin was not that popular at that time, so I also ask Sparrow to pick up my resume. When looking at the history of Sparrow, I see the ideas are changing so rapidly...
 
-## Swan
+### Swan
 Swan is young, she enjoy the leisure time with me...
 
-# Qiu Qin
+## Qiu Qin
 My name pronounces like "Chiu Chin". I always feel my names are elegant as you can rotate the "u" to get an "n". In Chinese, my first name comes from the first song of the Classic of Poetry, the oldest existing collection of Chinese poetry. And my last name can be found in the second piece of it. Thanks to my parents.
 
 I was born on a mountainside and grew up near the south China sea. Learn more about my footprints with [Swan](/Swan "Swan").

@@ -1,20 +1,31 @@
 ﻿/* Heading size */
 h1 {
-    font-size: 40px;
+    font-size: 36px;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 10px; 
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px; 
 }
 
 h4 {
-    font-size: 24px;
-    margin-top: 12px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px; 
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 a {
@@ -109,16 +120,6 @@ a:hover {
 .spacer-15px {
     height: 15px;
 }
-
-.latex-font h1,
-.latex-font h2,
-.latex-font h3,
-.latex-font h4,
-.latex-font h5,
-.latex-font h6 {
-    font-family: "latex-font";
-} 
-
 
 .blue-ribbon {
     position: absolute;

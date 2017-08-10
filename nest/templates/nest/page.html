@@ -1,13 +1,13 @@
 {% extends "nest/base.html" %}
 {% block head %}
 {% load staticfiles %}
-<link rel="stylesheet" href="{% static 'nest/latex.css' %}" />
+<link rel="stylesheet" href="{% static 'cmu-serif/cmun-serif.css' %}" />
 <link rel="stylesheet" href="{% static 'nest/markdown.css' %}" />
 {% endblock %}
 
 {% block content %}
 <div class="blue-ribbon"></div>
-<div class="paper-content markdown mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 latex-font">
+<div class="paper-content markdown mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 cmu-serif">
     {{ html_content|safe }}
 </div>
 {% endblock %}
