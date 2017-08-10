@@ -2,7 +2,7 @@
     "title": "Sparrow",
     "astrology_card": {
         "key": "astrology",
-        "title": "The Astrology - My Personal Ideas",
+        "title": "After Work...The Astrology Collection",
         "description": "Astrology is a collection of my ideas and personal projects. I like to built things in my spare time. Writing computer programs is a great way to build things. However, engineering is more than software...",
         "image": "cards/NYCLights.jpg",
         "caption": "Lights, New York City",
@@ -87,10 +87,10 @@
             }
         ]
     },
-    "application_card": {
-        "key": "apps",
-        "title": "Application Projects",
-        "description": "I worked with different people to implement various applications, like database, or websites. These projects are usually more reliable and intended to improve the productivity.",
+    "work_card": {
+        "key": "work",
+        "title": "At Work...",
+        "description": "I worked with different people to implement reliable applications, like databases and websites. I also worked on exploratory research projects. These projects may not become applications eventually. However, they help us explore the unknown territories",
         "image": "cards/MontaukPoint.jpg",
         "caption": "Montauk Point, NY",
         "events": [
@@ -136,39 +136,6 @@
                 ]
             },
             {
-                "key": "congdon_db",
-                "title": "Database for Appraisal Business",
-                "summary": "Developed a Microsoft Access database (with VBA) to replace an IBM approach database.",
-                "year": "2015",
-                "tags": [
-                    "MS Access",
-                    "VBA",
-                    "Google Maps API",
-                    "Database"
-                ]
-            },
-            {
-                "key": "abet_db",
-                "title": "ABET Accreditation Document Database",
-                "summary": "Developed curriculum database with Microsoft Access, SQL and VBA scripts to store curriculum data and documents.",
-                "year": "2012",
-                "tags": [
-                    "MS Access",
-                    "VBA",
-                    "Google Maps API",
-                    "Database"
-                ]
-            }
-        ]
-    },
-    "research_card": {
-        "key": "research",
-        "title": "Research Projects",
-        "description": "Being in the school for a long time, I also work on exploratory projects. These projects may not become applications eventually. However, they help us explore the unknown territories",
-        "image": "cards/AreciboObservatory.jpg",
-        "caption": "Arecibo Observatory, PR",
-        "events": [
-            {
                 "key": "QPOST",
                 "title": "Smart Grid Reliability",
                 "summary": "This project investigated the modeling, simulation and control of eletric power systems, including both the distribution and transmission systems. For the distribution system, we worked with the data from New York State Electric & Gas (NYSEG) to identify critical locations for installing power switching equipments. For the transmission system, we built hybrid simulation to incorporate discrete events and the fluctuations continuous states. Based on the simulation model, we designed fault diagnosis algorithm and proposed a data-driven decision making model to improve the reliability.",
@@ -182,6 +149,18 @@
                     "Kalman Filter",
                     "Markov Model",
                     "Optimization"
+                ]
+            },
+            {
+                "key": "abet_db",
+                "title": "ABET Accreditation Document Database",
+                "summary": "Developed curriculum database with Microsoft Access, SQL and VBA scripts to store curriculum data and documents.",
+                "year": "2012",
+                "tags": [
+                    "MS Access",
+                    "VBA",
+                    "Google Maps API",
+                    "Database"
                 ]
             },
             {
