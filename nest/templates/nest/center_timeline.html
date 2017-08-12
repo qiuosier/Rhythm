@@ -1,0 +1,39 @@
+{% extends "nest/base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'nest/timeline.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="page-content">
+    <div class="row">
+        <ul class="timeline center-axis" id="swan-timeline">
+            {% for entry in journeys %}
+            <li class="{% cycle 'left-panel' 'right-panel' %}">
+                <a href="{% url 'nest:rhythm' 'entry.key' %}">
+                    <div class="timeline-badge mdl-shadow--2dp">
+                        <p>{{ entry.year }}</p>
+                    </div>
+                </a>
+                <div class="center-axis-line"></div>
+                <a href="{% url 'nest:rhythm' 'entry.key' %}">
+                    <div class="timeline-panel mdl-shadow--2dp">
+                        <div class="timeline-image">
+                            <img src="{% static 'images/swan/home/Small_'|add:entry.key|add:'.jpg' %}" />
+                        </div>
+                        <div class="image-caption">
+                            <h4>
+                                {{ entry.title }}
+                            </h4>
+                            <p>{{ entry.location }}</p>
+                            <p>{{ entry.description }}</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

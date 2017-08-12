@@ -1,5 +1,64 @@
 {
     "title": "Swan",
+    "markers": [
+        {
+            "key": "Duke",
+            "title": "Chapel Hill, NC",
+            "description": "Walking through the Duke garden to work...",
+            "location": "{ lat: 35.913200, lng: -79.055845 }",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+        },
+        {
+            "key": "Hackensack",
+            "title": "Hackensack, NJ",
+            "description": "Take another break, think of a picture...",
+            "location": "{ lat: 40.885933, lng: -74.043474 }",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+        },
+        {
+            "key": "Binghamton",
+            "title": "Binghamton, NY",
+            "description": "Enjoy the peace of counrtyside...",
+            "location": "{ lat: 42.098687, lng: -75.917974 }",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+        },
+        {
+            "key": "Lhasa",
+            "title": "Lhasa, China",
+            "description": "Living at 11k feet for a year, a unique experience for me...",
+            "location": "{ lat: 29.652491, lng: 91.172110 }",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+        },
+        {
+            "key": "Xian",
+            "title": "Xi'an, China",
+            "description": "Immersing in an ancient city...",
+            "location": "{ lat: 34.341574, lng: 108.939770 }",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+            "image": "/static/images/swan/home/Small_XA.jpg"
+        },
+        {
+            "key": "Guangzhou",
+            "title": "Guangzhou, China",
+            "description": "Four years in college, for endless memory...",
+            "location": "{ lat: 23.129110, lng: 113.264385 }",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+        },
+        {
+            "key": "Jiangmen",
+            "title": "Jiangmen, China",
+            "description": "The place I grew up, about 65 miles from the south China sea.",
+            "location": "{ lat: 22.579117, lng: 113.081508 }",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+        },
+        {
+            "key": "Guanchun",
+            "title": "Shaoguan, China",
+            "description": "I was born here...",
+            "location": "{ lat: 25.212376, lng: 113.055090 }",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+        }
+    ],
     "journeys": [
         {
             "key": "JM",

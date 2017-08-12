@@ -2,38 +2,81 @@
 {% load staticfiles %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'nest/timeline.css' %}" />
+<link rel="stylesheet" href="{% static 'nest/map.css' %}" />
 {% endblock %}
 
 {% block content %}
-<div class="page-content">
-    <div class="row">
-        <ul class="timeline center-axis" id="swan-timeline">
-            {% for entry in journeys %}
-            <li class="{% cycle 'left-panel' 'right-panel' %}">
-                <a href="{% url 'nest:rhythm' 'entry.key' %}">
-                    <div class="timeline-badge mdl-shadow--2dp">
-                        <p>{{ entry.year }}</p>
-                    </div>
-                </a>
-                <div class="center-axis-line"></div>
-                <a href="{% url 'nest:rhythm' 'entry.key' %}">
-                    <div class="timeline-panel mdl-shadow--2dp">
-                        <div class="timeline-image">
-                            <img src="{% static 'images/swan/home/Small_'|add:entry.key|add:'.jpg' %}" />
-                        </div>
-                        <div class="image-caption">
-                            <h4>
-                                {{ entry.title }}
-                            </h4>
-                            <p>{{ entry.location }}</p>
-                            <p>{{ entry.description }}</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+<div id="swan-map"></div>
+<script>
+function initMap() {
+    // Set the height of the map
+    var mapHeight = window.innerHeight - $("header").outerHeight() - $("footer").outerHeight()
+    $("#swan-map").height(mapHeight);
+
+    var mapCenter = { lat: 35, lng: 139 };
+    var map = new google.maps.Map(document.getElementById('swan-map'), {
+        zoom: 3,
+        center: mapCenter
+    });
+
+    var infoWindow = [];
+    var markers = [
+        {% for marker in markers %}
+        {
+            title: "{{ marker.title }}",
+            description: "{{ marker.description }}",
+            location: {{ marker.location }},
+            {% if marker.icon %}
+            icon: "{{ marker.icon }}",
+            {% else %}
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            {% endif %}
+            {% if marker.image %}
+            image: "{{ marker.image }}",
+            {% else %}
+            image: "",
+            {% endif %}
+        },
+        {% endfor %}
+    ];
+    var mapMarkers = [];
+
+    for (var i = 0; i < markers.length; i++) {
+        var contentString = '<div>' +
+            '<h3>' + markers[i].title + '</h3>' +
+            '<div>' +
+            '<p>' + markers[i].description + '</p>' +
+            '<a href=\"#\">More</a>' +
+            '<img class=\"img-info-window img-responsive\" src=\"' + markers[i].image + '\" />' +
+            '</div>' +
+            '</div>';
+
+        infoWindow[i] = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        mapMarkers[i] = new google.maps.Marker({
+            map: map,
+            position: markers[i].location,
+            icon: markers[i].icon,
+            title: markers[i].title
+        });
+
+        mapMarkers[i].addListener('mouseover', (function(marker, i) {
+            return function() {
+                infoWindow[i].open(map, mapMarkers[i]);
+            }
+        })(mapMarkers[i], i));
+
+        mapMarkers[i].addListener('mouseout', (function(marker, i) {
+            return function() {
+                infoWindow[i].close();
+            }
+        })(mapMarkers[i], i));
+    }
+}
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf3PU4HdkjwNXlvy7VwOEglHVE4glbmNc&callback=initMap">
+</script>
 {% endblock %}
