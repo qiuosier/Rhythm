@@ -1,0 +1,27 @@
+.nest-card-image {
+    height: 200px;
+}
+
+.nest-card-image-caption {
+    color: white;
+    font-size: smaller;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.75);
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.nest-card-title {
+    font-weight: bold;
+}
+
+.nest-blue-ribbon {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 40vh;
+    background-color: #C5CAE9;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+}

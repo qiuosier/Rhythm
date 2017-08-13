@@ -1,14 +1,14 @@
 {% extends "nest/base.html" %}
 
 {% block content %}
-<div class="nest-cards-content">
+<div class="content-narrow">
     {% for card in cards %}
     <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
-        <div class="mdl-card__media mdl-color-text--grey-50 nest-cards-image" style="background-image: url(/static/images/{{ card.image }});">
-            <div class="nest-cards-image-caption">{{ card.caption }}</div>
+        <div class="mdl-card__media mdl-color-text--grey-50 nest-card-image" style="background-image: url(/static/images/{{ card.image }});">
+            <div class="nest-card-image-caption">{{ card.caption }}</div>
         </div>
         <div class="mdl-card__supporting-text mdl-color-text--grey-800 mdl-card--border">
-            <h4 class="nest-cards-title no-spacing">{{ card.title }}</h4>
+            <h4 class="nest-card-title no-spacing">{{ card.title }}</h4>
         </div>
         <div class="mdl-card__supporting-text mdl-color-text--grey-600 mdl-card--border">
             {{ card.description }}

@@ -25,7 +25,7 @@
             {% else %}
             <div class="item">
             {% endif %}
-            <img src="{{ entry.image }}" alt="" class="img-responsive" />
+            <img src="{{ entry.image }}" alt="" class="image-responsive" />
                 <div class="carousel-caption">
                     <p>
                         {{ entry.key }} - {{ entry.description}} <br />
@@ -41,12 +41,12 @@
         </div>
     </div>
 </div>
-<div class="page-content">
+<div class="content-center">
     <div class="mdl-grid" id="myBirds">
         {% for bird in birds %}
             <div class="mdl-cell mdl-cell--3-col-desktop mdl-card mdl-shadow--4dp">
                 <div class="mdl-card__media">
-                    <img class="img-full-width img-responsive" src="{{ bird.image }}" alt="" />
+                    <img class="image-full-width image-responsive" src="{{ bird.image }}" alt="" />
                 </div>
                 <div class="mdl-card__supporting-text">
                     {{ bird.description }}

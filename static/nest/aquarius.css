@@ -1,138 +1,36 @@
 ﻿/* Heading size */
 h1 {
-    font-size: 36px;
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 10px; 
 }
 
 h2 {
-    font-size: 28px;
-    line-height: 30px;
+    font-size: 26px;
+    line-height: 26px;
     margin-bottom: 10px; 
 }
 
 h3 {
-    font-size: 24px;
-    line-height: 24px;
-    margin-top: 15px;
+    font-size: 22px;
+    line-height: 22px;
+    margin-top: 10px;
     margin-bottom: 10px; 
 }
 
 h4 {
     font-size: 20px;
     line-height: 20px;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 10px; 
 }
 
+/* Paragraph */
 p {
     margin-top: 10px;
     margin-bottom: 0;
 }
 
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    margin-top: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.page-content {
-    max-width: 1250px;
-    margin: 0 auto;
-}
-
-.paper-content {
-    width: 850px;
-    border-radius: 2px;
-    padding: 50px 100px;
-    margin: 30px auto;
-    text-align: justify;
-}
-@media (max-width: 900px) {
-    .paper-content {
-        width: auto;
-        padding: 30px 20px;
-        margin: 10px 10px;
-    }
-}
-
-.nest-timeline-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.nest-cards-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.nest-cards-image {
-    height: 200px;
-}
-
-.nest-cards-image-caption {
-    color: white;
-    font-size: smaller;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.75);
-    text-align: right;
-    padding-right: 5px;
-    padding-top: 5px;
-}
-
-.nest-cards-title {
-    font-weight: bold;
-}
-
-.img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.img-full-width {
-    width: 100%;
-}
-
-.text-right-desktop {
-    text-align: right;
-}
-@media (max-width: 900px) {
-    .text-right-desktop {
-        text-align: left;
-    }
-}
-
-.no-spacing {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.spacer-15px {
-    height: 15px;
-}
-
-.blue-ribbon {
-    position: absolute;
-    z-index: -10;
-    width: 100%;
-    height: 40vh;
-    background-color: #C5CAE9;
-    flex-shrink: 0;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-}
-
-/* Paragraph */
 p.normal {
     font-style: normal;
 }
@@ -145,9 +43,72 @@ p.oblique {
     font-style: oblique;
 }
 
-/* Image Caption */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Wrapping element */
+/* Set the width and some basic padding to keep content from hitting the edges */
+.content-bs-fix-nav {
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content-center {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.content-paper {
+    width: 850px;
+    border-radius: 2px;
+    padding: 50px 100px;
+    margin: 30px auto;
+    text-align: justify;
+}
+@media (max-width: 900px) {
+    .content-paper {
+        width: auto;
+        padding: 30px 20px;
+        margin: 10px 10px;
+    }
+}
+
+.content-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Spacing */
+.no-spacing {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.spacer-15px {
+    height: 15px;
+}
+
+/* Image */
 .image-wrapper {
     position:relative;
+}
+
+.image-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.image-full-width {
+    width: 100%;
 }
 
 .image-caption {
@@ -171,23 +132,6 @@ p.oblique {
     font-size: 12px;
     line-height: 1.2;
     margin-bottom: 0px;
-}
-
-.image-caption-bottom {
-    z-index: 10;
-    padding-left: 20px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin: auto;
-    left: 0%;
-    bottom: 15px;
-    color: #fff;
-    text-align: left;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-    background: rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 0px 3px 3px rgba(255, 240, 160, 0.60);
-    width: 100%;
 }
 
 /* Quotes */
@@ -214,9 +158,7 @@ blockquote p {
     opacity: 0.5;
 }
 
-.blog-entry {
-    display:none
-}
+/* Clear Fix from bootstrap */
 
 .clearfix:after {
     clear: both;
@@ -230,4 +172,15 @@ blockquote p {
 }
 .clearfix {
     display: block;
+}
+
+/* Text Position */
+.text-right,
+.text-right-desktop {
+    text-align: right;
+}
+@media (max-width: 900px) {
+    .text-right-desktop {
+        text-align: left;
+    }
 }

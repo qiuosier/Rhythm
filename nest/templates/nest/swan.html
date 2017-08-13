@@ -42,12 +42,11 @@ function initMap() {
     var mapMarkers = [];
 
     for (var i = 0; i < markers.length; i++) {
-        var contentString = '<div>' +
+        var contentString = '<div class=\"image-wrapper\">' +
+            '<img class=\"img-info-window image-responsive\" src=\"' + markers[i].image + '\" />' +
+            '<div class=\"image-caption\">' +
             '<h3>' + markers[i].title + '</h3>' +
-            '<div>' +
             '<p>' + markers[i].description + '</p>' +
-            '<a href=\"#\">More</a>' +
-            '<img class=\"img-info-window img-responsive\" src=\"' + markers[i].image + '\" />' +
             '</div>' +
             '</div>';
 
