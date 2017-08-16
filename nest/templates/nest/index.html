@@ -62,11 +62,7 @@
 </div>
 <script>
     $(document).ready(function () {
-        // set image wraper initial height
-        var imageHeight = $('header').outerWidth() * 700 / 1920 / 2;
-        $("#myCarouselWrapper").css({
-            'height': imageHeight + 'px'
-        });
+        setImageHeight();
     });
 
     $(window).resize(function () {
@@ -74,18 +70,10 @@
     });
 
     $(window).ready(function () {
-        // Slide down and fade in
         setTimeout(function () {
-            // Animate image height
-            // Mininum height is set to 280px in css.
-            var imageHeight = Math.max(280, $('header').outerWidth() * 700 / 1920);
-            $("#myCarouselWrapper").animate({
-                height: imageHeight + 'px'
-            }, 1000, function () {
-                $("#myCarousel").animate({
-                    opacity: "1"
-                }, 1000);
-            });
+            $("#myCarousel").animate({
+                opacity: "1"
+            }, 1000);
         }, 1000);
     })
 

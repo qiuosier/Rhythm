@@ -1,7 +1,49 @@
-#swan-map {
-    min-height: 500px;
+.img-info-window {
+    max-height: 200px;
 }
 
-.img-info-window {
-    height: 200px;
+.square-wrapper {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    border: 1px solid white;
+    background-color: #2196F3;
+    color: white;
+    float: left;
+}
+
+.square-wrapper p {
+    padding: 5px;
+}
+
+.square-image {
+    height: 100px;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+}
+
+.square-caption {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    bottom: 5px;
+    left: 5px;
+}
+
+#swan-map-wrapper {
+    position: relative;
+}
+
+#swan-map {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    top: 0;
+}
+
+#swan-squares {
+    position: absolute;
+    z-index: 10;
+    top: 0;
 }

@@ -2,7 +2,7 @@
 This folder contains files in "[Markdown](daringfireball.net/projects/markdown "The Markdown Project Homepage")" format. These files in this folder are used as the sources of some pages on this website. The Markdown format provides a simple way to write and format lightweight text documents.
 
 ## Displaying Markdown Files
-The URL pattern for displaying a file in this folder is `/markdown/<filename>/`, where `<filename>` is the filename without extension (.md). When user visits the URL, the Django view function (`nest.page`) loads a file in this folder, convert it to HTML, and render it with the `nest/templates/nest/page.html` template.
+The URL pattern for displaying a file in this folder is `/markdown/<filename>/`, where `<filename>` is the filename without extension (.md). When user visits the URL, the Django view function (`nest.page`) loads a file in this folder, convert it to HTML, and render it with the `nest/templates/nest/paper.html` template.
 
 ## Location of this folder
 The location of this folder affects the image rendering in the Markdown files. 

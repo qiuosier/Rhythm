@@ -14,14 +14,14 @@
                 {% for project in card.events %}
                     <li>
                         {% if project.summary %}
-                            <a href="{% url 'nest:page' project.name %}">
+                            <a href="{% url 'nest:paper' project.name %}">
                                 <div class="timeline-badge mdl-shadow--2dp {{ project.name }}">
                                     <img src="/static/images/zodiac/icon-zodiac-{{ project.name }}.png" />
                                 </div>
                             </a>
                             <div class="timeline-panel mdl-shadow--2dp">
                                 <div>
-                                    <h4 class="no-spacing timeline-panel-title"><a href="{% url 'nest:page' project.name %}">{{ project.name }}</a></h4>
+                                    <h4 class="no-spacing timeline-panel-title"><a href="{% url 'nest:paper' project.name %}">{{ project.name }}</a></h4>
                                 </div>
                                 <div>
                                     {% for tag in project.tags %}

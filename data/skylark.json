@@ -1,0 +1,64 @@
+{
+    "collections": [
+        {
+            "title": "City",
+            "description": "",
+            "image": "IMGP5557.jpg",
+            "key": "city"
+        },
+        {
+            "title": "Perspective",
+            "description": "",
+            "image": "IMGP0439.jpg",
+            "key": "perspective"
+        },
+        {
+            "title": "Moment",
+            "description": "",
+            "image": "IMGP0376.jpg",
+            "key": "moment"
+        },
+        {
+            "title": "Still",
+            "description": "",
+            "image": "IMGP4655.jpg",
+            "key": "still"
+        },
+        {
+            "title": "Blur",
+            "description": "",
+            "image": "IMG_20151222_175339-EFFECTS.jpg",
+            "key": "blur"
+        },
+        {
+            "title": "Green",
+            "description": "",
+            "image": "IMGP4184.jpg",
+            "key": "green"
+        },
+        {
+            "title": "Blue",
+            "description": "",
+            "image": "YamzhogYumco.jpg",
+            "key": "blue"
+        },
+        {
+            "title": "Yellow",
+            "description": "",
+            "image": "IMG_20151010.jpg",
+            "key": "yellow"
+        },
+        {
+            "title": "Pink",
+            "description": "",
+            "image": "IMGP0001.jpg",
+            "key": "pink"
+        },
+        {
+            "title": "Panorama",
+            "description": "",
+            "image": "IMGP7695-Pano.jpg",
+            "key": "pano"
+        }
+    ]
+}
