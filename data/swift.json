@@ -1,0 +1,16 @@
+{
+    "blogs": [
+        {
+            "title": "D8C8",
+            "summary": "ABCD",
+            "size": "mdl-cell--8-col",
+            "image": "GatewayArch.jpg"
+        },
+        {
+            "title": "D4C8",
+            "summary": "ABCD",
+            "size": "mdl-cell--8-col mdl-cell--8-col mdl-cell--4-col-desktop",
+            "image": "AreciboObservatory.jpg"
+        }
+    ]
+}

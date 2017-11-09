@@ -1,0 +1,27 @@
+{% extends "nest/base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div class="mdl-grid content-center">
+    {% for blog in blogs %}
+    <div class="mdl-cell mdl-card mdl-shadow--4dp {{ blog.size }}">
+        <div class="mdl-card__media">
+            <img class="image-responsive" src="/static/images/swift/home/{{ blog.image }}" border="0" alt="">
+        </div>
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">{{ blog.title }}</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            {{ blog.summary }}
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="#"
+                data-upgraded=",MaterialButton,MaterialRipple">More<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
