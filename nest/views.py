@@ -57,9 +57,9 @@ def load_data_and_render(request, json_name, html_name=None):
     return render(request, html_file, load_json(json_name))
 
 
-def paper(request, filename):
-    """Loads data from a markdown file and renders it in the "paper" template.
-    Markdown files are stored in the "static/data" folder.
+def page(request, filename):
+    """Loads data from a markdown file and renders it in the "page" template.
+    Markdown files are stored in the "data/markdown" folder.
 
     Args:
         request: HTTP request.
@@ -78,7 +78,7 @@ def paper(request, filename):
         text,
         output_format="html5",
     )
-    return render(request, "nest/paper.html", {"html_content": html_content})
+    return render(request, "nest/page.html", {"html_content": html_content})
 
 
 def cards(request, filename):

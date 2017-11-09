@@ -11,7 +11,7 @@
         </div>
         {% if card.events %}
         <div class="mdl-card__supporting-text">
-            {% include "nest/components/left_axis_timeline.html" with events=card.events %}
+            {% include "nest/components/timeline_left_axis.html" with events=card.events %}
         </div>
         {% endif %}
         {% if card.link %}

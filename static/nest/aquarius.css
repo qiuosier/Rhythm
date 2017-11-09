@@ -64,7 +64,7 @@ a:hover {
     margin: 0 auto;
 }
 
-.content-paper {
+.content-page {
     width: 850px;
     border-radius: 2px;
     padding: 50px 100px;
@@ -72,7 +72,7 @@ a:hover {
     text-align: justify;
 }
 @media (max-width: 900px) {
-    .content-paper {
+    .content-page {
         width: auto;
         padding: 30px 20px;
         margin: 10px 10px;
