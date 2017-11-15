@@ -1,16 +1,18 @@
 {
     "blogs": [
         {
-            "title": "D8C8",
-            "summary": "ABCD",
-            "size": "mdl-cell--8-col",
-            "image": "GatewayArch.jpg"
-        },
-        {
-            "title": "D4C8",
-            "summary": "ABCD",
+            "title": "Arecibo Observatory",
+            "summary": "Listening to waves...",
             "size": "mdl-cell--8-col mdl-cell--8-col mdl-cell--4-col-desktop",
             "image": "AreciboObservatory.jpg"
+        },
+        {
+            "title": "Gateway to the West",
+            "summary": "It is always hard to find time to travel for a long time. Finally, I got a chance to plan a trip to the west...",
+            "size": "mdl-cell--8-col",
+            "image": "GatewayArch.jpg",
+            "name": "20170504_GatewayArch",
+            "time": "May 4th, 2016"
         }
     ]
 }

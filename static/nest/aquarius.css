@@ -3,14 +3,14 @@ h1 {
     font-size: 32px;
     line-height: 36px;
     margin-bottom: 10px; 
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 h2 {
     font-size: 26px;
     line-height: 28px;
     margin-bottom: 10px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 h3 {
