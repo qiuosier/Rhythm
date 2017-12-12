@@ -13,6 +13,11 @@ def index(request):
     return load_data_and_render(request, "index")
 
 
+def skylark_collection(request, collection):
+    data = load_json("skylark/" + collection)
+    return render(request, "nest/skylark_collection.html", data)
+
+
 def load_json(filename):
     """Loads data from a JSON file to a Python dictionary
     JSON files are stored in the "/data" folder.

@@ -1,0 +1,21 @@
+{
+    "title": "City Collection",
+    "key": "city",
+    "photos": [
+        {
+            "title": "Toronto",
+            "description": "",
+            "image": "IMGP1466.jpg"
+        },
+        {
+            "title": "Shanghai",
+            "description": "",
+            "image": "IMGP2438.jpg"
+        },
+        {
+            "title": "Denver",
+            "description": "",
+            "image": "IMGP5557.jpg"
+        }
+    ]
+}

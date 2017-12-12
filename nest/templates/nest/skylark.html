@@ -6,21 +6,27 @@
 
 {% block content %}
 <div class="mdl-grid content-center">
+    <div class="mdl-cell mdl-cell--12-col">
+        <h1>The Skylark Gallery</h1>
+    </div>
     {% for collection in collections %}
     <div class="mdl-cell mdl-card mdl-shadow--4dp">
         <div class="mdl-card__media">
             <img class="image-responsive" src="/static/images/skylark/home/Medium_{{ collection.image }}" border="0" alt="">
         </div>
         <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">{{ collection.title }}</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur
-            ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="/page/construction/"
-                data-upgraded=",MaterialButton,MaterialRipple">More<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+            <div class="mdl-grid mdl-grid--no-spacing" style="width: 100%">
+                <div class="mdl-cell mdl-cell--9-col">
+                    <h2 class="mdl-card__title-text">{{ collection.title }}</h2>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col">
+                    {% if collection.key %}
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{% url 'nest:skylark_collection' collection.key %}"
+                        data-upgraded=",MaterialButton,MaterialRipple">More<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+                    {% endif %}
+                </div>
+            </div>
+            
         </div>
     </div>
     {% endfor %}
