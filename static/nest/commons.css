@@ -48,6 +48,10 @@ input.btn {
     padding: 0;
 }
 
+.padding-15px {
+    padding: 15px;
+}
+
 .half-width {
     width: 50%;
 }

@@ -5,18 +5,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="mdl-grid content-center">
-    <div class="mdl-cell mdl-cell--12-col">
-        <h1>The Skylark Gallery - {{ title }}</h1>
-    </div>
+<h1>The Skylark Gallery - {{ title }}</h1>
+<div class="row">
     {% for photo in photos %}
-    <div class="mdl-cell mdl-card mdl-shadow--4dp">
-        <div class="mdl-card__media">
+    <div class="col-md-4" style="padding: 7px 7px;">
+        <div class="md-raised-6px no-margin no-padding">
             <img class="img-fluid" src="/static/images/skylark/{{ key }}/{{ photo.image }}" border="0" alt="">
-        </div>
-        <div class="mdl-card__title">
-            <div class="mdl-grid mdl-grid--no-spacing" style="width: 100%">
-                <h2 class="mdl-card__title-text">{{ photo.title }}</h2>
+            <div class="padding-15px">
+                <h4>{{ photo.title }}</h4>
+                <small><i>{{ photo.date }}</i></small><br />
+                <small><i>{{ photo.meta }}</i></small>
+                <p>{{ photo.description }}</p>
             </div>
         </div>
     </div>

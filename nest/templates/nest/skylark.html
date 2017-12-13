@@ -16,7 +16,7 @@
             </div>
             <div class="spacer-15px"></div>
             <div class="text-center">
-                <h5>
+                <h4>
                     {% if collection.key %}
                     <a class="" href="{% url 'nest:skylark_collection' collection.key %}">
                         {{ collection.title }}
@@ -24,8 +24,7 @@
                     {% else %}
                         {{ collection.title }}
                     {% endif %}
-                </h5>
-                
+                </h4>
             </div>
         </div>
     </div>
