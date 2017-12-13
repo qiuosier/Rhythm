@@ -62,28 +62,6 @@ def load_data_and_render(request, json_name, html_name=None):
     return render(request, html_file, load_json(json_name))
 
 
-def render_markdown(request, markdown_file):
-    """Loads data from a markdown file and renders it in the "page" template.
-
-    Args:
-        request: HTTP request.
-        markdown_file: Filename with full path and extension (.md).
-
-    Returns: HTTP Response.
-
-    """
-    if os.path.exists(markdown_file):
-        with open(markdown_file) as f:
-            text = f.read()
-    else:
-        return HttpResponseNotFound(markdown_file + " not found.")
-    html_content = markdown.markdown(
-        text,
-        output_format="html5",
-    )
-    return render(request, "nest/page.html", {"html_content": html_content})
-
-
 def page(request, filename):
     """Renders a markdown file stored in the "data/markdown" folder.
 
@@ -95,7 +73,19 @@ def page(request, filename):
 
     """
     markdown_file = os.path.join(settings.BASE_DIR, "data", "markdown", filename + ".md")
-    return render_markdown(request, markdown_file)
+    if os.path.exists(markdown_file):
+        with open(markdown_file) as f:
+            text = f.read()
+    else:
+        return HttpResponseNotFound(markdown_file + " not found.")
+    html_content = markdown.markdown(
+        text,
+        output_format="html5",
+    )
+    return render(request, "nest/page.html", {
+        "title": filename.title(),
+        "html_content": html_content
+    })
 
 
 def cards(request, filename):
