@@ -198,7 +198,7 @@
 /* Text size inside the badge */
 .timeline > li .timeline-badge p{
     font-size: 1.0em;
-    margin-top: 12px;
+    margin-top: 2px;
     margin-bottom: 0px;
 }
 /* Icon size inside the badge */

@@ -3,19 +3,17 @@
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'nest/timeline.css' %}" />
-<link rel="stylesheet" href="{% static 'nest/bs_label.css' %}" />
 <link rel="stylesheet" href="{% static 'nest/astrology.css' %}" />
 {% endblock %}
 
 {% block content %}
-<div class="content-center">
-    <div class="mdl-grid mdl-grid--no-spacing">
-        <div class="mdl-cell mdl-cell--6-col">
-            {% include "nest/components/card_work.html" with card=work_card %}
-        </div>
-        <div class="mdl-cell mdl-cell--6-col">
-            {% include "nest/components/card_astrology.html" with card=astrology_card %}
-        </div>
+<h1>Sparrow's Work</h1>
+<div class="row">
+    <div class="col-md-6">
+        {% include "nest/components/card_work.html" with card=work_card %}
+    </div>
+    <div class="col-md-6">
+        {% include "nest/components/card_astrology.html" with card=astrology_card %}
     </div>
 </div>
 {% endblock %}
