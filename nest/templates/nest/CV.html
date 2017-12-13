@@ -4,71 +4,70 @@
 <link rel="stylesheet" href="{% static 'cmu-serif/cmun-serif.css' %}" />
 {% endblock %}
 
-{% block content %}
-<div class="content-center">
-    <div class="content-page mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 cmu-serif">
-        <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--6-col">
-                <h1>Qiu Qin</h1>
-            </div>
-            <div class="mdl-cell mdl-cell--6-col text-right-desktop">
+{% block container %}
+<div class="nest-blue-ribbon"></div>
+<div class="spacer-15px"></div>
+<div class="container cmu-serif">
+    <div class="page md-raised-6px">
+        <div class="row">
+            <div class="col-md-6"><h1>Qiu Qin</h1></div>
+            <div class="col-md-6 text-right">
                 <p>
-                    {% for line in address %}
-                        {{ line }}<br />
-                    {% endfor %}
+                    {% for line in address %} {{ line }}
+                    <br /> {% endfor %}
                 </p>
             </div>
         </div>
         <h3>Experience</h3>
-        <div class="mdl-grid">
-        {% for ex in experience %}
-            <div class="mdl-cell mdl-cell--8-col no-spacing">
-                <p class="no-spacing">
-                    {{ ex.position }}<br />
-                    {{ ex.employer }}
-                </p>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col no-spacing text-right-desktop">
-                <p class="no-spacing">
-                    {{ ex.time }}<br />
-                    {{ ex.location }}
-                </p>
-            </div>
-            <div class="mdl-cell mdl-cell--12-col"></div>
-        {% endfor %}
+        <div class="row">
+            {% for ex in experience %}
+                <div class="col-md-8">
+                    <p>
+                        {{ ex.position }}<br />
+                        {{ ex.employer }}
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        {{ ex.time }}<br />
+                        {{ ex.location }}
+                    </p>
+                </div>
+                <div class="spacer-15px"></div>
+            {% endfor %}
         </div>
+        <div class="spacer-15px"></div>
+        <div class="spacer-15px"></div>
         <h3>Education</h3>
-        <div class="mdl-grid">
+        <div class="row">
         {% for edu in education %}
-            <div class="mdl-cell mdl-cell--8-col no-spacing">
-                <p class="no-spacing">
+            <div class="col-md-8">
+                <p>
                     {{ edu.degree }} {{ edu.major }}<br />
                     {{ edu.school }}
                 </p>
             </div>
-            <div class="mdl-cell mdl-cell--4-col no-spacing text-right-desktop">
-                <p class="no-spacing">
+            <div class="col-md-4">
+                <p>
                     {{ edu.time }}<br />
                     {{ edu.location }}
                 </p>
             </div>
-            <div class="mdl-cell mdl-cell--12-col no-spacing">
-                <ul class="no-spacing">
+            <div class="col-md-12">
+                <ul>
                     {% for line in edu.description %}
                         <li>{{ line }}</li>
                     {% endfor %}
                 </ul>
             </div>
-            <div class="mdl-cell mdl-cell--12-col"></div>
         {% endfor %}
-        
         </div>
-        <h3>Publications</h3>
-        <div class="mdl-grid">
+        <div class="spacer-15px"></div>
+        <div class="spacer-15px"></div>
+        <h3>Peer Reviewed Publications</h3>
         {% for publication in publications %}
         <p>{{ publication }}</p>
         {% endfor%}
-        </div>
     </div>
 </div>
 {% endblock %}

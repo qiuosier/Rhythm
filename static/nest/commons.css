@@ -1,0 +1,67 @@
+/* Paragraph */
+p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+p.normal {
+    font-style: normal;
+}
+
+p.italic {
+    font-style: italic;
+}
+
+p.oblique {
+    font-style: oblique;
+}
+
+/* Button */
+input.btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.btn {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* Table */
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+/* Spacing */
+.no-spacing {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.spacer-15px {
+    height: 15px;
+}
+
+/* Form */
+.form-error {
+    font-size: smaller;
+    color: red;
+}

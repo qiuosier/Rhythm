@@ -5,52 +5,45 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }} - Qiu's Bird Nest</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'nest/material.css' %}" />
+    <link rel="stylesheet" href="{% static 'nest/commons.css' %}" />
+
     <link rel="stylesheet" href="{% static 'nest/aquarius.css' %}" />
     <link rel="stylesheet" href="{% static 'nest/aquarius_mdl.css' %}" />
-    <script src="{% static 'basic/jquery.min.js' %}"></script>
-    <script src="{% static 'basic/bootstrap.min.js' %}"></script>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" 
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" 
+        crossorigin="anonymous"></script>
+    <script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+
     {% block head %} 
     {% endblock %}
 </head>
 
 <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title">Qiu's Bird Nest</span>
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation. We hide it in small screens. -->
-                <nav class="mdl-navigation mdl-layout--large-screen-only">
-                    {% include "nest/components/mdl_nav.html" %}
-                </nav>
-            </div>
-        </header>
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Qiu's Bird Nest</span>
-            <nav class="mdl-navigation">
-                {% include "nest/components/mdl_nav.html" %}
-            </nav>
-        </div>
-        <main class="mdl-layout__content">
-            {% block content %} 
-            {% endblock %}
-            <div class="clearfix"></div>
-            <footer class="mdl-mini-footer nest-footer">
-                <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo">&copy; 2017</div>
-                    <ul class="mdl-mini-footer__link-list">
-                        <li><a href="/page/about/">Qiu Qin</a></li>
-                        <li><a href="{% url 'nest:page' 'privacy' %}">Privacy</a></li>
-                    </ul>
-                </div>
-            </footer>
-        </main>
+{% include "nest/components/nav_bar.html" %}
+
+{% block container %} 
+<div class="container">
+{% block content %}
+{% endblock content %}
+</div>
+{% endblock container %}
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">
+            &copy; 2017
+            <a href="/page/about/">Qiu Qin</a>.
+            <a href="{% url 'nest:page' 'privacy' %}">Privacy</a>
+        </p>
     </div>
+</footer>
     
 </body>
 </html>

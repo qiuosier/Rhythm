@@ -1,11 +1,8 @@
 {% extends "nest/base.html" %}
 {% load staticfiles %}
 
-{% block head %} 
-<link rel="stylesheet" href="{% static 'nest/bs_carousel.css' %}" />
-{% endblock %}
-
-{% block content %}
+{% block container %}
+<div class="container-fluid">
 
 <div id="myCarouselWrapper" class="row">
     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
@@ -18,20 +15,20 @@
             {% endif %}
             {% endfor %}
         </ol>
-        <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner">
             {% for entry in carousel_data %}
             {% if forloop.counter == 1 %}
-            <div class="item active">
+            <div class="carousel-item active">
             {% else %}
-            <div class="item">
+            <div class="carousel-item">
             {% endif %}
-            <img src="{{ entry.image }}" alt="" class="image-responsive" />
+            <img src="{{ entry.image }}" alt="" class="d-block img-fluid" />
                 <div class="carousel-caption">
                     <p>
                         {{ entry.key }} - {{ entry.description}} <br />
                         <small>Photo by Qiu, {{ entry.date }}</small>
                     </p>
-                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="{{ entry.link }}">
+                    <a class="btn btn-sm btn-default" href="{{ entry.link }}">
                         More
                     </a>
                     <p></p>
@@ -41,27 +38,7 @@
         </div>
     </div>
 </div>
-{% comment %}
-<div class="content-center">
-    <div class="mdl-grid" id="myBirds">
-        {% for bird in birds %}
-            <div class="mdl-cell mdl-cell--3-col-desktop mdl-card mdl-shadow--4dp">
-                <div class="mdl-card__media">
-                    <img class="image-full-width image-responsive" src="{{ bird.image }}" alt="" />
-                </div>
-                <div class="mdl-card__supporting-text">
-                    {{ bird.description }}
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ bird.link }}">
-                        More
-                    </a>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-</div>
-{% endcomment %}
+
 <script>
     $(document).ready(function () {
         setImageHeight();
