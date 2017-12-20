@@ -5,29 +5,22 @@
 {% endblock %}
 
 {% block content %}
-    <div class="mdl-grid content-center">
-        <div class="mdl-cell mdl-cell--12-col">
-            <h1>The Swift Blog</h1>
-        </div>
-        {% for blog in blogs %}
-        <div class="mdl-cell mdl-card mdl-shadow--4dp {{ blog.size }}">
-            <div class="mdl-card__media">
+<div class="spacer-15px"></div>
+<h1>The Swift Blog</h1>
+<div class="row">
+    {% for blog in blogs %}
+    <div class="{{ blog.class }} md-container">
+        <div class="md-raised-6px full-height">
+            <div class="md-image">
                 <img class="img-fluid" src="/static/images/swift/{{ blog.image }}" border="0" alt="">
+                <div class="spacer-15px"></div>
             </div>
-            <div class="mdl-card__supporting-text">
-                <h2 class="mdl-card__title-text mdl-color-text--grey-800">{{ blog.title }}</h2>
+            <div class="md-text">
+                <h4>{{ blog.title }}</h4>
                 <p>{{ blog.summary }}</p>
             </div>
-            {% if blog.name %}
-            <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
-                    href="{% url 'nest:page' 'swift/'|add:blog.name %}" data-upgraded=",MaterialButton,MaterialRipple">
-                    More
-                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
-                </a>
-            </div>
-            {% endif %}
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 {% endblock %}
