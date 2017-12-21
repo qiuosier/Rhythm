@@ -11,12 +11,17 @@
     {% for blog in blogs %}
     <div class="{{ blog.class }} md-container">
         <div class="md-raised-6px full-height">
+            {% if blog.image %}
             <div class="md-image">
                 <img class="img-fluid" src="/static/images/swift/{{ blog.image }}" border="0" alt="">
                 <div class="spacer-15px"></div>
             </div>
+            {% endif %}
             <div class="md-text">
-                <h4>{{ blog.title }}</h4>
+                <h4><a href="{% url 'nest:page' 'swift/'|add:blog.name %}">{{ blog.title }}</a></h4>
+                {% if blog.date %}
+                <small><i>{{ blog.date }}</i></small>
+                {% endif %}
                 <p>{{ blog.summary }}</p>
             </div>
         </div>

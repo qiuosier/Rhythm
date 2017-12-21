@@ -1,18 +1,52 @@
 {
+    "title": "Swift Blog",
     "blogs": [
+        {
+            "title": "Python IDE?",
+            "summary": "Python is popular in the lab I am working for. I have been playing with Python and Django almost every day in the last two months...",
+            "class": "col-md-6 col-sm-6",
+            "image": "20160806_PythonKeyboard.jpg",
+            "name": "20160806_PythonIDE",
+            "date": "August 6th, 2016"
+        },
         {
             "title": "Arecibo Observatory",
             "summary": "Listening to waves...",
-            "class": "col-md-4 col-sm-6",
-            "image": "AreciboObservatory.jpg"
+            "class": "col-md-6 col-sm-6",
+            "image": "20160601_AreciboObservatory.jpg",
+            "name": "",
+            "date": "June 1st, 2016"
         },
         {
             "title": "Gateway to the West",
             "summary": "It is always hard to find time to travel for a long time. Finally, I got a chance to plan a trip to the west...",
             "class": "col-md-8 col-sm-12",
-            "image": "GatewayArch.jpg",
+            "image": "20160424_GatewayArch.jpg",
             "name": "20170504_GatewayArch",
-            "time": "May 4th, 2016"
+            "date": "May 4th, 2016"
+        },
+        {
+            "title": "TopCoder, LeetCode and HackerRank",
+            "summary": "Tried all of them, still think TopCoder is the best, technically. I believe TopCoder has a much longer history. Not sure why my friends all suggested LeetCode. It seems that HackerRank has the best relationship with the companies.",
+            "class": "col-md-4 col-sm-6",
+            "name": "20160308_TopCoder",
+            "date": "March 8th, 2016"
+        },
+        {
+            "title": "Change is not Easy",
+            "summary": "I believe, for most people, once they get used to something, they don't like changes.",
+            "class": "col-md-4 col-sm-6",
+            "image": "20160108_EllisIslandBuilding.jpg",
+            "name": "20160218_ChangeIsNotEasy",
+            "date": "Feburary 18th, 2016"
+        },
+        {
+            "title": "Live in My Life",
+            "summary": "Met an old friend after more than ten years...We didn't have a lot to talk, but I was impressed by some small things.",
+            "class": "col-md-8 col-sm-12",
+            "image": "20160129_GoldenGateBridge.jpg",
+            "name": "20160205_LiveInMyLife",
+            "date": "Feburary 5th, 2016"
         }
     ]
 }
