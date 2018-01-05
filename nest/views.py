@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound
 from django.template.loader import get_template
 from django.template import TemplateDoesNotExist
-from google.appengine.api import urlfetch
 from django.conf import settings
 import os
 import json
@@ -94,14 +93,3 @@ def cards(request, filename):
 
 def timeline(request, filename):
     return load_data_and_render(request, filename, "timeline")
-
-
-def activate(request):
-    try:
-        r = urlfetch.fetch('http://qiu.azurewebsites.net', method='GET', deadline=20)
-        if r.status_code == 200:
-            return HttpResponse("Nest activated successfully.")
-        else:
-            return HttpResponseBadRequest("Status Code: " + str(r.status_code))
-    except Exception as ex:
-        return HttpResponse("Exception.")

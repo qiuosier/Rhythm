@@ -10,5 +10,4 @@ urlpatterns = [
     url(r'^page/(?P<filename>.*)/$', views.page, name='page'),
     url(r'^cards/(?P<filename>.*)/$', views.cards, name='cards'),
     url(r'^timeline/(?P<filename>.*)/$', views.timeline, name='timeline'),
-    url(r'^activate/$', views.activate, name='activate')
 ]
