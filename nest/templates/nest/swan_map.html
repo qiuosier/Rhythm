@@ -1,0 +1,115 @@
+{% extends "nest/base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'nest/map.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="swan-map-wrapper">
+    <div id="swan-map"></div>
+    <div id="swan-squares">
+        <div id="destinations" class="hidden" style="position: relative; vertical-align: top;">
+                <div class="square-wrapper">
+                    <!-- <div class="square-wrapper"> -->
+                        <p><strong>Destinations</strong></p>
+                    <!-- </div> -->
+                </div>
+                {% for m in destinations %}
+                <div class="square-wrapper">
+                    <!-- <div class="square-wrapper"> -->
+                        <span class="square-caption">{{ m.key }}</span>
+                        <img src="{{ m.image }}" class="square-image image-responsive fade" />
+                    <!-- </div> -->
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+function setMapHeight() {
+    var mapHeight = window.innerHeight - $("header").outerHeight() - 56;
+    $("#swan-map").height(mapHeight);
+    $("#swan-map-wrapper").height(mapHeight);
+}
+
+function initMap() {
+    // Set the height of the map
+    setMapHeight();
+
+    var mapCenter = { lat: 35, lng: 139 };
+    var map = new google.maps.Map(document.getElementById('swan-map'), {
+        zoom: 3,
+        center: mapCenter
+    });
+
+    var infoWindow = [];
+    var markers = [
+        {% for m in destinations %}
+        {
+            title: "{{ m.title }}",
+            description: "{{ m.description }}",
+            location: {{ m.location }},
+            {% if m.icon %}
+            icon: "{{ m.icon }}",
+            {% else %}
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            {% endif %}
+            {% if m.image %}
+            image: "{{ m.image }}",
+            {% else %}
+            image: "/static/images/swan/home/Small_{{ m.key }}.jpg",
+            {% endif %}
+        },
+        {% endfor %}
+    ];
+    var mapMarkers = [];
+
+    for (var i = 0; i < markers.length; i++) {
+        var contentString = '<div class=\"image-wrapper\">' +
+            '<img class=\"img-info-window image-responsive\" src=\"' + markers[i].image + '\" />' +
+            '<div class=\"image-caption\">' +
+            '<h3>' + markers[i].title + '</h3>' +
+            '<p>' + markers[i].description + '</p>' +
+            '</div>' +
+            '</div>';
+
+        infoWindow[i] = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        mapMarkers[i] = new google.maps.Marker({
+            map: map,
+            position: markers[i].location,
+            icon: markers[i].icon,
+            title: markers[i].title
+        });
+
+        // mapMarkers[i].addListener('click', function(){
+        //     var mapWidth = $("#swan-map").innerWidth();
+        //     var container = $("#swan-squares");
+        //     container.width(mapWidth / 2);
+        //     container.css("right", 0);
+        //     $("#destinations").appendTo(container);
+        //     $("#destinations").removeClass("hidden");
+        // });
+
+        // mapMarkers[i].addListener('mouseover', (function(marker, i) {
+        //     return function() {
+        //         infoWindow[i].open(map, mapMarkers[i]);
+        //     }
+        // })(mapMarkers[i], i));
+
+        // mapMarkers[i].addListener('mouseout', (function(marker, i) {
+        //     return function() {
+        //         infoWindow[i].close();
+        //     }
+        // })(mapMarkers[i], i));
+    }
+}
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf3PU4HdkjwNXlvy7VwOEglHVE4glbmNc&callback=initMap">
+</script>
+{% endblock %}
