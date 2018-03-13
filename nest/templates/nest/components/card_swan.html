@@ -1,0 +1,14 @@
+<div class="md-raised-6px full-height">
+    {% if entry.image %}
+    <div class="md-image">
+        <img class="img-fluid" src="{{ entry.image }}" border="0" alt="">
+        <div class="spacer-15px"></div>
+    </div>
+    {% endif %}
+    <div class="md-text">
+        <h4>{{ entry.title }}</h4>
+        <small>
+            <i>{{ entry.date }}</i>
+        </small>
+    </div>
+</div>

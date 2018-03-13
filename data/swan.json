@@ -1,5 +1,13 @@
 {
     "title": "Swan",
+    "last_trip": {
+        "name": "Seattle",
+        "title": "My Last Trip: Seattle",
+        "image": "/static/images/swan/home/20180115-IMGP0313.jpg",
+        "date": "January, 2018",
+        "summary": "",
+        "location": ""
+    },
     "destinations": [
         {
             "name": "NC",
@@ -67,14 +75,6 @@
         }
     ],
     "journeys": [
-        {
-            "name": "Seattle",
-            "title": "Seattle",
-            "image": "/static/images/swan/home/20180114_IMGP0277.jpg",
-            "date": "January, 2018",
-            "summary": "",
-            "location": ""
-        },
         {
             "name": "Istanbul",
             "title": "Istanbul",

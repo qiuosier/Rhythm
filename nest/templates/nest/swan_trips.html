@@ -6,25 +6,24 @@
 
 {% block content %}
 <h1>Swan's Footprint</h1>
+<h2>Journeys</h2>
 <div class="row">
-    <div class="col-md-9 md-container">
-        {% include "nest/components/card_swan.html" with entry=last_trip %}
-    </div>
+    {% for entry in journeys %}
     <div class="col-md-3 md-container">
         <div class="md-raised-6px full-height">
-            {% if journeys.0.image %}
+            {% if entry.image %}
             <div class="md-image">
-                <img class="img-fluid" src="{{ journeys.0.image }}" border="0" alt="">
+                <img class="img-fluid" src="{{ entry.image }}" border="0" alt="">
                 <div class="spacer-15px"></div>
             </div>
             {% endif %}
             <div class="md-text">
-                {% for entry in journeys|slice:"5" %}
-                <p>{{ entry.title }}</p>
-                {% endfor %}
+                <h4>{{ entry.title }}</h4>
+                <small><i>{{ entry.date }}</i></small>
             </div>
         </div>
     </div>
+    {% endfor %}
 </div>
 
 <h2>Destinations</h2>
