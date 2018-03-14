@@ -26,11 +26,13 @@
                 <div class="carousel-caption">
                     <p>
                         {{ entry.key }} - {{ entry.description}} <br />
-                        <small>Photo by Qiu, {{ entry.date }}</small>
+                        <small>{{ entry.date }}</small>
                     </p>
+                    {% if entry.link %}
                     <a class="btn btn-sm btn-default" href="{{ entry.link }}">
                         More
                     </a>
+                    {% endif %}
                     <p></p>
                 </div>
             </div>

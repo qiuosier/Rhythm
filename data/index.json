@@ -2,21 +2,28 @@
     "title": "Home",
     "carousel_data": [
         {
+            "key": "Cherry Blossom",
+            "description": "Sarah P. Duke Gardens",
+            "date": "March 9, 2017",
+            "image": "/static/images/carousel/DukeGardens.jpg"
+        },
+        {
             "key": "Downtown Manhattan",
             "description": "New York City",
-            "date": "April, 2015",
-            "image": "/static/images/carousel/IMGP3844.jpg"
+            "date": "April 26, 2015",
+            "image": "/static/images/carousel/NYCDowntown.jpg"
         },
         {
             "key": "Mt. Everest",
-            "description": "An Unforgettable Bike Trip",
-            "date": "July, 2011",
-            "image": "/static/images/carousel/MtEverestSunset.jpg"
+            "description": "Bike Across the Himalayas",
+            "date": "July 17, 2011",
+            "image": "/static/images/carousel/MtEverest.jpg",
+            "link": "page/swan/20110700_AcrossTheHimalayas"
         },
         {
-            "key": "Xi'an",
+            "key": "Walls, Xi'an",
             "description": "The Ancient City",
-            "date": "November, 2008",
+            "date": "November 28, 2008",
             "image": "/static/images/carousel/Xian.jpg"
         }
     ],
