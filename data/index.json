@@ -2,27 +2,27 @@
     "title": "Home",
     "carousel_data": [
         {
-            "key": "Cherry Blossom",
-            "description": "Sarah P. Duke Gardens",
+            "key": "Sarah P. Duke Gardens",
+            "description": "A Pleasant Walk to Work",
             "date": "March 9, 2017",
             "image": "/static/images/carousel/DukeGardens.jpg"
         },
         {
-            "key": "Downtown Manhattan",
-            "description": "New York City",
+            "key": "New York City",
+            "description": "Where Dreams Begin",
             "date": "April 26, 2015",
             "image": "/static/images/carousel/NYCDowntown.jpg"
         },
         {
             "key": "Mt. Everest",
-            "description": "Bike Across the Himalayas",
+            "description": "Spectacular Sunset while Biking Across the Himalayas",
             "date": "July 17, 2011",
             "image": "/static/images/carousel/MtEverest.jpg",
             "link": "page/swan/20110700_AcrossTheHimalayas"
         },
         {
-            "key": "Walls, Xi'an",
-            "description": "The Ancient City",
+            "key": "The Walls around Xi'an",
+            "description": "My Journey from The Ancient City",
             "date": "November 28, 2008",
             "image": "/static/images/carousel/Xian.jpg"
         }
