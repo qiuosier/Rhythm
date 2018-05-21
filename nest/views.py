@@ -1,11 +1,12 @@
+import os
+import json
+import markdown
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound
 from django.template.loader import get_template
 from django.template import TemplateDoesNotExist
 from django.conf import settings
-import os
-import json
-import markdown
+from . lib import ascii_char
 
 
 def index(request):
@@ -77,6 +78,8 @@ def page(request, filename):
             text = f.read()
     else:
         return HttpResponseNotFound(markdown_file + " not found.")
+
+    text = filter(ascii_char, text)
     html_content = markdown.markdown(
         text,
         output_format="html5",
