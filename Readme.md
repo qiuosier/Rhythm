@@ -17,13 +17,14 @@ Brief descriptions of the folders and files:
 This is a Python Django project, so it follows most of the Django project patterns. In addition, this project has some additional design patterns.
 
 ### Data Format
-Other than the logging middleware, this project does not use external database. The data for rendering web pages are stored in the "data" folder with as "JSON" or "Markdown" format.
+Other than the logging middleware, this project does not use external database. The data for rendering web pages are stored in the "data" folder with as "JSON" or "Markdown" format. In addition, HTML templates for rendering the data are stored in the "nest/templates/nest" folder.
 
 ### Rendering Webpage with Data
+The `nest/view.py` module contains two basic view functions for rendering the "JSON" and "Markdown" data, respectively. 
+* The `load_data_and_render` function loads a JSON file from the data folder and render an HTML template in the tempalte folder (most likely with the same filename, e.g. hello.json and hello.html).
+* The `page` function loads a markdown file and render it with the `page.html` template.
+
 ## Updating Pages with Management Commands
 ### Update Swift
 
 ### Update Swan
-The `update_swan` command does the following:
-1. Create an page entry from the swan template (templates/swan.html) for the photo if one does not exist.
-2. Update Swan home page and create thumbnails if needed.
