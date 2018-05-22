@@ -9,22 +9,15 @@ from django.conf import settings
 from . lib import ascii_char
 
 
-def index(request):
-    return load_data_and_render(request, "index")
-
-
-def skylark_collection(request, collection):
-    data = load_json("skylark/" + collection)
-    return render(request, "nest/skylark_collection.html", data)
-
-
 def load_json(filename):
     """Loads data from a JSON file to a Python dictionary
     JSON files are stored in the "/data" folder.
-    Data will be empty if JSON file does not exist.
 
     Args:
         filename: Filename without extension.
+
+    Returns: A python dictionary containing data from the json file.
+        An empty dictionary will be returned if the data file is not found.
 
     """
     json_file = os.path.join(settings.BASE_DIR, "data", filename + ".json")
@@ -35,6 +28,15 @@ def load_json(filename):
         print("File Not Found.")
         data = {}
     return data
+
+
+def index(request):
+    return load_data_and_render(request, "index")
+
+
+def skylark_collection(request, collection):
+    data = load_json("skylark/" + collection)
+    return render(request, "nest/skylark_collection.html", data)
 
 
 def load_data_and_render(request, json_name, html_name=None):
@@ -88,10 +90,6 @@ def page(request, filename):
         "title": filename.title(),
         "html_content": html_content
     })
-
-
-def cards(request, filename):
-    return load_data_and_render(request, "cards/" + filename, "cards")
 
 
 def timeline(request, filename):
