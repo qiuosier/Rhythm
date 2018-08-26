@@ -8,6 +8,15 @@
         "summary": "",
         "location": ""
     },
+    "memories":[
+        {
+            "name": "",
+            "title": "The Himalayas",
+            "summary": "",
+            "date": "July, 2011",
+            "image": "/static/images/swan/home/Small_MtEverestSunset.jpg"
+        }
+    ],
     "destinations": [
         {
             "name": "NC",

@@ -27,6 +27,27 @@
     </div>
 </div>
 
+<h2>Memories</h2>
+<div class="row">
+    {% for entry in memories %}
+    <div class="col-md-3 md-container">
+        <div class="md-raised-6px full-height">
+            {% if entry.image %}
+            <div class="md-image">
+                <img class="img-fluid" src="{{ entry.image }}" border="0" alt="">
+                <div class="spacer-15px"></div>
+            </div>
+            {% endif %}
+            <div class="md-text">
+                <h4>{{ entry.title }}</h4>
+                <small><i>{{ entry.date }}</i></small>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
 <h2>
     Destinations
     <small class="text-muted"><i>where I called home...</i></small>

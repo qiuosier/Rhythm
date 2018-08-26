@@ -15,7 +15,7 @@ I don't really know how to write the Tibetan names in English, so I will leave t
 
 ![Trip Data](../../../static/images/swan/LK/Swan_LK_Elevation.PNG)
 
-Unlike the eastern part of China, towns and villages are sparsely located in Tibet. Also, native Tibetan people in most small villages speak only the Tibetic language, which I hardly understand. Finding somewhere to sleep overnight is not something easy. Although it was summer, the temperature usually drop below 10 degrees celsius (50 Fahrenheit) during the night due to the high elevation. Anyway, we decided to plan carefully and not to carry a tent (which is somewhat heavy for people riding a bike) with us.
+Unlike the eastern part of China, towns and villages are sparsely located in Tibet. It is common that you don't see any house in 50km along the road. Also, native Tibetan people in most small villages speak only the Tibetic language, which I hardly understand. Finding somewhere to sleep overnight is not something easy. Although it was summer, the temperature usually drop below 10 degrees celsius (50 Fahrenheit) during the night due to the high elevation. Anyway, we decided to plan carefully and not to carry a tent (which is somewhat heavy for people riding a bike) with us. The overnight stops with in Tibet in our plan is probably the best for most people not carrying a tent, as you can hardly find a place to sleep somewhere else.
 
 ![Route Map: Lhasa to Kathmandu](../../../static/images/swan/LK/Swan_LK_RouteMap.png)
 A super annoying thing is, for China, there is an offset (encrypted, see [Wikipedia](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)) between the map data (which provides the routes) and the satellite data (which provides the elevation) due to the government regulation. So I have to align the elevation data with the routes by myself. The elevation gain seems far from accurate for two days (7/10 and 7/19). Also, the data for 7/18 are just very rough estimation since the route does not exist on the map (actually there is hardly a road, or path to follow). 
@@ -69,54 +69,67 @@ We spent some time around the city in the morning, and we continue our trip arou
 
 We got to the 60km town in about 3 hours...I would rather call it a village. We decided to continue but that was a terrible idea. We ended up climbing up a pass in the darkness (thanks to a Tibetan guy who drove a tractor...he let us hold the tractor and "pulled" us up the hill for quite a distance. We went down the hill slowly under the moonlight...and in the silence. Finally we finished our 150km after mid-night.
 
-## Day 6
-Another tough day...reached the highest point (5248m, 17218ft) on our route.
+## Day 6, Crossing the Highest Point
+Another tough day...reached the highest point (5248m, 17218ft) on our route. I was also a bit surprised when I noticed that this point is actually a little bit higher than the base camp of Mt. Everest. Anyway, it is reasonable to build the road across a mountain through the lowest possible point. So the highest point on the main road to Kathmandu is not so close to the Mt. Everest.
+
+Because we did a long trip and went to bed pretty late the day before. We feel tired soon after we started climbing up. It is also a long way to the top: 26km. Luckily, a man driving a motor tricycle let us to grap the truck and pulled us up for a good distance. Like most other hills in Tibet, after certain elevation, there is no tree at all.
 
 ![The Highest Point](../../../static/images/swan/LK/Swan_LK_HighestPoint.jpg)
 
-We feel a little bit foggy as we approaching the highest point. And it begins to rain after we went through it. I also reached the highest speed during the descent.
+It is a bit foggy as we approaching the highest point. I feel cloud is rolling on the ground. And, it begins to rain after we went through it. I also reached the highest speed during the descent.
 
-## Day 7
-At Tingri, We decided to take a rest before heading to the Mt. Everest base camp. You can find good place to sleep here, because many tourists stays here when the visit the base camp. This is also a relatively good place to buy food and get supplies.
+## Day 7, At Tingri
+After two tough days, We decided to take a rest at Tingri before heading to the Mt. Everest base camp. This is a relatively big town, like the gateway to Mt. Everest. We found a relatively good place to sleep here, washed our clothes and get some supplies for the next days.
 
-## Day 8
-We left the main road and head to the base camp in the morning. It is an 100km dusty rough road. 
+## Day 8, Away from the Main Road
+We left the main road and head to the base camp in the morning. It is an 100km dusty rough road. We only planned to go 60km this day. I believe it is not fun to go this way at night. And it is cold at night.
 
 ![The Road to Base Camp](../../../static/images/swan/LK/Swan_LK_RoadToBaseCamp.jpg)
 
-We only planned to go 60km this day. I believe it is not fun to go this way at night. And it is cold at night.
+We need to climb up to about 5000m and go down before really climbing up to the base camp. People said this place around 5000m is the best place to view the four 8000m+ summits in a row. Unfortunately, clouds were covering the summits when we get there.
 
-![The Road to Base Camp](../../../static/images/swan/LK/Swan_LK_RoadToBaseCampA.jpg)
+![At 5000m, Looking Back (Facing North)](../../../static/images/swan/LK/Swan_LK_RoadToBaseCampA.jpg)
+At 5000m, looking back (facing north) at our way up here.
 
-We also need to climb up a pass before really climbing up to the base camp. A lot of people said, the pass is the best place to view the 4 8000m+ summits in a row. Unfortunately, it seems the clouds are covering the summits.
 
-![Looking for the Summits](../../../static/images/swan/LK/Swan_LK_RoadToBaseCampB.jpg)
+![At 5000m, Looking for the Summits](../../../static/images/swan/LK/Swan_LK_RoadToBaseCampB.jpg)
+At 5000m, looking for the summits (facing south).
 
-## Day 9
+## Day 9, Mt. Everest
 Reached the base camp in the afternoon, and spent a long time watching the sunset.
 
 ![Mt. Everest Sunset](../../../static/images/swan/LK/Swan_LK_MtEverestSunset.jpg)
 
+There are tents for people to rent and stay overnight. Those are big tents with multiple beds. We shared a tent with another group of 4 or 5 bikers. There isn't much you can eat, the only options for us are fried rice and plain noodle with egg. There is also a temple near the base camp, maybe you can get something better, but we didn't bother to ask. The camp gets busy as more visitor arrives here in the late afternoon/early evening. Most of them get here by bus or car. They also stay here overnight for the unique experiance of sleeping at an elevation of 5200m. The sunset time is after 9pm during the summer, we went to sleep soon after it. The temperature drops to around 0 celsius during the night. Water is also limited here.
 
-## Day 10
+## Day 10, Finding the Way Back
 We went up a little bit to take a closer look after sunrise... 
 
 ![Mt. Everest in the Morning](../../../static/images/swan/LK/Swan_LK_MtEverestMorning.jpg)
+
+There is a post office tent here for people to mail post cards. We mailed some before we left. Most people left in the early morning and the base camp becomes pretty quiet. July is probably not a good time to ascent to the summit. No one was preparing at the time we were there.
 
 Leaving the base camp and back to the main road...We did not go back with the way came in. Instead, we tried a way that are now no longer in the map (It was used before the current way to Mt. Everest was built, but no longer maintained). We enjoyed the view along the way, though sometimes it was not easy to find the way. We can hardly see anyone on the way.
 
 ![Leaving the Base Camp](../../../static/images/swan/LK/Swan_LK_LeavingBaseCamp.jpg)
 
-## Day 11
-Again we tried to go 150km in a day, and again we did not get to our destination until late night. After we got to the top of the last pass, there is a 100km+ downhill...The elevation goes down from 5100m to 650m.We stayed at Nyalam, about half way down, for the night.
+## Day 11, The South of the Himalayas
+Again we tried to go 150km in a day, and again we did not get to our destination until late night. After we got to the top of the last pass over 5000m (got there at around 8PM), we entered the south slope of the Himalayas. There is a 100km+ downhill...The elevation goes down from 5100m to 650m. We stayed at Nyalam, about half way down, for the night.
 ![Going Down the Himalayas](../../../static/images/swan/LK/Swan_LK_Down.jpg)
 
-## Day 12
-We ran into the fog, the moisture and the rain soon after we departed in the morning.
+## Day 12, Crossing the Border
+We ran into the fog, the moisture and the rain soon after we departed in the morning. There are more and more trees as we go down. The town of [Zhangmu](https://en.wikipedia.org/wiki/Zhangmu) is at the China-Nepal border. We got there before lunch. The town was built on hillside. The main road decents quickly as it goes through the town. The road is not wide, but you can see Nepal trucks coming up and down the road. The [Sino-Nepal Friendship Bridge](https://en.wikipedia.org/wiki/Sino-Nepal_Friendship_Bridge) down the road connects China and Nepal. We went through the border control and walked through the bridge to the Nepal side.
 
-![Going Down the Himalayas](../../../static/images/swan/LK/Swan_LK_Nyalam.jpg)
+![Town of Zhangmu](../../../static/images/swan/LK/Swan_LK_Zhangmu.jpg)
 
-## Day 13
+After we got into Napel, a small part of the road was collapsed due to the recent rain. We have to carry our bikes and walk through the muddy surface. We ended our day at Bahrabise, the first Nepal town in our way.
+
+## Day 13, Climbing up in Nepal
+Around lunch time, we got to the lowest point in our trip. This is another bridge built by both Nepal and China. After lunch, we need to do a last climb of about 700m before we can get to Kathmandu. Since the elevation is much loweer, we have more oxygen and the climb is much easier. But we have another problem, it is much hotter and more humid. There are also more people and shops along the road. We stayed in Banepa (about 30km from Kathmandu) for the night.
+
+![Dalaghat Bridge](../../../static/images/swan/LK/20110721_Dalaghat.jpg)
+
+## Day 14, Kathmandu
+The last day was an easy day.
+![Overlooking Kathmandu](../../../static/images/swan/LK/20110724_IMGP6732.jpg)
 To be continued...
-
-<!-- [Lhasa-Kathmandu Trip Plan (Chinese)](../../../static/images/swan/LK/Swan_LK_Day1.jpg) -->
