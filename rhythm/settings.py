@@ -51,7 +51,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'log_http_request.middleware.LogHttpRequestMiddleware',
+    'nest.middleware.LogHttpRequestMiddleware',
 ]
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'

@@ -1,7 +1,6 @@
 """
 This is
 """
-import json
 from google.appengine.ext import ndb
 
 
