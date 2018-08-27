@@ -6,7 +6,13 @@
     </div>
     {% endif %}
     <div class="md-text">
-        <h4>{{ entry.title }}</h4>
+        <h4>
+            {% if entry.name %}
+            <a href="{% url 'nest:page' 'swan/'|add:entry.name %}">{{ entry.title }}</a>
+            {% else %}
+            {{ entry.title }}
+            {% endif %}
+        </h4>
         <small>
             <i>{{ entry.date }}</i>
         </small>

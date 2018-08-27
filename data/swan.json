@@ -1,7 +1,7 @@
 {
     "title": "Swan",
     "last_trip": {
-        "name": "Seattle",
+        "name": "20180116_Seattle",
         "title": "My Last Trip: Seattle",
         "image": "/static/images/swan/home/20180115-IMGP0313.jpg",
         "date": "January, 2018",
@@ -10,7 +10,7 @@
     },
     "memories":[
         {
-            "name": "",
+            "name": "20110700_AcrossTheHimalayas",
             "title": "The Himalayas",
             "summary": "",
             "date": "July, 2011",
@@ -19,7 +19,7 @@
     ],
     "destinations": [
         {
-            "name": "NC",
+            "name": "",
             "title": "North Carolina",
             "summary": "Walking through the Duke garden to work...",
             "location": "{ lat: 35.913200, lng: -79.055845 }",
@@ -27,7 +27,7 @@
             "image": "/static/images/swan/home/20170309_IMG_0900.jpg"
         },
         {
-            "name": "NJ",
+            "name": "",
             "title": "New Jersey",
             "summary": "Take another break, think of a picture...",
             "location": "{ lat: 40.885933, lng: -74.043474 }",
@@ -35,7 +35,7 @@
             "image": "/static/images/swan/home/20150426_IMGP3844.jpg"
         },
         {
-            "name": "Binghamton",
+            "name": "",
             "title": "Binghamton",
             "summary": "Enjoy the peace of counrtyside...",
             "location": "{ lat: 42.098687, lng: -75.917974 }",
@@ -43,7 +43,7 @@
             "image": "/static/images/swan/home/IMG_20150203.jpg"
         },
         {
-            "name": "Lhasa",
+            "name": "",
             "title": "Lhasa",
             "summary": "Living at 11k feet for a year, a unique experience for me...",
             "location": "{ lat: 29.652491, lng: 91.172110 }",
@@ -51,7 +51,7 @@
             "image": "/static/images/swan/home/20101004_Lhasa.jpg"
         },
         {
-            "name": "Xian",
+            "name": "",
             "title": "Xi'an",
             "summary": "Immersing in an ancient city...",
             "location": "{ lat: 34.341574, lng: 108.939770 }",
@@ -59,7 +59,7 @@
             "image": "/static/images/swan/home/20081128_xian.jpg"
         },
         {
-            "name": "Guangzhou",
+            "name": "",
             "title": "Guangzhou",
             "summary": "Four years in college, for endless memory...",
             "location": "{ lat: 23.129110, lng: 113.264385 }",
@@ -67,7 +67,7 @@
             "image": "/static/images/swan/home/Small_Pearl.jpg"
         },
         {
-            "name": "Jiangmen",
+            "name": "",
             "title": "Jiangmen",
             "summary": "The place I grew up, about 65 miles from the south China sea.",
             "location": "{ lat: 22.579117, lng: 113.081508 }",
@@ -75,7 +75,7 @@
             "image": "/static/images/swan/home/Small_JM.jpg"
         },
         {
-            "name": "Guanchun",
+            "name": "",
             "title": "Shaoguan",
             "summary": "I was born here...",
             "location": "{ lat: 25.212376, lng: 113.055090 }",
@@ -85,7 +85,7 @@
     ],
     "journeys": [
         {
-            "name": "Istanbul",
+            "name": "",
             "title": "Istanbul",
             "image": "/static/images/swan/home/20171031_IMGP0105.jpg",
             "date": "November, 2017",
@@ -93,7 +93,7 @@
             "location": ""
         },
         {
-            "name": "CarolinaBeach",
+            "name": "",
             "title": "Carolina Beach",
             "image": "/static/images/swan/home/20170930_IMG_1102.jpg",
             "date": "September, 2017",
@@ -101,7 +101,7 @@
             "location": ""
         },
         {
-            "name": "MyrtleBeach",
+            "name": "",
             "title": "Myrtle Beach",
             "image": "/static/images/swan/home/20170903_IMG_0696.jpg",
             "date": "September, 2017",
@@ -109,7 +109,7 @@
             "location": ""
         },
         {
-            "name": "OuterBanks",
+            "name": "",
             "title": "Outer Banks",
             "image": "/static/images/swan/home/20170703_IMGP9690.jpg",
             "date": "July, 2017",
@@ -117,7 +117,7 @@
             "location": ""
         },
         {
-            "name": "HK",
+            "name": "",
             "title": "Hong Kong",
             "image": "/static/images/swan/home/20170503_IMGP9421.jpg",
             "date": "May 2017",
@@ -125,7 +125,7 @@
             "location": ""
         },
         {
-            "name": "Guizhou",
+            "name": "",
             "title": "Guizhou",
             "image": "/static/images/swan/home/20170417_IMGP9284.jpg",
             "date": "April, 2017"
