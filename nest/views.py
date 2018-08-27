@@ -6,28 +6,7 @@ from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFou
 from django.template.loader import get_template
 from django.template import TemplateDoesNotExist
 from django.conf import settings
-from . lib import ascii_char
-
-
-def load_json(filename):
-    """Loads data from a JSON file to a Python dictionary
-    JSON files are stored in the "/data" folder.
-
-    Args:
-        filename: Filename without extension.
-
-    Returns: A python dictionary containing data from the json file.
-        An empty dictionary will be returned if the data file is not found.
-
-    """
-    json_file = os.path.join(settings.BASE_DIR, "data", filename + ".json")
-    if os.path.exists(json_file):
-        with open(json_file) as f:
-            data = json.load(f)
-    else:
-        print("File Not Found.")
-        data = {}
-    return data
+from nest.lib import load_json, ascii_char, get_markdown_title
 
 
 def index(request):
@@ -82,12 +61,13 @@ def page(request, filename):
         return HttpResponseNotFound(markdown_file + " not found.")
 
     text = filter(ascii_char, text)
+    title = get_markdown_title(text)
     html_content = markdown.markdown(
         text,
         output_format="html5",
     )
     return render(request, "nest/page.html", {
-        "title": filename.title(),
+        "title": title,
         "html_content": html_content
     })
 
