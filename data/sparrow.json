@@ -1,0 +1,191 @@
+{
+    "title": "Sparrow",
+    "astrology_card": {
+        "key": "astrology",
+        "title": "After Work...The Astrology Collection",
+        "description": "Astrology is a collection of my ideas and personal projects. I like to built things in my spare time. Writing computer programs is a great way to build things. However, engineering is more than software...",
+        "image": "cards/NYCLights.jpg",
+        "caption": "Lights, New York City",
+        "link": "/rhythm/astrology/",
+        "events": [
+            {
+                "name": "Aries",
+                "summary": ""
+            },
+            {
+                "name": "Taurus",
+                "summary": "A windows PE application to backup/restore system images.",
+                "year": "2009",
+                "tags": [
+                    "2009",
+                    "C++"
+                ]
+            },
+            {
+                "name": "Gemini",
+                "summary": "A set of small programs doing small things.",
+                "year": "2015",
+                "tags": [
+                    "2015",
+                    "Python"
+                ]
+            },
+            {
+                "name": "Cancer",
+                "summary": ""
+            },
+            {
+                "name": "Leo",
+                "summary": ""
+            },
+            {
+                "name": "Virgo",
+                "summary": ""
+            },
+            {
+                "name": "Libra",
+                "summary": "A universal Windows platform app for viewing/annotating PDFs.",
+                "year": "2016",
+                "tags": [
+                    "2016",
+                    "C#",
+                    "Windows App",
+                    "PDF",
+                    "Inking"
+                ]
+            },
+            {
+                "name": "Scorpio",
+                "summary": ""
+            },
+            {
+                "name": "Sagittarius",
+                "summary": "An Adobe Lightroom plugin to GeoTag photos with Google location history data.",
+                "year": "2017",
+                "tags":[
+                    "2017",
+                    "Lua",
+                    "Lightroom"
+                ]
+            },
+            {
+                "name": "Capricorn",
+                "summary": "Snake, the once-popular game in grandfather's Nokia cellphone.",
+                "year": "2006",
+                "tags":[
+                    "2006",
+                    "C#"
+                ]
+            },
+            {
+                "name": "Aquarius",
+                "summary": ""
+            },
+            {
+                "name": "Pisces",
+                "summary": ""
+            }
+        ]
+    },
+    "work_card": {
+        "key": "work",
+        "title": "At Work...",
+        "description": "I worked with different people to implement reliable applications, like databases and websites. I also worked on exploratory research projects. These projects may not become applications eventually. However, they help us explore the unknown territories",
+        "image": "cards/MontaukPoint.jpg",
+        "caption": "Montauk Point, NY",
+        "events": [
+            {
+                "key": "crowdseq",
+                "title": "CrowdSeq, Annotating Genes and Variants",
+                "summary": "This project consist of a database, a web server, a set of REST APIs and mobile apps (iOS and Android). It allow users search for genes/variants, view the existing anntations and add their own annotations. The annotations are generally based on the studies between genes, variants and diseases.",
+                "year": "2017",
+                "tags": [
+                    "Python",
+                    "Django",
+                    "Javascript",
+                    "Google Cloud Platform",
+                    "Database",
+                    "REST API",
+                    "iOS App",
+                    "Android App"
+                ]
+            },
+            {
+                "key": "davelab_db",
+                "title": "Database for Genomic Sequencing and Analysis",
+                "summary": "This project develops a database, web interface and APIs for tracking patient samples throughout genomic sequencing and analysis process.",
+                "year": "2017",
+                "tags": [
+                    "Python",
+                    "Django",
+                    "Javascript",
+                    "Google Cloud Platform",
+                    "Database",
+                    "REST API"
+                ]
+            },
+            {
+                "key": "who",
+                "title": "Pathology Data Collection and Review System",
+                "summary": "We developed a web-based approach to pathology review that enables the integration of pathology data including high resolution images, reports and genomics data in a single easy to use resource.",
+                "year": "2016",
+                "tags": [
+                    "Python",
+                    "Django",
+                    "Javascript"
+                ]
+            },
+            {
+                "key": "QPOST",
+                "title": "Smart Grid Reliability",
+                "summary": "This project investigated the modeling, simulation and control of eletric power systems, including both the distribution and transmission systems. For the distribution system, we worked with the data from New York State Electric & Gas (NYSEG) to identify critical locations for installing power switching equipments. For the transmission system, we built hybrid simulation to incorporate discrete events and the fluctuations continuous states. Based on the simulation model, we designed fault diagnosis algorithm and proposed a data-driven decision making model to improve the reliability.",
+                "year": "2015",
+                "tags": [
+                    "MATLAB",
+                    "Simulink",
+                    "Power Systems",
+                    "Simulation",
+                    "Fault-Tolerant Control",
+                    "Kalman Filter",
+                    "Markov Model",
+                    "Optimization"
+                ]
+            },
+            {
+                "key": "abet_db",
+                "title": "ABET Accreditation Document Database",
+                "summary": "Developed curriculum database with Microsoft Access, SQL and VBA scripts to store curriculum data and documents.",
+                "year": "2012",
+                "tags": [
+                    "MS Access",
+                    "VBA",
+                    "Google Maps API",
+                    "Database"
+                ]
+            },
+            {
+                "key": "chaos",
+                "title": "Modeling and Simulation of Pedestrians",
+                "summary": "This project integrates perception, cognitive control, path planning, reactive movement appearance and characteristics components in an agent model. With the agent-based simulation, We reproduced several self-emerge phenomena of pedestrian flows in public environment.",
+                "year": "2010",
+                "tags": [
+                    "C++",
+                    "QT",
+                    "Agent-Based System",
+                    "Cross-Platform",
+                    "Simulation"
+                ]
+            },
+            {
+                "key": "gm",
+                "title": "Distributed Simulation in Vehicle Manufacturing",
+                "summary": "This project investigated the network communication protocols, data transfer and data conversion between different commercial software.",
+                "year": "2009",
+                "tags": [
+                    "C++",
+                    "Simulation"
+                ]
+            }
+        ]
+    }
+}

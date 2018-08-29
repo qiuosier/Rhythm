@@ -1,89 +1,214 @@
 {
     "title": "Swan",
+    "last_trip": {
+        "name": "20180116_Seattle",
+        "title": "My Last Trip: Seattle",
+        "image": "/static/images/swan/home/20180115-IMGP0313.jpg",
+        "date": "January, 2018",
+        "summary": "",
+        "location": ""
+    },
+    "memories":[
+        {
+            "name": "20110700_AcrossTheHimalayas",
+            "title": "The Himalayas",
+            "summary": "",
+            "date": "July, 2011",
+            "image": "/static/images/swan/home/Small_MtEverestSunset.jpg"
+        }
+    ],
+    "destinations": [
+        {
+            "name": "",
+            "title": "North Carolina",
+            "summary": "Walking through the Duke garden to work...",
+            "location": "{ lat: 35.913200, lng: -79.055845 }",
+            "date": "2016-",
+            "image": "/static/images/swan/home/20170309_IMG_0900.jpg"
+        },
+        {
+            "name": "",
+            "title": "New Jersey",
+            "summary": "Take another break, think of a picture...",
+            "location": "{ lat: 40.885933, lng: -74.043474 }",
+            "date": "2015-2016",
+            "image": "/static/images/swan/home/20150426_IMGP3844.jpg"
+        },
+        {
+            "name": "",
+            "title": "Binghamton",
+            "summary": "Enjoy the peace of counrtyside...",
+            "location": "{ lat: 42.098687, lng: -75.917974 }",
+            "date": "2011-2015",
+            "image": "/static/images/swan/home/IMG_20150203.jpg"
+        },
+        {
+            "name": "",
+            "title": "Lhasa",
+            "summary": "Living at 11k feet for a year, a unique experience for me...",
+            "location": "{ lat: 29.652491, lng: 91.172110 }",
+            "date": "2010-2011",
+            "image": "/static/images/swan/home/20101004_Lhasa.jpg"
+        },
+        {
+            "name": "",
+            "title": "Xi'an",
+            "summary": "Immersing in an ancient city...",
+            "location": "{ lat: 34.341574, lng: 108.939770 }",
+            "date": "2007-2010",
+            "image": "/static/images/swan/home/20081128_xian.jpg"
+        },
+        {
+            "name": "",
+            "title": "Guangzhou",
+            "summary": "Four years in college, for endless memory...",
+            "location": "{ lat: 23.129110, lng: 113.264385 }",
+            "date": "2003-2007",
+            "image": "/static/images/swan/home/Small_Pearl.jpg"
+        },
+        {
+            "name": "",
+            "title": "Jiangmen",
+            "summary": "The place I grew up, about 65 miles from the south China sea.",
+            "location": "{ lat: 22.579117, lng: 113.081508 }",
+            "date": "1988-2003",
+            "image": "/static/images/swan/home/Small_JM.jpg"
+        },
+        {
+            "name": "",
+            "title": "Shaoguan",
+            "summary": "I was born here...",
+            "location": "{ lat: 25.212376, lng: 113.055090 }",
+            "date": "1985-1988",
+            "image": "/static/images/swan/home/Small_Guanchun.jpg"
+        }
+    ],
     "journeys": [
         {
-            "key": "JM",
-            "title": "Growing up in a town",
-            "year": "1989",
-            "location": "Jiangmen",
-            "description": "About 65 miles from Guangzhou, About 65 miles from the south China sea."
+            "name": "20171100_Istanbul",
+            "title": "Istanbul",
+            "image": "/static/images/swan/home/20171031_IMGP0105.jpg",
+            "date": "November, 2017",
+            "summary": "",
+            "location": ""
         },
         {
-            "key": "GZ",
-            "title": "Walking along the Pearl",
-            "year": "2003",
-            "location": "Guangzhou",
-            "description": "Four years in college, For endless memory."
+            "name": "",
+            "title": "Carolina Beach",
+            "image": "/static/images/swan/home/20170930_IMG_1102.jpg",
+            "date": "September, 2017",
+            "summary": "",
+            "location": ""
         },
         {
-            "key": "XA",
-            "title": "Immersing in an ancient city",
-            "year": "2007",
-            "location": "Xi'an",
-            "description": "Discover the past, Discover the future."
+            "name": "",
+            "title": "Myrtle Beach",
+            "image": "/static/images/swan/home/20170903_IMG_0696.jpg",
+            "date": "September, 2017",
+            "summary": "",
+            "location": ""
         },
         {
-            "key": "QH",
-            "title": "Tour the Qinghai lake",
-            "year": "2010",
-            "location": "Qinghai",
-            "description": "7 days, 535km, Avg. Elevation 3200m"
+            "name": "",
+            "title": "Outer Banks",
+            "image": "/static/images/swan/home/20170703_IMGP9690.jpg",
+            "date": "July, 2017",
+            "summary": "",
+            "location": ""
         },
         {
-            "key": "LS",
-            "title": "Living in Tibet",
-            "year": "2010",
-            "location": "Tibet",
-            "description": ""
+            "name": "",
+            "title": "Hong Kong",
+            "image": "/static/images/swan/home/20170503_IMGP9421.jpg",
+            "date": "May 2017",
+            "summary": "",
+            "location": ""
         },
         {
-            "key": "LK",
-            "title": "Crosing the Himalayas.",
-            "year": "2011",
-            "location": "The Himalayas",
-            "description": "Two weeks, 1100km, Avg. Elevation 3940m"
+            "name": "",
+            "title": "Guizhou",
+            "image": "/static/images/swan/home/20170417_IMGP9284.jpg",
+            "date": "April, 2017"
         },
         {
-            "key": "BU",
-            "title": "Enjoy the peace of counrtyside",
-            "year": "2011",
-            "location": "Binghamton",
-            "description": ""
+            "name": "Miami",
+            "title": "Miami",
+            "image": "/static/images/swan/home/20170211_IMGP9081.jpg",
+            "date": "Feburary, 2017",
+            "summary": "",
+            "location": ""
         },
         {
-            "key": "NY",
-            "title": "The Big Apple",
-            "year": "2011",
-            "location": "New York",
-            "description": ""
+            "name": "PuertoRico",
+            "title": "Puerto Rico",
+            "image": "/static/images/swan/home/20160529_IMG_2939.jpg",
+            "date": "June, 2016",
+            "summary": "",
+            "location": ""
         },
         {
-            "key": "AT",
-            "title": "Drifting on the Atlantic",
-            "year": "2013",
-            "location": "Atlantic Ocean",
-            "description": ""
+            "name": "Chicago",
+            "title": "Chicago",
+            "image": "/static/images/swan/home/20160425_IMGP8229.jpg",
+            "date": "April, 2016",
+            "summary": "",
+            "location": ""
         },
         {
-            "key": "GC",
-            "title": "Revisiting my birthplace",
-            "year": "2014",
-            "location": "Guangchun",
-            "description": "After 26 years..."
+            "name": "StLouis",
+            "title": "St. Louis",
+            "image": "/static/images/swan/home/20160424_IMGP8204.jpg",
+            "date": "April, 2016",
+            "summary": "",
+            "location": ""
         },
         {
-            "key": "ON",
-            "title": "Running along Ontario",
-            "year": "2014",
-            "location": "Toronto",
-            "description": "21km,1:57:30"
+            "name": "Montauk",
+            "title": "Montauk",
+            "image": "/static/images/swan/home/20160416_IMG_20160416_164248-01.jpg",
+            "date": "April, 2016",
+            "summary": "",
+            "location": ""
         },
         {
-            "key": "EU",
-            "title": "A peak of Europe",
-            "year": "2015",
-            "location": "Europe",
-            "description": "France,Italy,Iceland"
+            "name": "SanFrancisco",
+            "title": "San Francisco",
+            "image": "/static/images/swan/home/20160129_IMG_20160129_154403-01.jpg",
+            "date": "January, 2016",
+            "summary": "",
+            "location": ""
+        },
+        {
+            "name": "BlueLagoon",
+            "title": "Blue Lagoon",
+            "image": "/static/images/swan/home/20150907_IMGP7693.jpg",
+            "date": "September, 2015",
+            "summary": "",
+            "location": ""
+        },
+        {
+            "name": "Milan",
+            "title": "Milan",
+            "image": "/static/images/swan/home/20150905_IMGP7452.jpg",
+            "date": "September, 2015",
+            "summary": "",
+            "location": ""
+        },
+        {
+            "name": "Paris",
+            "title": "Paris",
+            "image": "/static/images/swan/home/20150902_IMGP7033.jpg",
+            "date": "September, 2015",
+            "summary": "",
+            "location": ""
+        },
+        {
+            "name": "Denver",
+            "title": "Denver",
+            "image": "/static/images/swan/home/20150726_IMGP5557.jpg",
+            "date": "July, 2015",
+            "summary": "",
+            "location": ""
         }
     ]
 }

@@ -5,6 +5,15 @@
     position: relative;
 }
 
+.timeline .timeline-panel p {
+    text-align: justify;
+}
+
+.timeline .timeline-panel-title {
+    font-size: 18px;
+    /* text-transform: uppercase; */
+}
+
 /* This will draw a vertical line */
 .timeline:before {
     top: 0;
@@ -76,16 +85,22 @@
 .timeline > li .timeline-panel {
     border: 1px solid #999999;
     border-radius: 2px;
-    position: relative;
-    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    position: relative; 
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.timeline > li .timeline-panel:hover {
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,.25), 
+                0 3px 14px 2px rgba(0,0,0,.22), 
+                0 5px 5px -3px rgba(0,0,0,.2);
 }
 
 /* Panel width for single column panels */
 .timeline.left-axis > li .timeline-panel {
-    width: calc( 100% - 75px );
+    width: calc( 100% - 100px );
     float: right;
     padding: 15px;
+    background-color: white;
 }
 
 /* Panel width and height for double column panels*/
@@ -172,11 +187,18 @@
     border-top-left-radius: 50%;
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
+.timeline > li a .timeline-badge:hover {
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,.14), 
+                0 3px 14px 2px rgba(0,0,0,.12), 
+                0 5px 5px -3px rgba(0,0,0,.2);
+}
+
 /* Text size inside the badge */
 .timeline > li .timeline-badge p{
     font-size: 1.0em;
-    margin-top: 12px;
+    margin-top: 2px;
     margin-bottom: 0px;
 }
 /* Icon size inside the badge */
@@ -317,13 +339,15 @@
         padding-right: 20px;
     }
     .timeline > li .timeline-panel {
-        width: calc(100% - 35px)!important;
-        width: -moz-calc(100% - 35px)!important;
-        width: -webkit-calc(100% - 35px)!important;
+        width: calc(100% - 15px)!important;
+        width: -moz-calc(100% - 15px)!important;
+        width: -webkit-calc(100% - 15px)!important;
         margin-left: 0px!important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
     }
     .timeline.left-axis > li .timeline-panel {
-        margin-top: 40px;
+        margin-top: 50px;
     }
 
     /* Hide triangles */
@@ -335,12 +359,12 @@
     }
 
     /* Badge position */
-    .timeline.center-axis > li .timeline-badge {
+    .timeline > li .timeline-badge {
         left: 15px;
         margin-left: 0;
         top: 15px;
     }
-    .timeline.center-axis > li.right-panel .timeline-badge {
+    .timeline > li.right-panel .timeline-badge {
         left: 15px;
     }
 

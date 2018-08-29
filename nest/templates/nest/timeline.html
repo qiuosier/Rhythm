@@ -1,0 +1,13 @@
+{% extends "nest/base.html" %}
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'nest/timeline.css' %}" />
+<link rel="stylesheet" href="{% static 'nest/bs_label.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="content-narrow">
+    <h3>{{ title }}</h3>
+    {% include "nest/component/timeline_left_axis.html" %}
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+<div class="md-raised-6px no-margin no-padding">
+    <div class="nest-card-image" style="background-image: url(/static/images/{{ card.image }});">
+        <div class="nest-card-image-caption">{{ card.caption }}</div>
+    </div>
+    <div class="padding-15px">
+        <h4 class="nest-card-title no-spacing">{{ card.title }}</h4>
+        <p>{{ card.description }}</p>
+        <div>
+            <ul class="timeline left-axis">
+                {% for project in card.events %}
+                <li>
+                    {% if project.summary %}
+                    <a href="{% url 'nest:page' project.name %}">
+                        <div class="timeline-badge mdl-shadow--2dp {{ project.name }}">
+                            <img src="/static/images/zodiac/icon-zodiac-{{ project.name }}.png" />
+                        </div>
+                    </a>
+                    <div class="timeline-panel mdl-shadow--2dp">
+                        <div>
+                            <h4 class="no-spacing timeline-panel-title">
+                                <a href="{% url 'nest:page' project.name %}">{{ project.name }}</a>
+                            </h4>
+                        </div>
+                        <div>
+                            {% for tag in project.tags %}
+                            <span class="badge badge-success">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        <div>
+                            <p>{{ project.summary }}</p>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="timeline-badge">
+                        <img src="/static/images/zodiac/icon-zodiac-{{ project.name }}.png" />
+                    </div>
+                    <div class="timeline-empty-panel"></div>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

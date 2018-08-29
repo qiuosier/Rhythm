@@ -1,0 +1,27 @@
+{% extends "nest/base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<h1>The Skylark Gallery - {{ title }}</h1>
+<div class="row">
+    {% for photo in photos %}
+    <div class="col-md-4" style="padding: 7px 7px;">
+        <div class="md-raised-6px">
+            <div class="md-image">
+                <img class="img-fluid" src="/static/images/skylark/{{ key }}/{{ photo.image }}" border="0" alt="">
+                <div class="spacer-15px"></div>
+            </div>
+            <div class="md-text">
+                <h4>{{ photo.title }}</h4>
+                <small><i>{{ photo.meta }}</i></small><br />
+                <small><i>{{ photo.date }}</i></small>
+                <p>{{ photo.description }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

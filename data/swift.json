@@ -1,0 +1,59 @@
+{
+    "blogs": [
+        {
+            "name": "20160806_PythonIDE",
+            "title": "Python IDE?",
+            "image": "20160806_PythonKeyboard.jpg",
+            "summary": "Lack of a good IDE means less productive....",
+            "key": "20160806",
+            "date": "August 6th, 2016",
+            "class": "col-md-8"
+        },
+        {
+            "name": "20160504_GatewayArch",
+            "title": "Gateway to the West",
+            "image": "20160424_GatewayArch.jpg",
+            "summary": "Life is running like a machine....",
+            "key": "20160504",
+            "date": "May 4th, 2016",
+            "class": "col-md-4"
+        },
+        {
+            "name": "20160308_TopCoder",
+            "title": "TopCoder, LeetCode and HackerRank",
+            "image": null,
+            "summary": "Tried all of them, still think TopCoder is the best, technically....",
+            "key": "20160308",
+            "date": "March 8th, 2016",
+            "class": "col-md-4"
+        },
+        {
+            "name": "20160218_ChangeIsNotEasy",
+            "title": "Change is not Easy",
+            "image": "20160108_EllisIslandBuilding.jpg",
+            "summary": "I believe, for most people, once they get used to something, they don't like changes. Or, I...",
+            "key": "20160218",
+            "date": "Feburary 18th, 2016",
+            "class": "col-md-4"
+        },
+        {
+            "name": "20160205_LiveInMyLife",
+            "title": "Live in My Life",
+            "image": "20160129_GoldenGateBridge.jpg",
+            "summary": "Met an old friend after more than ten years...We didn't have a lot to talk, but I was impressed...",
+            "key": "20160205",
+            "date": "Feburary 5th, 2016",
+            "class": "col-md-4"
+        },
+        {
+            "name": "20160120_PlayingTopCoder",
+            "title": "Playing with Top Coder",
+            "image": "20160114_MorningEagle.jpg",
+            "summary": "After someone from Mountain View visited this website, I realized that it is not a good idea...",
+            "key": "20160120",
+            "date": "January 20th, 2016",
+            "class": "col-md-6"
+        }
+    ],
+    "title": "The Swift Blog"
+}

@@ -2,36 +2,57 @@
 {% load staticfiles %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'nest/timeline.css' %}" />
 {% endblock %}
 
 {% block content %}
-<div class="page-content">
-    <div class="row">
-        <ul class="timeline center-axis" id="swan-timeline">
-            {% for entry in journeys %}
-            <li class="{% cycle 'left-panel' 'right-panel' %}">
-                <div class="timeline-badge">
-                    <p>{{ entry.year }}</p>
-                </div>
-                <div class="center-axis-line"></div>
-                <a href="{% url 'nest:rhythm' 'entry.key' %}">
-                    <div class="timeline-panel">
-                        <div class="timeline-image">
-                            <img src="{% static 'images/swan/home/Small_'|add:entry.key|add:'.jpg' %}" />
-                        </div>
-                        <div class="image-caption">
-                            <h4>
-                                {{ entry.title }}
-                            </h4>
-                            <p>{{ entry.location }}</p>
-                            <p>{{ entry.description }}</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
+<h1>Swan's Footprint <small class="text-muted"><i>Traveling to infinity...</i></small></h1>
+<div class="row">
+    <div class="col-md-9 md-container">
+        {% include "nest/cards/card_swan.html" with entry=last_trip %}
     </div>
+    <div class="col-md-3 md-container">
+        <div class="md-raised-6px full-height">
+            {% if journeys.0.image %}
+            <div class="md-image">
+                <img class="img-fluid" src="{{ journeys.0.image }}" border="0" alt="">
+                <div class="spacer-15px"></div>
+            </div>
+            {% endif %}
+            <div class="md-text">
+                {% for entry in journeys|slice:"5" %}
+                <p>
+                    {% if entry.name %}
+                    <a href="{% url 'nest:page' 'swan/'|add:entry.name %}">{{ entry.title }}</a>
+                    {% else %}
+                    {{ entry.title }}
+                    {% endif %},
+                    <small><i class="text-muted">{{ entry.date }}</i></small>
+                </p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Memories</h2>
+<div class="row">
+    {% for entry in memories %}
+    <div class="col-md-3 md-container">
+        {% include "nest/cards/card_swan.html" %}
+    </div>
+    {% endfor %}
+</div>
+
+
+<h2>
+    Destinations
+    <small class="text-muted"><i>where I called home...</i></small>
+</h2>
+<div class="row">
+    {% for entry in destinations %}
+    <div class="col-md-3 md-container">
+        {% include "nest/cards/card_swan.html" %}
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}

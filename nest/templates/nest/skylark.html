@@ -1,0 +1,35 @@
+{% extends "nest/base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div class="spacer-15px"></div>
+<h1>The Skylark Gallery</h1>
+<div class="row">
+    {% for collection in collections %}
+    <div class="col-md-4 md-container">
+        <div class="md-raised-6px">
+            <div class="md-image">
+                <img class="img-fluid" src="/static/images/skylark/home/Medium_{{ collection.image }}" border="0" alt="">
+                <div class="spacer-15px"></div>
+            </div>
+            <div class="md-text">
+                <h4>
+                    {% if collection.key %}
+                    <a class="" href="{% url 'nest:skylark_collection' collection.key %}">
+                        {{ collection.title }}
+                    </a>
+                    {% else %}
+                        {{ collection.title }}
+                    {% endif %}
+                </h4>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+    
+
+{% endblock %}

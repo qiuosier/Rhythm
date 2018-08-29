@@ -1,0 +1,34 @@
+{
+    "title": "City Collection",
+    "key": "city",
+    "photos": [
+        {
+            "title": "Toronto",
+            "meta": "Photo taken at rooftop of Park Hyatt Toronto",
+            "date": "May 4th, 2014",
+            "description": "",
+            "image": "IMGP1466.jpg"
+        },
+        {
+            "title": "Shanghai",
+            "meta": "Photo taken at Park Hyatt Shanghai",
+            "date": "September 8th, 2014",
+            "description": "",
+            "image": "IMGP2438.jpg"
+        },
+        {
+            "title": "Denver",
+            "meta": "Photo taken at Denver Art Museum",
+            "date": "July 6th, 2015",
+            "description": "",
+            "image": "IMGP5557.jpg"
+        },
+        {
+            "title": "New York",
+            "meta": "Photo taken at Liberty State Park",
+            "date": "April 26th, 2015",
+            "description": "",
+            "image": "IMGP3844.jpg"
+        }
+    ]
+}
