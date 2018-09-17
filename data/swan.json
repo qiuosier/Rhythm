@@ -43,8 +43,8 @@
             "image": "/static/images/swan/home/IMG_20150203.jpg"
         },
         {
-            "name": "",
-            "title": "Lhasa",
+            "name": "20110700_Tibet",
+            "title": "Tibet",
             "summary": "Living at 11k feet for a year, a unique experience for me...",
             "location": "{ lat: 29.652491, lng: 91.172110 }",
             "date": "2010-2011",
@@ -93,7 +93,7 @@
             "location": ""
         },
         {
-            "name": "",
+            "name": "20171001_CarolinaBeach",
             "title": "Carolina Beach",
             "image": "/static/images/swan/home/20170930_IMG_1102.jpg",
             "date": "September, 2017",
@@ -109,7 +109,7 @@
             "location": ""
         },
         {
-            "name": "",
+            "name": "20170704_OuterBanks",
             "title": "Outer Banks",
             "image": "/static/images/swan/home/20170703_IMGP9690.jpg",
             "date": "July, 2017",
