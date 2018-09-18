@@ -8,13 +8,20 @@
         "summary": "",
         "location": ""
     },
-    "memories":[
+    "featured":[
+        {
+            "name": "20161000_BlueRidgePkwy",
+            "title": "Blue Ridge Parkway",
+            "summary": "",
+            "date": "October, 2016",
+            "image": "/static/images/swan/home/20161000_BlueRidgePkwy.jpg"
+        },
         {
             "name": "20110700_AcrossTheHimalayas",
             "title": "The Himalayas",
             "summary": "",
             "date": "July, 2011",
-            "image": "/static/images/swan/home/Small_MtEverestSunset.jpg"
+            "image": "/static/images/swan/home/20110700_SunsetMtEverest.jpg"
         }
     ],
     "destinations": [
@@ -87,7 +94,7 @@
         {
             "name": "20171100_Istanbul",
             "title": "Istanbul",
-            "image": "/static/images/swan/home/20171031_IMGP0105.jpg",
+            "image": "/static/images/swan/home/20171100_Istanbul.jpg",
             "date": "November, 2017",
             "summary": "",
             "location": ""
@@ -95,7 +102,7 @@
         {
             "name": "20171001_CarolinaBeach",
             "title": "Carolina Beach",
-            "image": "/static/images/swan/home/20170930_IMG_1102.jpg",
+            "image": "/static/images/swan/home/20171001_CarolinaBeach.jpg",
             "date": "September, 2017",
             "summary": "",
             "location": ""
@@ -111,7 +118,7 @@
         {
             "name": "20170704_OuterBanks",
             "title": "Outer Banks",
-            "image": "/static/images/swan/home/20170703_IMGP9690.jpg",
+            "image": "/static/images/swan/home/20170704_OuterBanks.jpg",
             "date": "July, 2017",
             "summary": "",
             "location": ""
