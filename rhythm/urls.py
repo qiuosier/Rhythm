@@ -19,7 +19,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 urlpatterns = [
     url(r'^robots.txt$', 
-    lambda r: HttpResponse("User-agent: *\nDisallow: /", 
+    lambda r: HttpResponse("User-agent: *\nDisallow:\n", 
     content_type = "text/plain")),
     url(r'^admin/', admin.site.urls),
     url(r'^', include('nest.urls')),

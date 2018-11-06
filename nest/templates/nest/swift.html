@@ -13,12 +13,12 @@
         <div class="md-raised-6px full-height">
             {% if blog.image %}
             <div class="md-image">
-                <img class="img-fluid" src="/static/images/swift/{{ blog.image }}" border="0" alt="">
+                <img class="img-fluid" src="{{ blog.image }}" border="0" alt="">
                 <div class="spacer-15px"></div>
             </div>
             {% endif %}
             <div class="md-text">
-                <h4><a href="{% url 'nest:page' 'swift/'|add:blog.name %}">{{ blog.title }}</a></h4>
+                <h4><a href="{% url 'nest:page' blog.name %}">{{ blog.title }}</a></h4>
                 {% if blog.date %}
                 <small><i>{{ blog.date }}</i></small>
                 {% endif %}

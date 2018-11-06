@@ -1,3 +1,6 @@
+"""
+This command updates the Swift blog home page to contain the latest blogs in "data/swift" folder.
+"""
 import os
 import json
 from operator import itemgetter
@@ -6,7 +9,11 @@ from django.core.management.base import BaseCommand
 
 # The folder storing the Markdown blog files.
 # The filename should have the format of 20160101_ArticleName.md, i.e. a date and a name separated by '_'
-BLOGS_FOLDER = os.path.join(settings.BASE_DIR, "data", "markdown", "swift")
+MARKDOWN_FOLDER = os.path.join(settings.BASE_DIR, "data", "markdown")
+BLOG_FOLDERS = [
+    os.path.join(MARKDOWN_FOLDER, "swift"),
+    os.path.join(MARKDOWN_FOLDER, "swan")
+]
 
 # The JSON file storing the Swift home page entries
 JSON_OUTPUT = os.path.join(settings.BASE_DIR, "data", "swift.json")
@@ -15,12 +22,18 @@ JSON_OUTPUT = os.path.join(settings.BASE_DIR, "data", "swift.json")
 # Each number indicates the width of the blog entry on the page.
 # This number is the same number as the ones used in the bootstrap column width (e.g., col-md-8).
 # The page has a full width of 12
-SIZE_ARRRY = [8, 4, 4, 4, 4, 6, 6, 4, 4, 4, 6, 6]
+SIZE_ARRAY = [8, 4, 4, 4, 4, 6, 6, 4, 4, 4, 6, 6]
+
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
         # Load all file names.
-        files = [os.path.join(BLOGS_FOLDER, f) for f in os.listdir(BLOGS_FOLDER) if os.path.isfile(os.path.join(BLOGS_FOLDER, f))]
+        files = []
+        for folder in BLOG_FOLDERS:
+            files.extend([
+                os.path.join(folder, f)
+                for f in os.listdir(folder) if os.path.isfile(os.path.join(folder, f))
+            ])
         entries = []
         for filename in files:
             with open(filename, 'r') as f:
@@ -46,7 +59,7 @@ class Command(BaseCommand):
                         date = line.strip('_')
                         continue
                     if not image and line.startswith('!['):
-                        image = line.rsplit('/', 1)[1].strip(')')
+                        image = line[line.find("/static/"):].strip(')')
                         continue
                     if not intro and line[0].isalpha():
                         if len(line) > 90:
@@ -60,7 +73,7 @@ class Command(BaseCommand):
                     "image": image,
                     "summary": intro,
                     "date": date,
-                    "name": os.path.basename(filename).split('.')[0],
+                    "name": filename.split('.')[0].replace(MARKDOWN_FOLDER, "")[1:],
                     "key": os.path.basename(filename).split('_')[0],
                     "class": "col-md-6"
                 })
@@ -72,7 +85,7 @@ class Command(BaseCommand):
         # Set entry width
         i = 0
         for entry in entries:
-            entry["class"] = "col-md-" + str(SIZE_ARRRY[i])
+            entry["class"] = "col-md-" + str(SIZE_ARRAY[i])
             i += 1
         # Save the data
         with open(JSON_OUTPUT, 'w') as output:
@@ -80,4 +93,3 @@ class Command(BaseCommand):
                 "title": "The Swift Blog",
                 "blogs": entries
             }, output)
-        
