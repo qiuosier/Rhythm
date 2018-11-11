@@ -5,7 +5,7 @@ I got my PhD in Electrical Engineering at the end of 2015. I am currently a Bioi
 
 I work on simulation, modeling, web applications and databases. I like traveling, running and taking photos. 
 
-See my [CV](/rhythm/CV "Qiu's CV").
+See my [CV](/CV "Qiu's CV").
 
 ## My Name
 Thanks to my parents. I always feel my names are elegant as you can rotate the "u" to get an "n". In Chinese, my first name comes from the first piece of the "[*Classic of Poetry*](https://en.wikipedia.org/wiki/Classic_of_Poetry)", the oldest existing collection of Chinese poetry. And my last name can be found in the second piece of it. 
@@ -25,5 +25,3 @@ The Skylark Gallery displays some of my insteresting photos. Skylark started as 
 
 ### My Footprint, Swan
 Swan is young, she enjoy the leisure time with me on the map...
-
-

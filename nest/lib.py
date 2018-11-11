@@ -14,8 +14,16 @@ def load_json(filename):
         An empty dictionary will be returned if the data file is not found.
 
     """
-    json_file = os.path.join(settings.BASE_DIR, "data", filename + ".json")
-    if os.path.exists(json_file):
+    root = os.path.join(settings.BASE_DIR, "data")
+    
+    json_file = None
+    file_path = os.path.join(root, filename)
+    if os.path.exists(file_path):
+        json_file = file_path
+    elif os.path.exists(file_path + ".json"):
+        json_file = file_path + ".json"
+    
+    if json_file:
         with open(json_file) as f:
             data = json.load(f)
     else:
@@ -41,3 +49,17 @@ def get_markdown_title(text):
         if line.startswith("#"):
             return line.strip("#").strip("\n").strip(" ")
     return ""
+
+
+def search_file(search_dirs, filename, root=""):
+    for directory in search_dirs:
+        relative_path = os.path.join(directory, filename)
+
+        if relative_path.startswith("/"):
+            absolute_path = relative_path
+        else:
+            absolute_path = os.path.join(root, relative_path)
+
+        if os.path.exists(absolute_path):
+            return relative_path
+    return None
