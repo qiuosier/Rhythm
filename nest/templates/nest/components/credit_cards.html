@@ -1,0 +1,66 @@
+{% load variable_tags %}
+
+<div>
+    <table id="rewards-table" class="table table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Card
+                </th>
+                {% for cat in categories.keys %}
+                <th>
+                    {{ cat }}
+                </th>
+                {% endfor %}
+                <th>
+                    Others
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for card in cards %}
+            <tr class="table-row">
+                <td class="text-left">
+                    <a href="{{ card.link }}" target="_blank">{{ card.name }}</a>
+                    <div><small>
+                        Type: {{ card.reward.unit }}, Value: {{ card.reward.value|floatformat:2 }}
+                    </small></div>
+                </td>
+                {% with card_rewards=card.reward.categories %}
+                {% for category in categories.keys %}
+                {% if card.name in max_rewards|get_field_value:category %}
+                    <td class="text-success">
+                        {{ card_rewards|get_field_value:category|default:card_rewards.Base }}
+                    </td>
+                {% elif card.name in min_rewards|get_field_value:category %}
+                    <td class="text-danger">
+                        {{ card_rewards|get_field_value:category|default:card_rewards.Base }}
+                    </td>
+                {% else %}
+                <td>
+                    {{ card_rewards|get_field_value:category|default:card_rewards.Base }}
+                </td>
+                {% endif %}
+                {% endfor %}
+                {% endwith %}
+                <td class="text-left">
+                    <small>
+                        {% for line in card.reward.categories.Others %}
+                        <div>{{ line }}</div>
+                        {% endfor %}
+                    </small>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script src='/static/tablesorts/tablesort.min.js'></script>
+<script src='/static/tablesorts/tablesort.number.js'></script>
+
+<script>
+    $(document).ready(function() {
+        new Tablesort(document.getElementById('rewards-table'));
+    })
+</script>

@@ -1,0 +1,187 @@
+{
+    "cards": [
+        {
+            "name": "AMEX EveryDay",
+            "link": "http://refer.amex.us/QIUqd6XX?XLINK=MYCP",
+            "reward": {
+                "unit": "point",
+                "value": 1,
+                "categories": {
+                    "Base": 1,
+                    "Grocery": 2 
+                }
+            }
+        },
+        {
+            "name": "AMEX BlueCash",
+            "link": "http://refer.amex.us/QIUqKZhx?XLINK=MYCP",
+            "reward": {
+                "unit": "cent",
+                "value": 1,
+                "categories": {
+                    "Base": 1,
+                    "Grocery": 3,
+                    "Gas": 2,
+                    "Department Store": 2
+                }
+            }
+        },
+        {
+            "name": "AMEX Hilton Ascend",
+            "link": "http://refer.amex.us/QIUqSu94?XLINK=MYCP",
+            "reward": {
+                "unit": "point",
+                "value": 0.3333333,
+                "categories": {
+                    "Base": 3,
+                    "Grocery": 6,
+                    "Gas": 6,
+                    "Hilton": 12
+                }
+            }
+        },
+        {
+            "name": "AMEX Platinum Delta",
+            "link": "http://refer.amex.us/QIUqTHgg?XLINK=MYCP",
+            "reward": {
+                "unit": "mile",
+                "value": 1,
+                "categories": {
+                    "Base": 1,
+                    "Delta": 2
+                }
+            }
+        },
+        {
+            "name": "BOA Alaska Airline Visa",
+            "link": "https://www.alaskaair.com/content/credit-card/visa-signature",
+            "reward": {
+                "unit": "mile",
+                "value": 1,
+                "categories": {
+                    "Base": 1,
+                    "Alaska": 3
+                }
+            }
+        },
+        {
+            "name": "BOA Cash Rewards Visa",
+            "link": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
+            "reward": {
+                "unit": "cent",
+                "value": 1,
+                "categories": {
+                    "Base": 1,
+                    "Grocery": 2,
+                    "Wholesale Club": 3
+                }
+            }
+        },
+        {
+            "name": "Chase IHG Mastercard",
+            "link": "https://www.referyourchasecard.com/251/GHGUSD8C5A",
+            "reward": {
+                "unit": "point",
+                "value": 1,
+                "categories": {
+                    "Base": 1,
+                    "Grocery": 2,
+                    "Gas": 2,
+                    "Restaurant": 2,
+                    "IHG": 5
+                }
+            }
+        },
+        {
+            "name": "Chase Hyatt Visa",
+            "link": "https://www.referyourchasecard.com/205/79BCJ2MJKM",
+            "reward": {
+                "unit": "point",
+                "value": 1.5,
+                "categories": {
+                    "Base": 1,
+                    "Car Rental": 2,
+                    "Restaurant": 2,
+                    "Airlines": 2,
+                    "Hyatt": 3
+                }
+            }
+        },
+        {
+            "name": "Chase Freedom",
+            "link": "https://creditcards.chase.com/cash-back-credit-cards/chase-freedom",
+            "reward": {
+                "unit": "point",
+                "value": 1,
+                "categories": {
+                    "Base": 1,
+                    "Department Store": 5,
+                    "Wholesale Club": 5,
+                    "Chase Pay": 5
+                }
+            }
+        },
+        {
+            "name": "Citi AAdvantage Platinum",
+            "link": "https://www.citi.com/credit-cards/credit-card-details/citi.action?ID=citi-aadvantage-platinum-elite-credit-card",
+            "reward": {
+                "unit": "mile",
+                "value": 1.5,
+                "categories": {
+                    "Base": 1,
+                    "American Airlines": 2,
+                    "Restaurant": 2,
+                    "Gas": 2
+                }
+            }
+        },
+        {
+            "name": "Citi AAdvantage MileUp",
+            "link": "https://www.citi.com/credit-cards/credit-card-details/citi.action?ID=aadvantage-mile-up-credit-card",
+            "reward": {
+                "unit": "mile",
+                "value": 1.5,
+                "categories": {
+                    "Base": 1,
+                    "American Airlines": 2,
+                    "Grocery": 2
+                }
+            }
+        },
+        {
+            "name": "Citi Double Cash",
+            "link": "#",
+            "reward": {
+                "unit": "cent",
+                "value": 1,
+                "categories": {
+                    "Base": 2
+                }
+            }
+        },
+        {
+            "name": "Discover It",
+            "link": "https://refer.discover.com/s/5oqoe",
+            "reward": {
+                "unit": "cent",
+                "value": 1,
+                "categories": {
+                    "Base": 1,
+                    "Amazon.com": 5,
+                    "Wholesale Club": 5
+                }
+            }
+        },
+        {
+            "name": "Discover Miles",
+            "link": "https://refer.discover.com/s/bmkx7",
+            "reward": {
+                "unit": "cent",
+                "value": 1,
+                "categories": {
+                    "Base": 1.5
+                }
+            }
+        }
+    ]
+}
