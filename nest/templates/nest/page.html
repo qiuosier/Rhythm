@@ -12,4 +12,22 @@
         {{ html_content|safe }}
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        // The ".ajax-page-component" class is used in the page for additional components that 
+        // require separated data requests.
+        $(".ajax-page-component").each(function(index, element) {
+            var url = "/render/" + $(element).data("template") + "/data/" + $(element).data("context") + "/";
+            $.getJSON(url, function(data) {
+                if (data.html.length) {
+                    $(element).replaceWith(data.html);
+                }
+            }).fail(function(jqxhr, textStatus, error) {
+                $(element).text("Request Failed (" + textStatus + "): " + error);
+                $(element).addClass("text-danger");
+            });
+        });
+    });
+</script>
 {% endblock %}
