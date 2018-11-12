@@ -1,15 +1,16 @@
 {% load variable_tags %}
 
 <div>
+    <div><i>Last Updated: {{ updated }}</i></div>
     <table id="rewards-table" class="table table-hover">
         <thead>
             <tr>
                 <th>
                     Card
                 </th>
-                {% for cat in categories.keys %}
+                {% for category in categories.keys %}
                 <th>
-                    {{ cat }}
+                    <a href="javascript:void(0);">{{ category }}</a>
                 </th>
                 {% endfor %}
                 <th>

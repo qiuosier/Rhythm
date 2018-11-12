@@ -64,10 +64,10 @@ def credit_cards(data):
         others.append("%s: %.1f" % (category, reward_categories[category]))
         reward_categories["Others"] = others
         categories.pop(category)
-    context = {
+    data.update({
         "categories": categories,
         "cards": cards,
         "max_rewards": max_rewards,
         "min_rewards": min_rewards,
-    }
-    return context
+    })
+    return data
