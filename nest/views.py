@@ -11,9 +11,7 @@ from nest import transform
 
 
 def load_data_and_render(request, html_name, json_name=None, transform_name=None):
-    """Loads data from a JSON file and renders a template.
-    JSON files are stored in the "/data" folder.
-    HTML files are stored in the "nest" template folder.
+    """Loads data from a JSON file, transforms it with a function and renders it with an HTML template.
 
     Args:
         request: HTTP request.
@@ -26,6 +24,9 @@ def load_data_and_render(request, html_name, json_name=None, transform_name=None
         If transform_name is not specified, the html_name will be also used as transform_name.
 
     Returns: If the request is AJAX, a JSON response. Otherwise HTTP Response.
+
+    JSON files should be stored in the "/data" or "/data/components" folder.
+    HTML files should be stored in the "/nest/templates/nest" or "/nest/templates/nest/components" folder.
 
     """
     html_root = os.path.join(settings.BASE_DIR, "nest", "templates")
