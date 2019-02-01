@@ -15,7 +15,7 @@ Brief descriptions of the folders and files:
 ## Design Pattern
 This is a Python Django project, so it follows most of the Django project patterns. In addition, this project has some additional design patterns.
 
-### Content Data Format
+### Content Data
 The logging middleware uses [Google Datastore NDB](https://cloud.google.com/appengine/docs/standard/python/ndb/) to store the logs.
 
 Other than the logging middleware, this project does not use external database. The data for rendering web pages are stored in the "data" folder as "JSON" or "Markdown" format. HTML templates for rendering the data are stored in the "nest/templates/nest" folder. The `nest/view.py` module contains two basic view functions for rendering the "JSON" and "Markdown" data, respectively. These two functions handles the rendering of most webpages.
