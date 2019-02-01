@@ -108,12 +108,3 @@ def index(request):
 def skylark_collection(request, collection):
     data = load_json("skylark/" + collection)
     return render(request, "nest/skylark_collection.html", data)
-
-
-def timeline(request, filename):
-    return render_template(request, filename, "timeline")
-
-
-def credit_card(request):
-    data = load_json("credit_cards")
-
