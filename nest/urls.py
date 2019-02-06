@@ -9,7 +9,7 @@ urlpatterns = [
     url(r'^page/(?P<filename>.*)/$', views.page, name='page'),
     # Customized rendering
     url(r'^skylark/(?P<collection>.*)/$', views.skylark_collection, name='skylark_collection'),
-    
+    url(r'^skylark/(?P<collection>.+?)/(?P<title>.*)$', views.skylark_image, name='skylark_image'),
     # The following patterns all use the "render_template" view (nest:render_template).
     url(
         r'^render/(?P<html_name>.*?)/data/(?P<json_name>.*?)/trasnform/(?P<transform_name>.*?)$', 

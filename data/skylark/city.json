@@ -17,6 +17,13 @@
             "image": "IMGP2438.jpg"
         },
         {
+            "title": "Beijing",
+            "meta": "Photo taken at Jingshan Park",
+            "date": "September 12th, 2014",
+            "description": "",
+            "image": "IMGP2714.jpg"
+        },
+        {
             "title": "Denver",
             "meta": "Photo taken at Denver Art Museum",
             "date": "July 6th, 2015",
@@ -29,6 +36,20 @@
             "date": "April 26th, 2015",
             "description": "",
             "image": "IMGP3844.jpg"
+        },
+        {
+            "title": "Paris",
+            "meta": "Photo taken at Louvre Museum",
+            "date": "September 2nd, 2015",
+            "description": "",
+            "image": "IMGP7033.jpg"
+        },
+        {
+            "title": "Hong Kong",
+            "meta": "Photo taken at The Victoria Peak",
+            "date": "May 3rd, 2017",
+            "description": "",
+            "image": "IMGP9421.jpg"
         }
     ]
 }

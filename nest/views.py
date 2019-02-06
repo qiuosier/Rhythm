@@ -108,3 +108,21 @@ def index(request):
 def skylark_collection(request, collection):
     data = load_json("skylark/" + collection)
     return render(request, "nest/skylark_collection.html", data)
+
+def skylark_image(request, collection, title):
+    data = load_json("skylark/" + collection)
+    photos = data.get("photos", [])
+    for photo in photos:
+        if photo.get("title").replace(" ", "_") == title.replace(" ", "_"):
+            image_path = os.path.join("/static/images/skylark", collection, photo.get("image"))
+            image_alt = photo.get("description")
+            if not image_alt:
+                image_alt = photo.get("title")
+            html_content = '<img src="%s" alt="%s"><h1 class="text-center">%s</h1>' % (
+                image_path, image_alt, photo.get("title", "")
+            )
+            return render(request, "nest/page.html", {
+                "title": title,
+                "html_content": html_content
+            })
+    return HttpResponseNotFound("Image not found.")
