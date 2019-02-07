@@ -26,7 +26,7 @@
     ],
     "destinations": [
         {
-            "name": "",
+            "name": "20180000_NC",
             "title": "North Carolina",
             "summary": "Walking through the Duke garden to work...",
             "location": "{ lat: 35.913200, lng: -79.055845 }",
@@ -63,7 +63,7 @@
             "summary": "Immersing in an ancient city...",
             "location": "{ lat: 34.341574, lng: 108.939770 }",
             "date": "2007-2010",
-            "image": "/static/images/swan/home/20081128_Xian.jpg"
+            "image": "/static/images/swan/home/20100700_Xian.jpg"
         },
         {
             "name": "",
