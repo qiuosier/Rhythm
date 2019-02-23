@@ -1,6 +1,11 @@
 {
     "steps": [
         {
+            "name": "ubuntu",
+            "args": ["pip install -t lib -r requirements.txt"],
+            "timeout": "600s"
+        },
+        {
             "name": "gcr.io/cloud-builders/gcloud",
             "args": ["app", "deploy"],
             "timeout": "600s"
