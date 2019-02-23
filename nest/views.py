@@ -10,7 +10,7 @@ from nest.lib import load_json, ascii_char, get_markdown_title, search_file
 from nest import transform
 
 
-def load_data_and_render(request, html_name, json_name=None, transform_name=None):
+def render_template(request, html_name, json_name=None, transform_name=None):
     """Loads data from a JSON file, transforms it with a function and renders it with an HTML template.
 
     Args:
@@ -41,14 +41,14 @@ def load_data_and_render(request, html_name, json_name=None, transform_name=None
     ]
 
     # Get template file path.
-    if html_name is None:
-        html_name = json_name
     html_file = search_file(html_dirs, html_name + ".html", root=html_root)
     if not html_file:
         return HttpResponseNotFound("Template \"%s\" does not exist." % html_name)
 
     # Load data
     # Get data file path.
+    if json_name is None:
+        json_name = html_name
     json_file = search_file(data_dirs, json_name + ".json", root=data_root)
     if json_file:
         # Load json data from file.
@@ -102,18 +102,27 @@ def page(request, filename):
 
 
 def index(request):
-    return load_data_and_render(request, "index")
+    return render_template(request, "index")
 
 
 def skylark_collection(request, collection):
     data = load_json("skylark/" + collection)
     return render(request, "nest/skylark_collection.html", data)
 
-
-def timeline(request, filename):
-    return load_data_and_render(request, filename, "timeline")
-
-
-def credit_card(request):
-    data = load_json("credit_cards")
-
+def skylark_image(request, collection, title):
+    data = load_json("skylark/" + collection)
+    photos = data.get("photos", [])
+    for photo in photos:
+        if photo.get("title").replace(" ", "_") == title.replace(" ", "_"):
+            image_path = os.path.join("/static/images/skylark", collection, photo.get("image"))
+            image_alt = photo.get("description")
+            if not image_alt:
+                image_alt = photo.get("title")
+            html_content = '<img src="%s" alt="%s"><h1 class="text-center">%s</h1>' % (
+                image_path, image_alt, photo.get("title", "")
+            )
+            return render(request, "nest/page.html", {
+                "title": title,
+                "html_content": html_content
+            })
+    return HttpResponseNotFound("Image not found.")

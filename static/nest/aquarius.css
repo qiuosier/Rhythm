@@ -124,12 +124,17 @@ blockquote p {
 }
  
 @media (max-width: 768px) { 
-    .carousel-inner > .item.active { 
+    .carousel-inner > .carousel-item.active { 
         overflow:hidden; 
-    } 
-    .carousel-inner > .item img  
+    }
+
+    .carousel-inner > .carousel-item img  
     { 
-        height: 280px; 
+        height: 480px; 
         object-fit: cover; 
     } 
+
+    .page {
+        padding: 20px 20px;
+    }
 }

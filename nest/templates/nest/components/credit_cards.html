@@ -2,59 +2,61 @@
 
 <div>
     <div><i>Last Updated: {{ updated }}</i></div>
-    <table id="rewards-table" class="table table-hover">
-        <thead>
-            <tr>
-                <th>
-                    Card
-                </th>
-                {% for category in categories.keys %}
-                <th>
-                    <a href="javascript:void(0);">{{ category }}</a>
-                </th>
-                {% endfor %}
-                <th>
-                    Others
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for card in cards %}
-            <tr class="table-row">
-                <td class="text-left">
-                    <a href="{{ card.link }}" target="_blank">{{ card.name }}</a>
-                    <div><small>
-                        Type: {{ card.reward.unit }}, Value: {{ card.reward.value|floatformat:2 }}
-                    </small></div>
-                </td>
-                {% with card_rewards=card.reward.categories %}
-                {% for category in categories.keys %}
-                {% if card.name in max_rewards|get_field_value:category %}
-                    <td class="text-success">
+    <div style="overflow-x:scroll">
+        <table id="rewards-table" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Card
+                    </th>
+                    {% for category in categories.keys %}
+                    <th>
+                        <a href="javascript:void(0);">{{ category }}</a>
+                    </th>
+                    {% endfor %}
+                    <th>
+                        Others
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for card in cards %}
+                <tr class="table-row">
+                    <td class="text-left">
+                        <a href="{{ card.link }}" target="_blank">{{ card.name }}</a>
+                        <div><small>
+                            Type: {{ card.reward.unit }}, Value: {{ card.reward.value|floatformat:2 }}
+                        </small></div>
+                    </td>
+                    {% with card_rewards=card.reward.categories %}
+                    {% for category in categories.keys %}
+                    {% if card.name in max_rewards|get_field_value:category %}
+                        <td class="text-success">
+                            {{ card_rewards|get_field_value:category|default:card_rewards.Base }}
+                        </td>
+                    {% elif card.name in min_rewards|get_field_value:category %}
+                        <td class="text-danger">
+                            {{ card_rewards|get_field_value:category|default:card_rewards.Base }}
+                        </td>
+                    {% else %}
+                    <td>
                         {{ card_rewards|get_field_value:category|default:card_rewards.Base }}
                     </td>
-                {% elif card.name in min_rewards|get_field_value:category %}
-                    <td class="text-danger">
-                        {{ card_rewards|get_field_value:category|default:card_rewards.Base }}
+                    {% endif %}
+                    {% endfor %}
+                    {% endwith %}
+                    <td class="text-left">
+                        <small>
+                            {% for line in card.reward.categories.Others %}
+                            <div>{{ line }}</div>
+                            {% endfor %}
+                        </small>
                     </td>
-                {% else %}
-                <td>
-                    {{ card_rewards|get_field_value:category|default:card_rewards.Base }}
-                </td>
-                {% endif %}
+                </tr>
                 {% endfor %}
-                {% endwith %}
-                <td class="text-left">
-                    <small>
-                        {% for line in card.reward.categories.Others %}
-                        <div>{{ line }}</div>
-                        {% endfor %}
-                    </small>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <script src='/static/tablesorts/tablesort.min.js'></script>

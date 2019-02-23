@@ -11,8 +11,10 @@
     <div class="col-md-4" style="padding: 7px 7px;">
         <div class="md-raised-6px">
             <div class="md-image">
+                <a href="{% url 'nest:skylark_image' key photo.title %}">
                 <img class="img-fluid" src="/static/images/skylark/{{ key }}/{{ photo.image }}" border="0" alt="">
                 <div class="spacer-15px"></div>
+                </a>
             </div>
             <div class="md-text">
                 <h4>{{ photo.title }}</h4>

@@ -1,5 +1,5 @@
 {
-    "updated": "2018/11",
+    "updated": "2019/01",
     "cards": [
         {
             "name": "AMEX EveryDay",
@@ -116,9 +116,8 @@
                 "value": 1,
                 "categories": {
                     "Base": 1,
-                    "Department Store": 5,
-                    "Wholesale Club": 5,
-                    "Chase Pay": 5
+                    "Gas": 5,
+                    "Drugstores": 5
                 }
             }
         },
@@ -168,8 +167,7 @@
                 "value": 1,
                 "categories": {
                     "Base": 1,
-                    "Amazon.com": 5,
-                    "Wholesale Club": 5
+                    "Grocery": 5
                 }
             }
         },
