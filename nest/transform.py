@@ -20,7 +20,7 @@ def credit_cards(data):
             card_list = categories.get(category, [])
             card_list.append((card, normalized_value))
             categories[category] = card_list
-    categories = OrderedDict(sorted(categories.items(), key=lambda (k, v): len(v), reverse=True))
+    categories = OrderedDict(sorted(categories.items(), key=lambda k_v: len(k_v[1]), reverse=True))
     
     # Store the categories with only one card
     singles = []
@@ -41,7 +41,7 @@ def credit_cards(data):
             reward_categories = reward.get("categories", {})
             reward_value = reward_categories.get(category, reward_categories.get("Base"))
             reward_list.append((card, reward_value))
-        reward_list.sort(key=lambda (k, v): v, reverse=True)
+        reward_list.sort(key=lambda k_v: k_v[1], reverse=True)
         # The max and min reward values in this category
         max_value = reward_list[0][1]
         min_value = reward_list[-1][1]

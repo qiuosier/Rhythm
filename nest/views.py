@@ -89,7 +89,7 @@ def page(request, filename):
     else:
         return HttpResponseNotFound(markdown_file + " not found.")
 
-    text = filter(ascii_char, text)
+    text = "".join(filter(ascii_char, text))
     title = get_markdown_title(text)
     html_content = markdown.markdown(
         text,
@@ -108,6 +108,7 @@ def index(request):
 def skylark_collection(request, collection):
     data = load_json("skylark/" + collection)
     return render(request, "nest/skylark_collection.html", data)
+
 
 def skylark_image(request, collection, title):
     data = load_json("skylark/" + collection)

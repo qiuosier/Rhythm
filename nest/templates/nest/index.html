@@ -61,12 +61,10 @@
     function setImageHeight() {
         // Set the height of the carousel image.
         // Mininum height is set to 480px in css.
-        console.log($('.container').outerWidth());
-        var imageHeight = Math.max(480, $('.container').outerWidth() * 700 / 1920);
+        var imageHeight = Math.max(480, $('#myCarousel').outerWidth() * 830 / 1920);
         $("#myCarouselWrapper").css({
             'height': imageHeight + 'px'
-        })
-        console.log(imageHeight);
+        });
     }
 </script>
 {% endblock %}

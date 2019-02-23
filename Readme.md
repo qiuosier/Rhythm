@@ -1,6 +1,6 @@
 # Rhythm - The Bird Nest Project
 This is Qiu's personal website, designed for Google App Engine standard environment.
-This project uses Python 2 and Django 1.9.
+This project uses Python 3.7 and Django 2.1.
 
 ## Folders and Files
 Brief descriptions of the folders and files:
