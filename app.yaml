@@ -7,7 +7,3 @@ handlers:
   static_dir: static/
 - url: .*
   script: rhythm.wsgi.application
-
-libraries:
-- name: ssl
-  version: "2.7.11"
