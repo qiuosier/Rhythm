@@ -22,5 +22,6 @@ urlpatterns = [
     lambda r: HttpResponse("User-agent: *\nDisallow:\n", 
     content_type = "text/plain")),
     url(r'^admin/', admin.site.urls),
+    url(r'^aquarius/', include('aquarius.urls')),
     url(r'^', include('nest.urls')),
 ]
