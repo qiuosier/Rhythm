@@ -5,6 +5,7 @@ This project uses Python 3.7 and Django 2.1.
 ## Folders and Files
 Brief descriptions of the folders and files:
 * "app.yaml": App Engine app's settings. For more details, see https://cloud.google.com/appengine/docs/standard/python/config/appref
+* "build.json": Configuration file for Google Cloud Build and Google App Engine.
 * "appengine_config.py": App Engine python module configuration. For more details, see https://cloud.google.com/appengine/docs/standard/python/tools/appengineconfig
 * "requirement.txt": Lists python package dependencies.
 * "static": Stores static files for the website, including the images.
@@ -14,6 +15,12 @@ Brief descriptions of the folders and files:
 
 ## Design Pattern
 This is a Python Django project, so it follows most of the Django project patterns. In addition, this project has some additional design patterns.
+
+### Credentials
+This website loads credentials from `rhythm/private.py`. This file is NOT included in the Git repository. The file is simply a python file with constants. It should look like:
+```
+DJANGO_SECRET_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+```
 
 ### Content Data
 The logging middleware uses [Google Datastore NDB](https://cloud.google.com/appengine/docs/standard/python/ndb/) to store the logs.
@@ -52,3 +59,6 @@ The Swift home page displays blog entries. It loads data from `/data/swift.json`
 
 ### Update Footprint Index - Swan
 The Swan home page displays my travel entries.
+
+## Delopyment with Google Cloud Build and App Engine.
+The `build.json` file contains steps for deploying the website too Google App Engine using Google Cloud Build.
