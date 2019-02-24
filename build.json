@@ -2,7 +2,7 @@
     "steps": [
         {
             "name": "docker.io/library/python:3.7",
-            "args": ["pip", "install", "-t", "lib", "-r", "/workspace/requirements.txt"],
+            "args": ["pip", "install", "-t", "lib", "-r", "requirements.txt"],
             "timeout": "600s"
         },
         {
