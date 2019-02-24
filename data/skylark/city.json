@@ -1,7 +1,22 @@
 {
     "title": "City Collection",
     "key": "city",
+    "description": "I like to view a city like a bird.",
     "photos": [
+        {
+            "title": "Xi An",
+            "meta": "Photo taken near the southeast corner of City Wall",
+            "date": "November 28th, 2008",
+            "description": "",
+            "image": "Xian.jpg"
+        },
+        {
+            "title": "Lhasa",
+            "meta": "Photo taken at the hill to the south of Lhasa",
+            "date": "October 4th, 2010",
+            "description": "",
+            "image": "Potala.jpg"
+        },
         {
             "title": "Toronto",
             "meta": "Photo taken at rooftop of Park Hyatt Toronto",
@@ -32,17 +47,31 @@
         },
         {
             "title": "New York",
-            "meta": "Photo taken at Liberty State Park",
+            "meta": "Photo taken on the Cruise to Statue of Liberty",
             "date": "April 26th, 2015",
             "description": "",
             "image": "IMGP3844.jpg"
         },
         {
             "title": "Paris",
-            "meta": "Photo taken at Louvre Museum",
-            "date": "September 2nd, 2015",
+            "meta": "Photo taken at Arc de Triomphe",
+            "date": "September 4th, 2015",
             "description": "",
-            "image": "IMGP7033.jpg"
+            "image": "IMGP7245.jpg"
+        },
+        {
+            "title": "Milan",
+            "meta": "Photo taken at Milan Cathedral",
+            "date": "September 5nd, 2015",
+            "description": "",
+            "image": "IMGP7399.jpg"
+        },
+        {
+            "title": "Washington DC",
+            "meta": "Photo taken at the top of Washington Monument",
+            "date": "January 2nd, 2016",
+            "description": "",
+            "image": "IMG_20160102_161210-01.jpg"
         },
         {
             "title": "Hong Kong",
@@ -50,6 +79,34 @@
             "date": "May 3rd, 2017",
             "description": "",
             "image": "IMGP9421.jpg"
+        },
+        {
+            "title": "Istanbul",
+            "meta": "Photo taken near Modern Art Museum",
+            "date": "October 31st, 2017",
+            "description": "",
+            "image": "IMGP0074.jpg"
+        },
+        {
+            "title": "Seattle",
+            "meta": "Photo taken at Kerry Park",
+            "date": "January 15th, 2018",
+            "description": "",
+            "image": "IMGP0313.jpg"
+        },
+        {
+            "title": "San Francisco",
+            "meta": "Photo taken at Hilton San Francisco Union Square",
+            "date": "December 16th, 2018",
+            "description": "",
+            "image": "IMG_0969.jpg"
+        },
+        {
+            "title": "Miami",
+            "meta": "Photo taken at Miami Riverwalk",
+            "date": "Feburary 16th, 2019",
+            "description": "",
+            "image": "IMG_2963.jpg"
         }
     ]
 }
