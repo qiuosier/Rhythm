@@ -16,7 +16,7 @@ Around 2010, I started to use Aperture to manage my pictures. Unfortunately, in 
 
 My current photos workflow utilize the unlimited uploads offered by Google photos and can be used for both Windows and Mac. Adobe Lightroom is currently the central software of my workflow. I am using the Lightroom Classic (Adobe also offer a cloud-based version of Lightroom CC). With the Lightroom Classic, data are divided into two parts on my computer: the photo originals and the Lightroom catalog, which include all modifications to the photos.
 
-![My Photo Workflow](../../../static/images/swift/20180812_PhotoWorkflow.jpg)
+![My Photo Workflow](../../../static/images/swift/20180812_MyPhotoWorkflow.jpg)
 
 My solution includes 4 parts:
 1. Edit. Lightroom and Photoshop are still the best pair.

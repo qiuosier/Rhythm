@@ -12,27 +12,15 @@
         {% include "nest/cards/card_swan.html" with entry=last_trip %}
     </div>
     <div class="col-md-3 md-container">
-        <div class="md-raised-6px full-height">
-            {% if journeys.0.image %}
-            <div class="md-image">
-                <img class="img-fluid" src="{{ journeys.0.image }}" border="0" alt="">
-                <div class="spacer-15px"></div>
-            </div>
-            {% endif %}
-            <div class="md-text">
-                {% for entry in journeys|slice:"5" %}
-                <p>
-                    {% if entry.name %}
-                    <a href="{% url 'nest:page' 'swan/'|add:entry.name %}">{{ entry.title }}</a>
-                    {% else %}
-                    {{ entry.title }}
-                    {% endif %},
-                    <small><i class="text-muted">{{ entry.date }}</i></small>
-                </p>
-                {% endfor %}
-            </div>
-        </div>
+        {% include "nest/cards/card_swan.html" with entry=journeys.0 %}
     </div>
+</div>
+<div class="row">
+    {% for entry in journeys|slice:"1:5" %}
+    <div class="col-md-3 md-container">
+        {% include "nest/cards/card_swan.html" %}
+    </div>
+    {% endfor %}
 </div>
 
 <h2>Featured</h2>
