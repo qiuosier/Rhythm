@@ -21,12 +21,12 @@
             {% endif %}
             <div class="md-text">
                 {% for entry in journeys|slice:"5" %}
-                <p>
+                <p style="line-height: 1">
                     {% if entry.name %}
-                    <a href="{% url 'nest:page' 'swan/'|add:entry.name %}">{{ entry.title }}</a>
+                    <a href="{% url 'nest:page' entry.name %}">{{ entry.title }}</a>
                     {% else %}
                     {{ entry.title }}
-                    {% endif %},
+                    {% endif %}<br />
                     <small><i class="text-muted">{{ entry.date }}</i></small>
                 </p>
                 {% endfor %}

@@ -54,11 +54,13 @@ The URL pattern for displaying a "page" is `www.example.com/page/<file_path>/`, 
 ## Updating Pages with Management Commands
 Some pages, like the index page of the "Swift Blog" displays "JSON" data summarized from "Markdown" files. A few management commands are designed to update such "JSON" data automatically.
 
-### Update Blogs Index - Swift
+### Blogs Index - Swift
 The Swift home page displays blog entries. It loads data from `/data/swift.json`, which should be updated as new blogs are added. The `update_swift` management command is designed to update the `/data/swift.json`. The command loads the blogs, generate summaries and updates the entries to be displayed on the Swift home page.
 
-### Update Footprint Index - Swan
+### Footprint Index - Swan
 The Swan home page displays my travel entries.
+
+### Thumbnails
 
 ## Delopyment with Google Cloud Build and App Engine.
 The `build.json` file contains steps for deploying the website too Google App Engine using Google Cloud Build.
