@@ -1,5 +1,5 @@
 """
-This command updates the Swift blog home page to contain the latest blogs in "data/swift" folder.
+This command updates the Swan page to contain the latest entries in "data/swan" folder.
 """
 import os
 import json
@@ -7,7 +7,7 @@ import re
 from operator import itemgetter
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from nest.lib import parse_markdown, resize_image, get_files
+from nest.lib import summarize_markdown, resize_image, AFolder
 
 # The folder storing the Markdown files.
 # The filename should have the format of 20160101_ArticleName.md, i.e. a date and a name separated by '_'
@@ -26,8 +26,11 @@ THUMBNAIL_FOLDER = os.path.join(settings.BASE_DIR, "static", "images", "swan", "
 
 
 def update_swan_thumbnails():
+    """Generates thumbnails using the first image appear in each Markdown file.
+
+    """
     image_pattern = r"!\[.*\]\(.*/%s/.*jpg\)" % IMAGE_SUB_FOLDER
-    markdown_files = get_files(SWAN_FOLDER)
+    markdown_files = AFolder(SWAN_FOLDER).files
     for markdown_file in markdown_files:
         thumbnail_name = markdown_file.replace(".md", ".jpg")
         thumbnail_file = os.path.join(THUMBNAIL_FOLDER, thumbnail_name)
@@ -55,7 +58,7 @@ class Command(BaseCommand):
             ])
         entries = []
         for filename in files:
-            entry_dict = parse_markdown(filename, base_dir=MARKDOWN_FOLDER)
+            entry_dict = summarize_markdown(filename, base_dir=MARKDOWN_FOLDER)
             entries.append(entry_dict)
             
         # Sort by date

@@ -6,6 +6,7 @@ import json
 from operator import itemgetter
 from django.conf import settings
 from django.core.management.base import BaseCommand
+from nest.lib import summarize_markdown, AFolder
 
 # The folder storing the Markdown blog files.
 # The filename should have the format of 20160101_ArticleName.md, i.e. a date and a name separated by '_'
@@ -30,56 +31,17 @@ class Command(BaseCommand):
         # Load all file names.
         files = []
         for folder in BLOG_FOLDERS:
-            files.extend([
-                os.path.join(folder, f)
-                for f in os.listdir(folder) if os.path.isfile(os.path.join(folder, f))
-            ])
+            files.extend(AFolder(folder).files)
         entries = []
         for filename in files:
-            with open(filename, 'r') as f:
-                lines = f.readlines()
-                # Title of the blog
-                title = None
-                # Date of the blog
-                date = None
-                # The first image
-                image = None
-                # Introduction text
-                intro = None
-                for line in lines:
-                    if title and date and image and intro:
-                        break
-                    line = line.replace('\r', '').replace('\n', '')
-                    if len(line) == 0:
-                        continue
-                    if not title and line[0] == '#':
-                        title = line[1:].strip(' ')
-                        continue
-                    if not date and line[0] == '_' and line[-1] == '_':
-                        date = line.strip('_')
-                        continue
-                    if not image and line.startswith('!['):
-                        image = line[line.find("/static/"):].strip(')')
-                        continue
-                    if not intro and line[0].isalpha():
-                        if len(line) > 90:
-                            intro = line[:line.find(' ', 90)]
-                        else:
-                            intro = line
-                        intro = intro + '...'
-                        continue
-                entries.append({
-                    "title": title,
-                    "image": image,
-                    "summary": intro,
-                    "date": date,
-                    "name": filename.split('.')[0].replace(MARKDOWN_FOLDER, "")[1:],
-                    "key": os.path.basename(filename).split('_')[0],
-                    "class": "col-md-6"
-                })
+            entry = summarize_markdown(filename, MARKDOWN_FOLDER)
+            entry["class"] = "col-md-6"
+            entries.append(entry)
         # Sort by date
+        # TODO: key?
         entries = sorted(entries, key=itemgetter('key'), reverse=True)
         # Take only the first 12 entries
+        # TODO: show 12+ entries?
         if len(entries) > 12:
             entries = entries[:12]
         # Set entry width

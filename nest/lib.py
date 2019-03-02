@@ -66,11 +66,7 @@ def search_file(search_dirs, filename, root=""):
     return None
 
 
-def get_files(dir_path):
-    return [f for f in os.listdir(dir_path) if os.path.isfile(os.path.join(dir_path, f))]
-
-
-def parse_markdown(filename, base_dir):
+def summarize_markdown(filename, base_dir):
     with open(filename, 'r') as f:
         lines = f.readlines()
         # Title of the blog
@@ -113,9 +109,14 @@ def parse_markdown(filename, base_dir):
         }
 
 
-def resize_image(image_file, output_file, to_width, to_height):
-    try:
-        im = Image.open(image_file)
+class AImage:
+    def __init__(self, filename):
+        self.image_file = filename
+        if not os.path.exists(self.image_file):
+            raise IOError("File %s not found." % self.image_file)
+
+    def resize_and_crop(self, output_file, to_width, to_height):
+        im = Image.open(self.image_file)
         w, h = im.size
         # Resize the image
         # w/h < to_w/to_h means the image is too tall
@@ -130,7 +131,35 @@ def resize_image(image_file, output_file, to_width, to_height):
         mid_h = h / 2
         im = im.crop((mid_w - to_width / 2, mid_h - to_height / 2, mid_w + to_width / 2, mid_h + to_height / 2))
         im.save(output_file, "JPEG")
-        print("Resized %s" % image_file)
+
+
+def resize_image(image_file, output_file, to_width, to_height):
+    try:
+        AImage(image_file).resize_and_crop(output_file, to_width, to_height)
+        print("Re-sized %s" % image_file)
     except IOError as ex:
         print(ex)
         print("Cannot create thumbnail for '%s'" % image_file)
+
+
+class AFolder:
+    def __init__(self, path):
+        self.path = path
+
+    def __str__(self):
+        return self.path
+
+    @property
+    def files(self):
+        return [f for f in os.listdir(self.path) if os.path.isfile(os.path.join(self.path, f))]
+
+    @property
+    def folders(self):
+        return [f for f in os.listdir(self.path) if os.path.isdir(os.path.join(self.path, f))]
+
+    def create(self):
+        os.makedirs(self.path)
+
+    def empty(self):
+        for f in self.files:
+            os.remove(os.path.join(self.path, f))
