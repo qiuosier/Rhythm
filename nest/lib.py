@@ -1,7 +1,6 @@
 import json
 import os
 from django.conf import settings
-from PIL import Image
 
 
 def load_json(filename):
@@ -16,7 +15,6 @@ def load_json(filename):
 
     """
     root = os.path.join(settings.BASE_DIR, "data")
-    
     json_file = None
     file_path = os.path.join(root, filename)
     if os.path.exists(file_path):
@@ -110,12 +108,14 @@ def summarize_markdown(filename, base_dir):
 
 
 class AImage:
+
     def __init__(self, filename):
         self.image_file = filename
         if not os.path.exists(self.image_file):
             raise IOError("File %s not found." % self.image_file)
 
     def resize_and_crop(self, output_file, to_width, to_height):
+        from PIL import Image
         im = Image.open(self.image_file)
         w, h = im.size
         # Resize the image
