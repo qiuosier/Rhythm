@@ -64,12 +64,7 @@ def render_template(request, html_name, json_name=None, transform_name=None):
         context = {}
 
     # Return response
-    if request.is_ajax():
-        return JsonResponse({
-            "html": render_to_string(html_file, context)
-        })
-    else:
-        return render(request, html_file, context)
+    return render(request, html_file, context)
 
 
 def page(request, filename):
@@ -127,3 +122,7 @@ def skylark_image(request, collection, title):
                 "html_content": html_content
             })
     return HttpResponseNotFound("Image not found.")
+
+
+def swan_journeys(request):
+    return render_template("swan_journeys", "swan")

@@ -19,14 +19,21 @@
         // require separated data requests.
         $(".ajax-page-component").each(function(index, element) {
             var url = "/render/" + $(element).data("template") + "/data/" + $(element).data("context") + "/";
-            $.getJSON(url, function(data) {
-                if (data.html.length) {
-                    $(element).replaceWith(data.html);
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onload = function (e) {
+                if (xhr.response.length) {
+                    $(element).html(xhr.response);
+                } else {
+                    $(element).text("Invalid Response.");
+                    $(element).addClass("text-danger");
                 }
-            }).fail(function(jqxhr, textStatus, error) {
-                $(element).text("Request Failed (" + textStatus + "): " + error);
+            };
+            xhr.onerror = function () {
+                $(element).text("Request Failed (" + xhr.statusText + "): ");
                 $(element).addClass("text-danger");
-            });
+            };
+            xhr.send();
         });
     });
 </script>

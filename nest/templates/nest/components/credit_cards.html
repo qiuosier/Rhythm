@@ -59,11 +59,8 @@
     </div>
 </div>
 
-<script src='/static/js/tablesorts/tablesort.min.js'></script>
-<script src='/static/js/tablesorts/tablesort.number.min.js'></script>
-
-<script>
-    $(document).ready(function() {
-        new Tablesort(document.getElementById('rewards-table'));
-    })
+<script async src='/static/js/tablesorts/tablesort.min.js'></script>
+<script async src='/static/js/tablesorts/tablesort.number.min.js'></script>
+<script async defer>
+    new Tablesort(document.getElementById('rewards-table'));
 </script>
