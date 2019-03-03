@@ -26,7 +26,7 @@ def load_json(filename):
         with open(json_file) as f:
             data = json.load(f)
     else:
-        print("File Not Found.")
+        print("File %s Not Found." % file_path)
         data = {}
     return data
 
