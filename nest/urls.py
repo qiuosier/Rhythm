@@ -10,7 +10,7 @@ urlpatterns = [
     # Customized rendering
     url(r'^skylark/(?P<collection>[^/]+?)/$', views.skylark_collection, name='skylark_collection'),
     url(r'^skylark/(?P<collection>[^/]+?)/(?P<title>.+?)/$', views.skylark_image, name='skylark_image'),
-    url(r'^swan/journeys/$', views.swan_journeys, name='swan_journeys'),
+    url(r'^swan/journeys/(?P<start>[0-9]+)/(?P<size>[0-9]+)/$', views.swan_journeys, name='swan_journeys'),
     # The following patterns all use the "render_template" view (nest:render_template).
     url(
         r'^render/(?P<html_name>.*?)/data/(?P<json_name>.*?)/trasnform/(?P<transform_name>.*?)/$', 

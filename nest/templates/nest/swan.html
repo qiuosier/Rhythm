@@ -17,14 +17,16 @@
         {% include "nest/cards/card_swan.html" with entry=journeys.1 %}
     </div>
 </div>
-<div class="row">
-    {% for entry in journeys|slice:"2:10" %}
+<div class="row" id="swan-journeys">
+    {% for entry in journeys|slice:"2:6" %}
     <div class="col-md-3 md-container">
         {% include "nest/cards/card_swan.html" %}
     </div>
     {% endfor %}
 </div>
-<!-- <div><a class="btn btn-sm btn-outline-primary">Load More...</a></div> -->
+<div class="text-center" id="load-more-journeys" style="padding-top: 10px;">
+    <button class="btn btn-sm btn-outline-primary" style="cursor:pointer" onclick="loadMoreJourneys();">Load More...</button>
+</div>
 
 <h2>Memories</h2>
 <div class="row">
@@ -47,4 +49,23 @@
     </div>
     {% endfor %}
 </div>
+
+<script>
+    function loadMoreJourneys() {
+        var journeys_div = $("#swan-journeys")
+        // The starting index for loading journeys (0-based)
+        var start = journeys_div.children().length + 2;
+        // The number of journeys to be loaded
+        var size = 8;
+        $.getJSON("/swan/journeys/" + start + "/" + size + "/", function (data) {
+            if (data.html.length) {
+                journeys_div.append(data.html);
+            }
+            if (!data.more) {
+                // Hide the "Load More" button if there is no more journeys.
+                $("#load-more-journeys").addClass("d-none");
+            }
+        })
+    }
+</script>
 {% endblock %}
