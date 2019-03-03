@@ -1,0 +1,60 @@
+{
+    "journeys": [
+        {
+            "title": "Toronto",
+            "summary": "Photo taken at rooftop of Park Hyatt Toronto",
+            "date": "May 4th, 2014",
+            "key": "20140504",
+            "image": "IMGP1466.jpg"
+        },
+        {
+            "title": "Shanghai",
+            "summary": "Photo taken at Park Hyatt Shanghai",
+            "date": "September 8th, 2014",
+            "key": "20140908",
+            "image": "IMGP2438.jpg"
+        },
+        {
+            "title": "Beijing",
+            "summary": "Photo taken at Jingshan Park",
+            "date": "September 12th, 2014",
+            "key": "20140912",
+            "image": "IMGP2714.jpg"
+        },
+        {
+            "title": "Denver",
+            "summary": "Photo taken at Denver Art Museum",
+            "date": "July 6th, 2015",
+            "key": "20150706",
+            "image": "IMGP5557.jpg"
+        },
+        {
+            "title": "Paris",
+            "summary": "Photo taken at Arc de Triomphe",
+            "date": "September 4th, 2015",
+            "key": "20150904",
+            "image": "IMGP7245.jpg"
+        },
+        {
+            "title": "Milan",
+            "summary": "Photo taken at Milan Cathedral",
+            "date": "September 5th, 2015",
+            "key": "20150905",
+            "image": "IMGP7399.jpg"
+        },
+        {
+            "title": "Washington DC",
+            "summary": "Photo taken at the top of Washington Monument",
+            "date": "January 2nd, 2016",
+            "key": "20160102",
+            "image": "IMG_20160102_161210-01.jpg"
+        },
+        {
+            "title": "Miami",
+            "summary": "Photo taken at Miami Riverwalk",
+            "date": "Feburary 16th, 2019",
+            "key": "20190216",
+            "image": "IMG_2963.jpg"
+        }
+    ]
+}

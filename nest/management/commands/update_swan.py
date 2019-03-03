@@ -12,10 +12,9 @@ from nest.lib import summarize_markdown, resize_image, AFolder
 # The folder storing the Markdown files.
 # The filename should have the format of 20160101_ArticleName.md, i.e. a date and a name separated by '_'
 MARKDOWN_FOLDER = os.path.join(settings.BASE_DIR, "data", "markdown")
-BLOG_FOLDERS = [
-    os.path.join(MARKDOWN_FOLDER, "swan")
-]
 SWAN_FOLDER = os.path.join(settings.BASE_DIR, "data", "markdown", "swan")
+
+JOURNEYS_JSON = os.path.join(settings.BASE_DIR, "data", "swan", "journeys.json")
 
 # The JSON file storing the Swift home page entries
 JSON_OUTPUT = os.path.join(settings.BASE_DIR, "data", "swan.json")
@@ -23,6 +22,26 @@ JSON_OUTPUT = os.path.join(settings.BASE_DIR, "data", "swan.json")
 IMAGE_SUB_FOLDER = "static/images"
 IMAGE_FOLDER = os.path.join(settings.BASE_DIR, IMAGE_SUB_FOLDER)
 THUMBNAIL_FOLDER = os.path.join(settings.BASE_DIR, "static", "images", "swan", "home")
+
+
+def add_journeys():
+    if not os.path.exists(JOURNEYS_JSON):
+        return
+
+    with open(JOURNEYS_JSON, 'r') as f:
+        journeys = json.load(f).get("journeys")
+
+    for journey in journeys:
+        filename = "%s_%s.md" % (journey.get("key"), journey.get("title"))
+        markdown_file = os.path.join(SWAN_FOLDER, filename)
+        if not os.path.exists(markdown_file):
+            image = journey.get("image")
+            with open(markdown_file, 'w') as f:
+                f.write("# %s\n\n" % journey.get("title"))
+                f.write("_%s_\n\n" % journey.get("date"))
+                f.write("![](../../../static/images/swan/journeys/%s)\n\n" % image)
+                f.write("%s\n" % journey.get("summary", ""))
+            print("Created %s." % markdown_file)
 
 
 def update_swan_thumbnails():
@@ -49,20 +68,15 @@ def update_swan_thumbnails():
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        # Load all file names.
-        files = []
-        for folder in BLOG_FOLDERS:
-            files.extend([
-                os.path.join(folder, f)
-                for f in os.listdir(folder) if os.path.isfile(os.path.join(folder, f))
-            ])
+
+        add_journeys()
+
+        # Load all swan markdown entries.
+        files = AFolder(SWAN_FOLDER).files
         entries = []
         for filename in files:
-            entry_dict = summarize_markdown(filename, base_dir=MARKDOWN_FOLDER)
+            entry_dict = summarize_markdown(os.path.join(SWAN_FOLDER, filename), base_dir=MARKDOWN_FOLDER)
             entries.append(entry_dict)
-            
-        # Sort by date
-        entries = sorted(entries, key=itemgetter('key'), reverse=True)
 
         # Load existing data from swan
         featured = []
@@ -73,31 +87,36 @@ class Command(BaseCommand):
                 featured = swan_data.get("featured", [])
                 destinations = swan_data.get("destinations", [])
 
-        # Process images for journeys
         update_swan_thumbnails()
+
+        # Get journeys
         journeys = []
         existing_entries = [entry["name"] for entry in featured + destinations if entry.get("name")]
-        for entry in entries[1:]:
+        for entry in entries:
             # Skip if entry is in featured or destinations
-            if entry["name"] in existing_entries:
-                continue
+            if entry["name"] not in existing_entries:
+                journeys.append(entry)
+
+        # Sort by date
+        journeys = sorted(journeys, key=itemgetter('key'), reverse=True)
+
+        # Process last trip image thumbnail
+        if journeys[0]["image"]:
+            image_file = settings.BASE_DIR + journeys[0]["image"]
+            thumbnail = os.path.join(THUMBNAIL_FOLDER, journeys[0]["name"].replace("swan/", "") + "_L.jpg")
+            resize_image(image_file, thumbnail, 1000, 500)
+            journeys[0]["image"] = thumbnail.replace(settings.BASE_DIR, "")
+
+        # Set other journeys thumbnail
+        for entry in journeys[1:]:
             thumbnail = os.path.join(THUMBNAIL_FOLDER, entry["name"].replace("swan/", "") + ".jpg")
             if os.path.exists(thumbnail):
                 entry["image"] = thumbnail.replace(settings.BASE_DIR, "")
-            journeys.append(entry)
-
-        # Process last trip image
-        if entries[0]["image"]:
-            image_file = settings.BASE_DIR + entries[0]["image"]
-            thumbnail = os.path.join(THUMBNAIL_FOLDER, entries[0]["name"].replace("swan/", "") + "_L.jpg")
-            resize_image(image_file, thumbnail, 1000, 500)
-            entries[0]["image"] = thumbnail.replace(settings.BASE_DIR, "")
 
         # Save the data
         with open(JSON_OUTPUT, 'w') as output:
             json.dump({
                 "title": "Swan",
-                "last_trip": entries[0],
                 "journeys": journeys,
                 "featured": featured,
                 "destinations": destinations
