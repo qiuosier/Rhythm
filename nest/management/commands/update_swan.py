@@ -91,10 +91,10 @@ class Command(BaseCommand):
 
         # Get journeys
         journeys = []
-        existing_entries = [entry["name"] for entry in featured + destinations if entry.get("name")]
+        existing_entries = [entry["link"] for entry in featured + destinations if entry.get("link")]
         for entry in entries:
             # Skip if entry is in featured or destinations
-            if entry["name"] not in existing_entries:
+            if entry["link"] not in existing_entries:
                 journeys.append(entry)
 
         # Sort by date
@@ -103,13 +103,13 @@ class Command(BaseCommand):
         # Process last trip image thumbnail
         if journeys[0]["image"]:
             image_file = settings.BASE_DIR + journeys[0]["image"]
-            thumbnail = os.path.join(THUMBNAIL_FOLDER, journeys[0]["name"].replace("swan/", "") + "_L.jpg")
+            thumbnail = os.path.join(THUMBNAIL_FOLDER, journeys[0]["link"].replace("swan/", "") + "_L.jpg")
             resize_image(image_file, thumbnail, 1000, 500)
             journeys[0]["image"] = thumbnail.replace(settings.BASE_DIR, "")
 
         # Set other journeys thumbnail
         for entry in journeys[1:]:
-            thumbnail = os.path.join(THUMBNAIL_FOLDER, entry["name"].replace("swan/", "") + ".jpg")
+            thumbnail = os.path.join(THUMBNAIL_FOLDER, entry["link"].replace("swan/", "") + ".jpg")
             if os.path.exists(thumbnail):
                 entry["image"] = thumbnail.replace(settings.BASE_DIR, "")
 

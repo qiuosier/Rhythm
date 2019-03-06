@@ -31,7 +31,7 @@ class Command(BaseCommand):
         # Load all file names.
         files = []
         for folder in BLOG_FOLDERS:
-            files.extend(AFolder(folder).files)
+            files.extend([os.path.join(folder, f) for f in AFolder(folder).files])
         entries = []
         for filename in files:
             entry = summarize_markdown(filename, MARKDOWN_FOLDER)

@@ -23,11 +23,24 @@ DJANGO_SECRET_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 ```
 
 ### Content Data
+The "data" folder and the "static/images" folder contain only content data (user data). These folders are included in the Git repostory intentionally to keep track of the history of content updates.
+
 The logging middleware uses [Google Datastore NDB](https://cloud.google.com/appengine/docs/standard/python/ndb/) to store the logs.
 
 Other than the logging middleware, this project does not use external database. The data for rendering web pages are stored in the "data" folder as "JSON" or "Markdown" format. HTML templates for rendering the data are stored in the "nest/templates/nest" folder. The `nest/view.py` module contains two basic view functions for rendering the "JSON" and "Markdown" data, respectively. These two functions handles the rendering of most webpages.
 
-The "data" folder and the "images" folder in the "static" folder contain only content data (user data). These folders are included in the Git repostory intentionally to keep track of the history of content updates.
+### JSON Data Model
+Contents of the website are often displayed as "entries". For example, the "Carousel" of the home page is displaying a list of "entries". Similar "entries" are used in different pages. This website uses the following data model for most entries.
+```
+{
+    "title": "",
+    "summary": "",
+    "date": "",
+    "link": "",
+    "image": "",
+    "class": "",
+}
+```
 
 ### Rendering Webpage with HTML Template and Structured JSON Data
 Structured data for the website are stored in "JSON" format. The basic webpage rendering pattern for most web frameworks is displaying templates with structured data. The data workflow can be summarized as 3 steps:

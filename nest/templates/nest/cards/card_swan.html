@@ -7,8 +7,8 @@
     {% endif %}
     <div class="md-text">
         <h4>
-            {% if entry.name %}
-            <a href="{% url 'nest:page' entry.name %}">{{ entry.title }}</a>
+            {% if entry.link %}
+            <a href="{% url 'nest:page' entry.link %}">{{ entry.title }}</a>
             {% else %}
             {{ entry.title }}
             {% endif %}
