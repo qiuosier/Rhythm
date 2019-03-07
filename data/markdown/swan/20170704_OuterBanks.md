@@ -1,6 +1,6 @@
 # Birds @ Outer Banks
 
-_July 3rd, 2017_
+_July 3, 2017_
 
 Birds and "First in Flight".
 

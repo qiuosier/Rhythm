@@ -1,6 +1,6 @@
 # Carolina Beach
 
-_October 1st, 2017_
+_October 1, 2017_
 
 Catching the end of summer...
 

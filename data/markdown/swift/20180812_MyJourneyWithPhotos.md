@@ -1,6 +1,6 @@
 # My Journey with Photos
 
-_August 21st, 2018_
+_August 21, 2018_
 
 ## Growing up with Photos
 When I was a small kid, we had photos using a traditional film camera from time to time. A camera was something expensive at that time. I never own one. Taking each photo cost some money (because we have to buy films) and we cannot see the it until we take the films to a shop and wait for a day or two. To see it on a computer, we have to scan it, often resulting in a low quality image.

@@ -99,11 +99,10 @@ def summarize_markdown(filename, base_dir):
                 continue
         return {
             "title": title,
-            "link": filename.split('.')[0].replace(base_dir, "")[1:],
-            "image": image,
             "summary": intro,
             "date": date,
-            "key": os.path.basename(filename).split('_')[0],
+            "link": filename.split('.')[0].replace(base_dir, "")[1:],
+            "image": image,
         }
 
 

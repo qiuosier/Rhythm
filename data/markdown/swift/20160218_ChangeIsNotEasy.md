@@ -1,6 +1,6 @@
 # Change is not Easy
 
-_Feburary 18th, 2016_
+_Feburary 18, 2016_
 
 ![Immigration Building, Ellis Island](../../../static/images/swift/20160108_EllisIslandBuilding.jpg)
 

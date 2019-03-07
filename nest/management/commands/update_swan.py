@@ -32,7 +32,7 @@ def add_journeys():
         journeys = json.load(f).get("journeys")
 
     for journey in journeys:
-        filename = "%s_%s.md" % (journey.get("key"), journey.get("title"))
+        filename = "%s.md" % journey.get("name")
         markdown_file = os.path.join(SWAN_FOLDER, filename)
         if not os.path.exists(markdown_file):
             image = journey.get("image")
@@ -98,7 +98,7 @@ class Command(BaseCommand):
                 journeys.append(entry)
 
         # Sort by date
-        journeys = sorted(journeys, key=itemgetter('key'), reverse=True)
+        journeys = sorted(journeys, key=lambda k: k["link"].rsplit("/", 1)[-1], reverse=True)
 
         # Process last trip image thumbnail
         if journeys[0]["image"]:

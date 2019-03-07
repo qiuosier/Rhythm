@@ -1,6 +1,6 @@
 # Live in My Life
 
-_Feburary 5th, 2016_
+_Feburary 5, 2016_
 
 ![Golden Gate Bridge, San Francisco](../../../static/images/swift/20160129_GoldenGateBridge.jpg)
 

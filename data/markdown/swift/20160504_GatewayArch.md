@@ -1,6 +1,6 @@
 # Gateway to the West
 
-_May 4th, 2016_
+_May 4, 2016_
 
 Life is running like a machine.
 

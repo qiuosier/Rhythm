@@ -1,6 +1,6 @@
 # San Francisco
 
-_December 20th, 2018_
+_December 20, 2018_
 
 ![](../../../static/images/swan/1812SanFrancisco/20180726_IMGP0677.jpg)
 

@@ -25,9 +25,15 @@ DJANGO_SECRET_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 ### Content Data
 The "data" folder and the "static/images" folder contain only content data (user data). These folders are included in the Git repostory intentionally to keep track of the history of content updates.
 
-The logging middleware uses [Google Datastore NDB](https://cloud.google.com/appengine/docs/standard/python/ndb/) to store the logs.
+This project does not use external database for content data. The data for rendering web pages are stored in the "data" folder as "JSON" or "Markdown" format. HTML templates for rendering the data are stored in the "nest/templates/nest" folder. The `nest/view.py` module contains two basic view functions for rendering the "JSON" and "Markdown" data, respectively. These two functions handles the rendering of most webpages.
 
-Other than the logging middleware, this project does not use external database. The data for rendering web pages are stored in the "data" folder as "JSON" or "Markdown" format. HTML templates for rendering the data are stored in the "nest/templates/nest" folder. The `nest/view.py` module contains two basic view functions for rendering the "JSON" and "Markdown" data, respectively. These two functions handles the rendering of most webpages.
+### Rendering Webpage with HTML Template and Structured JSON Data
+Structured data for the website are stored in "JSON" format. The basic webpage rendering pattern for most web frameworks is displaying templates with structured data. The data workflow can be summarized as 3 steps:
+1. Loading data
+2. Transforming/Manipulating data
+3. Rendering data with a template
+
+The `render_template` function in `nest/views.py` serves as an entry point of the above workflow. Search directories are defined in the function for looking up the JSON and HTML files. The data transformation step is optional. It uses functions defined in the `transform.py`.
 
 ### JSON Data Model
 Contents of the website are often displayed as "entries". For example, the "Carousel" of the home page is displaying a list of "entries". Similar "entries" are used in different pages. This website uses the following data model for most entries.
@@ -42,16 +48,10 @@ Contents of the website are often displayed as "entries". For example, the "Caro
 }
 ```
 
-### Rendering Webpage with HTML Template and Structured JSON Data
-Structured data for the website are stored in "JSON" format. The basic webpage rendering pattern for most web frameworks is displaying templates with structured data. The data workflow can be summarized as 3 steps:
-1. Loading data
-2. Transforming/Manipulating data
-3. Rendering data with a template
-
-The `render_template` function in `nest/views.py` serves as an entry point of the above workflow. Search directories are defined in the function for looking up the JSON and HTML files. The data transformation step is optional. It uses functions defined in the `transform.py`.
-
 ### Rendering Webpage with Markdown Data
 Un-structured data, like blogs or articles are stored in "Markdown" format.
+
+The "Markdown" data files for some content data, e.g. blogs and footprints are named in with an eight-digit date prefix, e.g. `20140504_Toronto.md`. The eight-digit part will be used to sort the entries in the home/summary page.
 
 The `page` function in `nest/views.py` is designed to render "Markdown" data in a webpage. It loads a markdown file and render it with the `page.html` template.
 
@@ -63,6 +63,7 @@ The `page.html` template also includes a function to render additional component
 AJAX GET requests will be sent to render additiona components using the `render_template` function. The returned data will be used to replace the whole HTML tag (`<div></div>` in the above example). The `[JSON_NAME]` and `[HTML_NAME]` are the inputs for the `render_template` function.
 
 The URL pattern for displaying a "page" is `www.example.com/page/<file_path>/`, in which `<file_path>` is the file path of a markdown file stored in `/data/markdown/`, including the filename but without the ".md" extension. Since both the URL and the file path are two level down from the root, relative paths in the markdown file will be able to point to the same location when the file is being viewed by a local editor or rendered by the web application. The images used in the markdown files are stored in `/static/images/`.
+
 
 ## Updating Pages with Management Commands
 Some pages, like the index page of the "Swift Blog" displays "JSON" data summarized from "Markdown" files. A few management commands are designed to update such "JSON" data automatically.
@@ -77,3 +78,7 @@ The Swan home page displays my travel entries.
 
 ## Delopyment with Google Cloud Build and App Engine.
 The `build.json` file contains steps for deploying the website too Google App Engine using Google Cloud Build.
+
+
+## Logging
+The logging middleware uses [Google Datastore NDB](https://cloud.google.com/appengine/docs/standard/python/ndb/) to store the logs.
