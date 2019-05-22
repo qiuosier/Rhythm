@@ -77,7 +77,7 @@ The Swan home page displays my travel entries.
 ### Thumbnails
 
 ## Delopyment with Google Cloud Build and App Engine.
-The `build.json` file contains steps for deploying the website too Google App Engine using Google Cloud Build.
+The `build.json` file contains steps for deploying the website to Google App Engine using Google Cloud Build.
 
 
 ## Logging

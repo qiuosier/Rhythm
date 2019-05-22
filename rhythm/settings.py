@@ -41,18 +41,19 @@ INSTALLED_APPS = [
     'nest',
 ]
 
-MIDDLEWARE_CLASSES = [
-    'google.appengine.ext.ndb.django_middleware.NdbDjangoMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'nest.middleware.LogHttpRequestMiddleware',
 ]
+
+if not DEBUG:
+    MIDDLEWARE.insert(0, 'google.appengine.ext.ndb.django_middleware.NdbDjangoMiddleware')
+    MIDDLEWARE.append("nest.middleware.LogHttpRequestMiddleware")
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
