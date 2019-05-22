@@ -3,7 +3,6 @@ This command updates the Swift blog home page to contain the latest blogs in "da
 """
 import os
 import json
-from operator import itemgetter
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from nest.lib import summarize_markdown, AFolder
@@ -31,7 +30,7 @@ class Command(BaseCommand):
         # Load all file names.
         files = []
         for folder in BLOG_FOLDERS:
-            files.extend(AFolder(folder).files)
+            files.extend([os.path.join(folder, f) for f in AFolder(folder).files])
         entries = []
         for filename in files:
             entry = summarize_markdown(filename, MARKDOWN_FOLDER)
@@ -39,7 +38,7 @@ class Command(BaseCommand):
             entries.append(entry)
         # Sort by date
         # TODO: key?
-        entries = sorted(entries, key=itemgetter('key'), reverse=True)
+        entries = sorted(entries, key=lambda k: k["link"].rsplit("/", 1)[-1], reverse=True)
         # Take only the first 12 entries
         # TODO: show 12+ entries?
         if len(entries) > 12:
@@ -49,6 +48,7 @@ class Command(BaseCommand):
         for entry in entries:
             entry["class"] = "col-md-" + str(SIZE_ARRAY[i])
             i += 1
+            print("%s %s" % (i, entry["title"]))
         # Save the data
         with open(JSON_OUTPUT, 'w') as output:
             json.dump({

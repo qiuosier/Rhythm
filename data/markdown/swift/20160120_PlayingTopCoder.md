@@ -1,6 +1,6 @@
 # Playing with Top Coder
 
-_January 20th, 2016_
+_January 20, 2016_
 
 After someone from Mountain View visited this website, I realized that it is not a good idea to let smart people hit a few pages that are under construction. 
 

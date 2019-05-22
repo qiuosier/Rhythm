@@ -1,6 +1,6 @@
 # Decoupling on the Cloud
 
-_July 29th, 2018_
+_July 29, 2018_
 
 Google Next is not an academic conference. It's more about learning the trend of future products, or how people approach real world problems.
 

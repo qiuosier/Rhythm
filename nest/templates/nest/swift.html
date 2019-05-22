@@ -18,7 +18,7 @@
             </div>
             {% endif %}
             <div class="md-text">
-                <h4><a href="{% url 'nest:page' blog.name %}">{{ blog.title }}</a></h4>
+                <h4><a href="{% url 'nest:page' blog.link %}">{{ blog.title }}</a></h4>
                 {% if blog.date %}
                 <small><i>{{ blog.date }}</i></small>
                 {% endif %}

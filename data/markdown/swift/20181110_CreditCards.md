@@ -1,6 +1,6 @@
 # Which Credit Card I Should Use to Get Max Rewards?
 
-_November 10th, 2018_
+_November 10, 2018_
 
 A few years ago, I was pretty good at remembering which credit card to use in order to maximize the rewards. As I am getting more and more credit cards, things become complicated. So I decided to make a table for them. Actually I asked the computer to make this table. There are many credit card blogs or websites making recommendations for the hot deals.
 

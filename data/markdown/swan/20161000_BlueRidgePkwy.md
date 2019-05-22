@@ -1,6 +1,6 @@
 # Blue Ridge Parkway
 
-_October 16th, 2016_
+_October 16, 2016_
 
 ![](../../../static/images/swan/1610BlueRidgePkwy/20161016_IMGP8864_HDR.jpg)
 

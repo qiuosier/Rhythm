@@ -1,6 +1,6 @@
 # Python IDE?
 
-_August 6th, 2016_
+_August 6, 2016_
 
 Lack of a good IDE means less productive.
 
