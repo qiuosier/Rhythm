@@ -1,6 +1,6 @@
 """
 This command updates the Skylark Gallery, including:
-    Generating thumbnails for the images.
+    Generating thumbnails for the images in each collection.
 
 Images in the Skylark Gallery are stored in collections, each collection is folder.
 All collections are stored in the "Skylark Image Folder".
