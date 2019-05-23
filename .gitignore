@@ -103,3 +103,5 @@ client_secrets.json
 
 # NPM
 /static/node_modules/
+
+\.DS_Store
