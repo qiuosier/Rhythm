@@ -37,6 +37,7 @@ Contents of the website are often displayed as "entries". For example, the "Caro
 {
     "title": "",
     "summary": "",
+    "description: "",
     "date": "",
     "link": "",
     "image": "",

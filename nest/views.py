@@ -111,9 +111,7 @@ def skylark_image(request, collection, title):
     for photo in photos:
         if photo.get("title").replace(" ", "_") == title.replace(" ", "_"):
             image_path = os.path.join("/static/images/skylark", collection, photo.get("image"))
-            image_alt = photo.get("description")
-            if not image_alt:
-                image_alt = photo.get("title")
+            image_alt = photo.get("title")
             html_content = '<img src="%s" alt="%s"><h1 class="text-center">%s</h1>' % (
                 image_path, image_alt, photo.get("title", "")
             )

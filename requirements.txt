@@ -2,3 +2,4 @@ Django~=2.2
 oauth2client
 markdown
 google-cloud-datastore
+pillow

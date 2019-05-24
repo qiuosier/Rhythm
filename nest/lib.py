@@ -157,7 +157,8 @@ class AFolder:
         return [f for f in os.listdir(self.path) if os.path.isdir(os.path.join(self.path, f))]
 
     def create(self):
-        os.makedirs(self.path)
+        if not os.path.exists(self.path):
+            os.makedirs(self.path)
 
     def empty(self):
         for f in self.files:
