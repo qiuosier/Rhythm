@@ -17,6 +17,7 @@ from nest.lib import resize_image, AFolder
 # The folder storing the skylark images
 SKYLARK_IMAGE_FOLDER = os.path.join(settings.BASE_DIR, "static", "images", "skylark")
 SKYLARK_DATA_FOLDER = os.path.join(settings.BASE_DIR, "data", "skylark")
+SKYLARK_INDEX = os.path.join(settings.BASE_DIR, "data", "skylark.json")
 
 class Command(BaseCommand):
     help = 'Updates the Skylark Gallery.'

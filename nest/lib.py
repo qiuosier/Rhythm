@@ -3,31 +3,25 @@ import os
 from django.conf import settings
 
 
-def load_json(filename):
+def load_json(file_path, default=None):
     """Loads data from a JSON file to a Python dictionary
-    JSON files are stored in the "/data" folder.
 
     Args:
-        filename: Filename without extension.
+        file_path: file path of a json file.
+        default: default value to be returned if the file does not exist.
+            If default is None and file is not found , an empty dictionary will be returned.
 
     Returns: A python dictionary containing data from the json file.
-        An empty dictionary will be returned if the data file is not found.
-
     """
-    root = os.path.join(settings.BASE_DIR, "data")
-    json_file = None
-    file_path = os.path.join(root, filename)
     if os.path.exists(file_path):
-        json_file = file_path
-    elif os.path.exists(file_path + ".json"):
-        json_file = file_path + ".json"
-    
-    if json_file:
-        with open(json_file) as f:
+        with open(file_path) as f:
             data = json.load(f)
     else:
         print("File %s Not Found." % file_path)
-        data = {}
+        if default:
+            data = default
+        else:
+            data = {}
     return data
 
 
@@ -60,7 +54,7 @@ def search_file(search_dirs, filename, root=""):
             absolute_path = os.path.join(root, relative_path)
 
         if os.path.exists(absolute_path):
-            return relative_path
+            return absolute_path
     return None
 
 

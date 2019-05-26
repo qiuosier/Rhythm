@@ -101,12 +101,14 @@ def index(request):
 
 
 def skylark_collection(request, collection):
-    data = load_json("skylark/" + collection)
+    json_file = os.path.join(settings.BASE_DIR, "data", "skylark", collection + ".json")
+    data = load_json(json_file)
     return render(request, "nest/skylark_collection.html", data)
 
 
 def skylark_image(request, collection, title):
-    data = load_json("skylark/" + collection)
+    json_file = os.path.join(settings.BASE_DIR, "data", "skylark", collection + ".json")
+    data = load_json(json_file)
     photos = data.get("photos", [])
     for photo in photos:
         if photo.get("title").replace(" ", "_") == title.replace(" ", "_"):
