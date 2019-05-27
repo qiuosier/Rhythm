@@ -82,7 +82,7 @@ def page(request, filename):
         with open(markdown_file) as f:
             text = f.read()
     else:
-        return HttpResponseNotFound(markdown_file + " not found.")
+        return HttpResponseNotFound(filename + " not found.")
 
     text = "".join(filter(ascii_char, text))
     title = get_markdown_title(text)

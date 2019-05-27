@@ -6,7 +6,7 @@ app_name = 'nest'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     # Basic page rendering
-    url(r'^page/(?P<filename>.*?)$', views.page, name='page'),
+    url(r'^page/(?P<filename>.*?)/$', views.page, name='page'),
     # Customized rendering
     url(r'^skylark/(?P<collection>[^/]+?)/$', views.skylark_collection, name='skylark_collection'),
     url(r'^skylark/(?P<collection>[^/]+?)/(?P<title>.+?)/$', views.skylark_image, name='skylark_image'),
