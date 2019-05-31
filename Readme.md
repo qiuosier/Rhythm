@@ -2,6 +2,9 @@
 This is Qiu's personal website, designed for Google App Engine standard environment.
 This project uses Python 3.7 and Django 2.2.
 
+[![Build Status](https://travis-ci.org/qiuosier/Rhythm.svg?branch=master)](https://travis-ci.org/qiuosier/Rhythm)
+[![Coverage Status](https://coveralls.io/repos/github/qiuosier/Rhythm/badge.svg?branch=master)](https://coveralls.io/github/qiuosier/Rhythm?branch=master)
+
 ## Architecture
 This website includes 4 components, each of them is named with a bird. That's why I called my website "Nest".
 * The Swift Blog: My blogs and posts along with pictures.
