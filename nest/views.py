@@ -43,7 +43,7 @@ def render_template(request, html_name, json_name=None, transform_name=None):
     # Get template file path.
     html_file = search_file(html_dirs, html_name + ".html", root=html_root)
     if not html_file:
-        return HttpResponseNotFound("Template \"%s\" does not exist." % html_name)
+        return HttpResponseNotFound("Template \"%s\" not found." % html_name)
 
     # Load data
     # Get data file path.
@@ -82,7 +82,7 @@ def page(request, filename):
         with open(markdown_file) as f:
             text = f.read()
     else:
-        return HttpResponseNotFound(markdown_file + " not found.")
+        return HttpResponseNotFound(filename + " not found.")
 
     text = "".join(filter(ascii_char, text))
     title = get_markdown_title(text)
@@ -101,19 +101,19 @@ def index(request):
 
 
 def skylark_collection(request, collection):
-    data = load_json("skylark/" + collection)
+    json_file = os.path.join(settings.BASE_DIR, "data", "skylark", collection + ".json")
+    data = load_json(json_file)
     return render(request, "nest/skylark_collection.html", data)
 
 
 def skylark_image(request, collection, title):
-    data = load_json("skylark/" + collection)
+    json_file = os.path.join(settings.BASE_DIR, "data", "skylark", collection + ".json")
+    data = load_json(json_file)
     photos = data.get("photos", [])
     for photo in photos:
         if photo.get("title").replace(" ", "_") == title.replace(" ", "_"):
             image_path = os.path.join("/static/images/skylark", collection, photo.get("image"))
-            image_alt = photo.get("description")
-            if not image_alt:
-                image_alt = photo.get("title")
+            image_alt = photo.get("title")
             html_content = '<img src="%s" alt="%s"><h1 class="text-center">%s</h1>' % (
                 image_path, image_alt, photo.get("title", "")
             )
@@ -122,29 +122,3 @@ def skylark_image(request, collection, title):
                 "html_content": html_content
             })
     return HttpResponseNotFound("Image not found.")
-
-
-def swan_journeys(request, start, size):
-    try:
-        start = int(start)
-        size = int(size)
-    except Exception as ex:
-        print(ex)
-        return JsonResponse({
-            "html": "",
-            "more": False
-        })
-
-    json_file = os.path.join(settings.BASE_DIR, "data", "swan.json")
-    journeys = load_json(json_file).get("journeys", [])
-    if start + size < len(journeys):
-        journeys = journeys[start:start + size]
-        more = True
-    else:
-        journeys = journeys[start:]
-        more = False
-    html = render_to_string("nest/swan_journeys.html", {"journeys": journeys})
-    return JsonResponse({
-        "html": html,
-        "more": more,
-    })
