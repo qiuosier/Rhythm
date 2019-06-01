@@ -83,7 +83,6 @@ def page(request, filename):
             text = f.read()
     else:
         return HttpResponseNotFound(filename + " not found.")
-
     text = "".join(filter(ascii_char, text))
     title = get_markdown_title(text)
     html_content = markdown.markdown(
