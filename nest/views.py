@@ -6,7 +6,9 @@ from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFou
 from django.template.loader import get_template, render_to_string
 from django.template import TemplateDoesNotExist
 from django.conf import settings
-from nest.lib import load_json, ascii_char, get_markdown_title, search_file
+from Aries.strings import AString
+from Aries.files import File
+from nest.lib import get_markdown_title, search_file
 from nest import transform
 
 
@@ -52,7 +54,7 @@ def render_template(request, html_name, json_name=None, transform_name=None):
     json_file = search_file(data_dirs, json_name + ".json", root=data_root)
     if json_file:
         # Load json data from file.
-        context = load_json(json_file)
+        context = File.load_json(json_file)
         # Transform data.
         if transform_name is None:
             transform_name = json_name
@@ -83,9 +85,7 @@ def page(request, filename):
             text = f.read()
     else:
         return HttpResponseNotFound(filename + " not found.")
-
-    text = "".join(filter(ascii_char, text))
-    title = get_markdown_title(text)
+    title = get_markdown_title(AString(text).remove_non_ascii())
     html_content = markdown.markdown(
         text,
         output_format="html5",
@@ -102,13 +102,13 @@ def index(request):
 
 def skylark_collection(request, collection):
     json_file = os.path.join(settings.BASE_DIR, "data", "skylark", collection + ".json")
-    data = load_json(json_file)
+    data = File.load_json(json_file)
     return render(request, "nest/skylark_collection.html", data)
 
 
 def skylark_image(request, collection, title):
     json_file = os.path.join(settings.BASE_DIR, "data", "skylark", collection + ".json")
-    data = load_json(json_file)
+    data = File.load_json(json_file)
     photos = data.get("photos", [])
     for photo in photos:
         if photo.get("title").replace(" ", "_") == title.replace(" ", "_"):
