@@ -5,7 +5,8 @@ import os
 import json
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from nest.lib import summarize_markdown, AFolder
+from Aries.storage import LocalFolder
+from nest.lib import summarize_markdown
 
 # The folder storing the Markdown blog files.
 # The filename should have the format of 20160101_ArticleName.md, i.e. a date and a name separated by '_'
@@ -30,7 +31,7 @@ class Command(BaseCommand):
         # Load all file names.
         files = []
         for folder in BLOG_FOLDERS:
-            files.extend([os.path.join(folder, f) for f in AFolder(folder).files])
+            files.extend([os.path.join(folder, f) for f in LocalFolder(folder).file_names])
         entries = []
         for filename in files:
             entry = summarize_markdown(filename, MARKDOWN_FOLDER)

@@ -3,37 +3,6 @@ import os
 from django.conf import settings
 
 
-def load_json(file_path, default=None):
-    """Loads data from a JSON file to a Python dictionary
-
-    Args:
-        file_path: file path of a json file.
-        default: default value to be returned if the file does not exist.
-            If default is None and file is not found , an empty dictionary will be returned.
-
-    Returns: A python dictionary containing data from the json file.
-    """
-    if os.path.exists(file_path):
-        with open(file_path) as f:
-            data = json.load(f)
-    else:
-        print("File %s Not Found." % file_path)
-        if default:
-            data = default
-        else:
-            data = {}
-    return data
-
-
-def ascii_char(char):
-    """Returns the input character if it is an ASCII character, otherwise empty string.
-    """
-    if ord(char) > 127: 
-        return ''
-    else: 
-        return char
-
-
 def get_markdown_title(text):
     """Gets the title of a Markdown file.
     """
@@ -133,27 +102,3 @@ def resize_image(image_file, output_file, to_width, to_height):
     except IOError as ex:
         print(ex)
         print("Cannot create thumbnail for '%s'" % image_file)
-
-
-class AFolder:
-    def __init__(self, path):
-        self.path = path
-
-    def __str__(self):
-        return self.path
-
-    @property
-    def files(self):
-        return [f for f in os.listdir(self.path) if os.path.isfile(os.path.join(self.path, f))]
-
-    @property
-    def folders(self):
-        return [f for f in os.listdir(self.path) if os.path.isdir(os.path.join(self.path, f))]
-
-    def create(self):
-        if not os.path.exists(self.path):
-            os.makedirs(self.path)
-
-    def empty(self):
-        for f in self.files:
-            os.remove(os.path.join(self.path, f))
