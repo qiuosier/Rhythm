@@ -1,4 +1,4 @@
-# Title
+# Making Git Repository Partially Public
 
 _May 4, 2016_
 
