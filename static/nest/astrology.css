@@ -13,9 +13,17 @@
 }
 
 .timeline-badge.Sagittarius {
-    background-color: forestgreen !important;
+    background-color: slategray !important;
 }
 
 .timeline-badge.Capricorn {
     background-color: cornflowerblue !important;
+}
+
+.timeline-badge.Aries {
+    background-color: darkorchid !important;
+}
+
+.timeline-badge.Virgo {
+    background-color: forestgreen !important;
 }
