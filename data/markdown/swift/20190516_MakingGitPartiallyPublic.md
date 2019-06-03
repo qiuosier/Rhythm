@@ -1,6 +1,6 @@
 # Making Git Repository Partially Public
 
-_May 4, 2016_
+_May 16, 2019_
 
 Now both GitHub and GitLab offer private or public repositories to free accounts, but what if we would like to keep a repository partially private? I don't think there is such a feature explicitly.
 

@@ -1,17 +1,21 @@
 <ul class="timeline left-axis">
     {% for event in events %}
         <li>
-            <a href="{% url 'nest:page' event.key %}">
-                <div class="timeline-badge mdl-shadow--2dp">
-                    {% if event.icon %}
-                    <img src="{{ event.icon }}" />
-                    {% else %}
-                    <p class="no-margin">{{ event.year }}</p>
-                    {% endif %}
-                </div>
-            </a>
+            <div class="timeline-badge mdl-shadow--2dp">
+                {% if event.icon %}
+                <img src="{{ event.icon }}" />
+                {% else %}
+                <p class="no-margin">{{ event.year }}</p>
+                {% endif %}
+            </div>
             <div class="timeline-panel mdl-shadow--2dp">
-                <h4 class="no-spacing timeline-panel-title"><a href="{% url 'nest:page' event.key %}">{{ event.title }}</a></h4>
+                <h4 class="no-spacing timeline-panel-title">
+                    {% if event.link %}
+                    <a href="{% url 'nest:page' event.key %}">{{ event.title }}</a>
+                    {% else %}
+                    <span class="text-primary">{{ event.title }}</span>
+                    {% endif %}
+                </h4>
                 <div>
                     {% for tag in event.tags %}
                     <span class="badge badge-success">{{ tag }}</span>
