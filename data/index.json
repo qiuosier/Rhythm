@@ -2,29 +2,31 @@
     "title": "Home",
     "carousel_data": [
         {
-            "key": "Sarah P. Duke Gardens",
-            "description": "A Pleasant Walk to Work",
+            "title": "Sarah P. Duke Gardens",
+            "summary": "A Pleasant Walk to Work",
             "date": "March 9, 2017",
-            "image": "/static/images/carousel/DukeGardens.jpg"
+            "image": "/static/images/carousel/DukeGardens.jpg",
+            "link": "page/swan/20160000_NC"
         },
         {
-            "key": "New York City",
-            "description": "Where Dreams Begin",
+            "title": "New York",
+            "summary": "Where Dreams Begin",
             "date": "April 26, 2015",
             "image": "/static/images/carousel/NYCDowntown.jpg"
         },
         {
-            "key": "Mt. Everest",
-            "description": "Spectacular Sunset while Biking Across the Himalayas",
+            "title": "Mt. Everest",
+            "summary": "Spectacular Sunset while Biking Across the Himalayas",
             "date": "July 17, 2011",
             "image": "/static/images/carousel/MtEverest.jpg",
             "link": "page/swan/20110700_AcrossTheHimalayas"
         },
         {
-            "key": "The Walls around Xi'an",
-            "description": "My Journey from The Ancient City",
+            "title": "Xi'an",
+            "summary": "My Journey from The Ancient City",
             "date": "November 28, 2008",
-            "image": "/static/images/carousel/Xian.jpg"
+            "image": "/static/images/carousel/Xian.jpg",
+            "link": "page/swan/20100700_Xian"
         }
     ],
 
