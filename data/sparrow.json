@@ -137,16 +137,37 @@
                 ]
             },
             {
-                "title": "Smart Grid Reliability",
-                "summary": "Investigated the modeling, simulation and control of eletric power systems, including both the distribution and transmission systems. For the distribution system, we worked with the data from New York State Electric & Gas (NYSEG) to identify critical locations for installing power switching equipments. For the transmission system, we built hybrid simulation to incorporate discrete events and the fluctuations continuous states. Based on the simulation model, we designed fault diagnosis algorithm and proposed a data-driven decision making model to improve the reliability.",
+                "title": "Smart Grid Fault Diagnosis and Mitigation",
+                "summary": "Investigated the modeling, simulation and control of electric power transmission systems, we built a hybrid simulation model to incorporate discrete events and the fluctuations on continuous states. Based on the simulation model, we designed fault diagnosis algorithm and proposed a data-driven decision making model to improve the reliability.",
                 "year": "2015",
                 "tags": [
                     "MATLAB",
                     "Simulink",
-                    "Power Systems",
                     "Fault-Tolerant Control",
                     "Signal Processing",
                     "Markov Model",
+                    "Optimization"
+                ]
+            },
+            {
+                "title": "Power Distribution Reliability",
+                "summary": "Working with New York State Electric & Gas (NYSEG), I built simulation models to evaluate the standard indices (SAIFI, SAIDI and CAIDI). In addition, I proposed a cost-effective strategy for installing equipments with an optimization program.",
+                "year": "2014",
+                "tags": [
+                    "MATLAB",
+                    "Simulation",
+                    "Optimization"
+                ]
+            },
+            {
+                "title": "Small Signal Controllability and Observability of Power Systems",
+                "summary": "Power system is a non-linear complex system. However, around the normal operating point, we can develop small signal model and investigate our ability to control and observe the system. My first journey to the American Control Conference presented the idea of improving the combination of fault-tolerance, controllability and observability.",
+                "year": "2013",
+                "tags": [
+                    "MATLAB",
+                    "Simulink",
+                    "Fault-Tolerant Control",
+                    "Principle Component Analysis",
                     "Optimization"
                 ]
             },

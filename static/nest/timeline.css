@@ -97,7 +97,7 @@
 
 /* Panel width for single column panels */
 .timeline.left-axis > li .timeline-panel {
-    width: calc( 100% - 100px );
+    width: calc( 100% - 70px );
     float: right;
     padding: 15px;
     background-color: white;
@@ -319,7 +319,7 @@
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 500px) {
     .timeline {
         padding:0px;
     }
