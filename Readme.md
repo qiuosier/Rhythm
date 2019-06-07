@@ -90,7 +90,7 @@ The `build.json` includes a step to copy the `private.py` file from a private st
 The Swift home page displays blog entries. It loads data from `/data/swift.json`, which should be updated as new blogs are added. The `update_swift` management command is designed to update the `/data/swift.json`. The command loads the blogs, generate summaries and updates the entries to be displayed on the Swift home page.
 
 ### Updating Footprint Index
-The Swan home page displays my travel entries. It loads data from `/data/swan.json`, which should be updated as new blogs are added. The `update_swan` management command is designed to update the `/data/swan.json`. The command also generate thumbnails for each entry to be displayed on the Swan home page.
+The Swan home page displays my travel entries. It loads data from `/data/swan.json`, which should be updated as new entries are added. The `update_swan` management command is designed to update the `/data/swan.json`. The command also generate thumbnails for each entry to be displayed on the Swan home page.
 
 ### Generating Thumbnails for Gallery
 The `update_skylark` generates thumbnails for images. Each folder inside the `/static/images/skylark` folder is considered as a collection. This command creates a `thumbnails` folder inside the folder of each collection and saves the thumbnails of the images into it.

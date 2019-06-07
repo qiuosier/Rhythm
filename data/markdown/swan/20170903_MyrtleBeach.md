@@ -1,6 +1,6 @@
 # Myrtle Beach
 
-September 3, 2017_
+_September 3, 2017_
 
 ![](../../../static/images/swan/1709MyrtleBeach/20170903_IMGP9878.jpg)
 
