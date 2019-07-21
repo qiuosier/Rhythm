@@ -1,6 +1,7 @@
 import os
 import json
 import markdown
+import datetime
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound, JsonResponse
 from django.template.loader import get_template, render_to_string
@@ -103,6 +104,14 @@ def index(request):
 def skylark_collection(request, collection):
     json_file = os.path.join(settings.BASE_DIR, "data", "skylark", collection + ".json")
     data = File.load_json(json_file)
+    # Sort the photos by date
+    photos = data.get("photos", [])
+    photos = sorted(
+        photos, 
+        key=lambda x: datetime.datetime.strptime(x.get("date"), "%B %d, %Y"),
+        reverse=True
+    )
+    data["photos"] = photos
     return render(request, "nest/skylark_collection.html", data)
 
 

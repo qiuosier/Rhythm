@@ -1,1 +1,119 @@
-{"title": "City Collection", "link": "city", "summary": "I like to view a city like a bird.", "photos": [{"title": "Xi An", "summary": "Photo taken near the southeast corner of City Wall", "date": "November 28th, 2008", "description": "", "image": "Xian.jpg"}, {"title": "Lhasa", "summary": "Photo taken at the hill to the south of Lhasa", "date": "October 4th, 2010", "description": "", "image": "Potala.jpg"}, {"title": "Toronto", "summary": "Photo taken at rooftop of Park Hyatt Toronto", "date": "May 4th, 2014", "description": "", "image": "IMGP1466.jpg"}, {"title": "Shanghai", "summary": "Photo taken at Park Hyatt Shanghai", "date": "September 8th, 2014", "description": "", "image": "IMGP2438.jpg"}, {"title": "Beijing", "summary": "Photo taken at Jingshan Park", "date": "September 12th, 2014", "description": "", "image": "IMGP2714.jpg"}, {"title": "Denver", "summary": "Photo taken at Denver Art Museum", "date": "July 6th, 2015", "description": "", "image": "IMGP5557.jpg"}, {"title": "New York", "summary": "Photo taken on the Cruise to Statue of Liberty", "date": "April 26th, 2015", "description": "", "image": "IMGP3844.jpg"}, {"title": "Paris", "summary": "Photo taken at Arc de Triomphe", "date": "September 4th, 2015", "description": "", "image": "IMGP7245.jpg"}, {"title": "Milan", "summary": "Photo taken at Milan Cathedral", "date": "September 5nd, 2015", "description": "", "image": "IMGP7399.jpg"}, {"title": "Washington DC", "summary": "Photo taken at the top of Washington Monument", "date": "January 2nd, 2016", "description": "", "image": "IMG_20160102_161210-01.jpg"}, {"title": "Hong Kong", "summary": "Photo taken at The Victoria Peak", "date": "May 3rd, 2017", "description": "", "image": "IMGP9421.jpg"}, {"title": "Istanbul", "summary": "Photo taken near Modern Art Museum", "date": "October 31st, 2017", "description": "", "image": "IMGP0074.jpg"}, {"title": "Seattle", "summary": "Photo taken at Kerry Park", "date": "January 15th, 2018", "description": "", "image": "IMGP0313.jpg"}, {"title": "San Francisco", "summary": "Photo taken at Hilton San Francisco Union Square", "date": "December 16th, 2018", "description": "", "image": "IMG_0969.jpg"}, {"title": "Miami", "summary": "Photo taken at Miami Riverwalk", "date": "February 16th, 2019", "description": "", "image": "IMG_2963.jpg"}, {"title": "IMGP7815", "summary": "", "date": "", "link": "", "image": "IMGP7815.jpg"}]}
+{
+    "title": "City Collection",
+    "link": "city",
+    "summary": "I like to view a city like a bird.",
+    "photos": [
+        {
+            "title": "Xi An",
+            "summary": "The City Wall",
+            "date": "November 28, 2008",
+            "description": "",
+            "image": "Xian.jpg"
+        },
+        {
+            "title": "Lhasa",
+            "summary": "The Potala Palace",
+            "date": "October 4, 2010",
+            "description": "",
+            "image": "Potala.jpg"
+        },
+        {
+            "title": "Toronto",
+            "summary": "Toronto Skyline",
+            "date": "May 4, 2014",
+            "description": "",
+            "image": "IMGP1466.jpg"
+        },
+        {
+            "title": "Shanghai",
+            "summary": "Lujiazui",
+            "date": "September 8, 2014",
+            "description": "",
+            "image": "IMGP2438.jpg"
+        },
+        {
+            "title": "Beijing",
+            "summary": "The Forbidden City",
+            "date": "September 12, 2014",
+            "description": "",
+            "image": "IMGP2714.jpg"
+        },
+        {
+            "title": "Denver",
+            "summary": "Denver Art Museum",
+            "date": "July 6, 2015",
+            "description": "",
+            "image": "IMGP5557.jpg"
+        },
+        {
+            "title": "New York",
+            "summary": "Downtown Manhattan",
+            "date": "April 26, 2015",
+            "description": "",
+            "image": "IMGP3844.jpg"
+        },
+        {
+            "title": "Paris",
+            "summary": "View from Arc de Triomphe",
+            "date": "September 4, 2015",
+            "description": "",
+            "image": "IMGP7245.jpg"
+        },
+        {
+            "title": "Milan",
+            "summary": "Duomo di Milano",
+            "date": "September 5, 2015",
+            "description": "",
+            "image": "IMGP7399.jpg"
+        },
+        {
+            "title": "Washington DC",
+            "summary": "The Ellipse",
+            "date": "January 2, 2016",
+            "description": "",
+            "image": "IMG_20160102_161210-01.jpg"
+        },
+        {
+            "title": "Hong Kong",
+            "summary": "View from The Victoria Peak",
+            "date": "May 3, 2017",
+            "description": "",
+            "image": "IMGP9421.jpg"
+        },
+        {
+            "title": "Istanbul",
+            "summary": "Mosque",
+            "date": "October 31, 2017",
+            "description": "",
+            "image": "IMGP0074.jpg"
+        },
+        {
+            "title": "Seattle",
+            "summary": "Space Needle",
+            "date": "January 15, 2018",
+            "description": "",
+            "image": "IMGP0313.jpg"
+        },
+        {
+            "title": "San Francisco",
+            "summary": "Downtown",
+            "date": "December 16, 2018",
+            "description": "",
+            "image": "IMG_0969.jpg"
+        },
+        {
+            "title": "Miami",
+            "summary": "Miami Riverwalk",
+            "date": "February 16, 2019",
+            "description": "",
+            "image": "IMG_2963.jpg"
+        },
+        {
+            "title": "Boston",
+            "summary": "Boston Harbor",
+            "date": "December 26, 2015",
+            "link": "",
+            "image": "IMGP7815.jpg"
+        }
+    ]
+}

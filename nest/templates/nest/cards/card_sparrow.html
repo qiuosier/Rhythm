@@ -1,0 +1,16 @@
+
+<div class="md-raised-6px no-margin no-padding">
+    <div class="nest-card-image" style="background-image: url(/static/images/{{ card.image }});">
+        <div class="nest-card-image-caption">{{ card.caption }}</div>
+    </div>
+    <div class="padding-15px">
+        <h4 class="nest-card-title no-spacing">{{ card.title }}</h4>
+        <p><i>{{ card.summary|default:"" }}</i></p>
+        <p class="text-justify">{{ card.description }}</p>
+        {% if card.events %}
+        <div>
+            {% include "nest/components/timeline_left_axis.html" with events=card.events %}
+        </div>
+        {% endif %}
+    </div>
+</div>

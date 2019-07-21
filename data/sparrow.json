@@ -1,5 +1,40 @@
 {
     "title": "Sparrow's Projects",
+    "areas": [
+        {
+            "title": "The Astrology Collection",
+            "summary": "Astrology is a collection of my ideas and applications",
+            "description": "From small scripts to home automation and pattern recognition, I like to make life easier with my engineering knowledge. However, solution is more than just coding...",
+            "image": "sparrow/cards/NationalHarbor.jpg",
+            "caption": "National Harbor, MD",
+            "link": ""
+        },
+        {
+            "title": "Bioinformatics and Medicine",
+            "summary": "Exploring DNA, clinical data and medical imaging",
+            "description": "I built cloud-based applications for tracking patient samples, clinical data, pathology images, genomic sequencing data and analysis pipelines.",
+            "image": "sparrow/cards/Duke.jpg",
+            "caption": "Duke University",
+            "link": ""
+        },
+        {
+            "title": "Power Systems and Fault-Tolerant Control",
+            "summary": "Moving towards a smarter grid",
+            "description": "Working with NYSERDA and NYSEG, we explored the future fault diagnosis, mitigation and optimization solutions for making our electric power transmission and distribution system smarter and more reliable.",
+            "image": "sparrow/cards/Vestal.jpg",
+            "caption": "Vestal, NY",
+            "link": ""
+        },
+        {
+            "title": "Simulation and Modeling",
+            "summary": "The first step of my research",
+            "description": "Started my research with connecting distributed simulations of manufacturing system, then I moved on to building my own pedestrians simulation system with artificial intelligence.",
+            "image": "sparrow/cards/XiAn.jpg",
+            "caption": "Xi'an, China",
+            "link": ""
+        }
+
+    ],
     "astrology_card": {
         "title": "The Astrology Collection",
         "description": "Astrology is a collection of my ideas and personal projects. I like to make lives easier when there is a chance. There is no doubt that computers have played a key role in automation. However, solution is more than just coding...",

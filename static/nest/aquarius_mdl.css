@@ -1,5 +1,7 @@
 .nest-card-image {
     height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .nest-card-image-caption {
