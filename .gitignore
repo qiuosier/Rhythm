@@ -105,3 +105,5 @@ client_secrets.json
 /static/node_modules/
 
 \.DS_Store
+
+Pisces
