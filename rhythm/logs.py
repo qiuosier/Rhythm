@@ -36,7 +36,7 @@ RHYTHM_CONFIG = {
     'loggers': {
         '': {
             'handlers': ['console'] if os.getenv('GAE_RUNTIME', '') != "python37" else ['stackdriver'],
-            'level': 'DEBUG',
+            'level': 'INFO' if os.getenv('GAE_RUNTIME', '') else 'DEBUG',
             'propagate': True,
             'name': 'Django:Rhythm'
         },
