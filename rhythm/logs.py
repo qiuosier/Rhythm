@@ -1,4 +1,7 @@
 import os
+from google.cloud import logging
+client = logging.Client()
+client.setup_logging()
 
 
 RHYTHM_CONFIG = {
@@ -25,10 +28,14 @@ RHYTHM_CONFIG = {
             'class': 'logging.StreamHandler',
             'formatter': 'Aries'
         },
+        'stackdriver': {
+            'class': 'google.cloud.logging.handlers.CloudLoggingHandler',
+            'client': client
+        }
     },
     'loggers': {
         '': {
-            'handlers': ['console'],
+            'handlers': ['console'] if os.getenv('GAE_RUNTIME', '') != "python37" else ['stackdriver'],
             'level': 'DEBUG',
             'propagate': True,
         },
