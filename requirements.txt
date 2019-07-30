@@ -1,8 +1,10 @@
 Django~=2.2
 openpyxl==2.4.8
 gcloud==0.18.3
+google-cloud-storage>=1.16
 requests
 markdown
 google-cloud-datastore
 pillow
 lxml
+plotly~=3.5
