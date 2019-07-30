@@ -164,3 +164,7 @@ def handler500(request):
     client = error_reporting.Client()
     client.report_exception()
     return HttpResponseServerError()
+
+
+def view_exception(request):
+    raise Exception("This is an uncaught exception")
