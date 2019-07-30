@@ -5,6 +5,10 @@
             "args": ["submodule", "update", "--init", "--recursive"]
         },
         {
+            "name": "gcr.io/cloud-builders/git",
+            "args": ["clone", "--depth", "1", "https://github.com/qiuosier/Pisces.git"]
+        },
+        {
             "name": "gcr.io/cloud-builders/gsutil",
             "args": ["cp", "gs://qiu-nest.appspot.com/private.py", "rhythm/private.py"],
             "timeout": "600s"
