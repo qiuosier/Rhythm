@@ -38,3 +38,5 @@ urlpatterns += [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('nest.urls')),
 ]
+
+handler500 = 'nest.views.handler500'

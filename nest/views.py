@@ -3,10 +3,11 @@ import json
 import markdown
 import datetime
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound, JsonResponse
+from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound, HttpResponseServerError, JsonResponse
 from django.template.loader import get_template, render_to_string
 from django.template import TemplateDoesNotExist
 from django.conf import settings
+from google.cloud import error_reporting
 from Aries.strings import AString
 from Aries.files import File
 from nest.lib import get_markdown_title, search_file
@@ -157,3 +158,13 @@ def swan_journeys(request, start, size):
         "html": html,
         "more": more,
     })
+
+
+def handler500(request):
+    client = error_reporting.Client()
+    client.report_exception()
+    return HttpResponseServerError()
+
+
+def view_exception(request):
+    raise Exception("This is an uncaught exception")

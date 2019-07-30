@@ -1,6 +1,8 @@
 Django~=2.2
 openpyxl==2.4.8
-gcloud==0.18.3
+gcloud
+google-cloud-logging
+google-cloud-error-reporting
 google-cloud-storage>=1.16
 requests
 markdown
