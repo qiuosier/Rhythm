@@ -87,3 +87,7 @@ class VisitWebsiteTestCase(SimpleTestCase):
                 if link.startswith("/static/"):
                     continue
                 queue.append(link)
+        sitemap_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), "sitemap.txt")
+        with open(sitemap_file, 'w') as f:
+            for url in visited_links.keys():
+                f.write("https://qqin.page%s\n" % url)

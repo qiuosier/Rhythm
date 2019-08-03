@@ -168,3 +168,10 @@ def handler500(request):
 
 def view_exception(request):
     raise Exception("This is an uncaught exception")
+
+
+def sitemap(request):
+    sitemap_file = os.path.join(settings.BASE_DIR, "sitemap.txt")
+    with open(sitemap_file, 'r') as f:
+        content = f.read()
+    return HttpResponse(content, content_type="text/plain")

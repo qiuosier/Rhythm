@@ -6,7 +6,7 @@
             "summary": "A Pleasant Walk to Work",
             "date": "March 9, 2017",
             "image": "/static/images/carousel/DukeGardens.jpg",
-            "link": "page/swan/20170000_DukeGardens"
+            "link": "page/swan/20170000_DukeGardens/"
         },
         {
             "title": "New York",
@@ -19,14 +19,14 @@
             "summary": "Spectacular Sunset while Biking Across the Himalayas",
             "date": "July 17, 2011",
             "image": "/static/images/carousel/MtEverest.jpg",
-            "link": "page/swan/20110700_AcrossTheHimalayas"
+            "link": "page/swan/20110700_AcrossTheHimalayas/"
         },
         {
             "title": "Xi'an",
             "summary": "My Journey from The Ancient City",
             "date": "November 28, 2008",
             "image": "/static/images/carousel/Xian.jpg",
-            "link": "page/swan/20100700_Xian"
+            "link": "page/swan/20100700_Xian/"
         }
     ],
 
