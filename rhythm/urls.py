@@ -20,9 +20,14 @@ from django.http import HttpResponse, HttpResponseRedirect
 from Aries.storage import LocalFolder
 
 urlpatterns = [
-    url(r'^robots.txt$', 
-    lambda r: HttpResponse("User-agent: *\nAllow: /\n", 
-    content_type = "text/plain")),
+    url(
+        r'^robots.txt$', 
+        lambda r: HttpResponse(
+            "User-agent: *\nAllow: /\n"
+            "Sitemap: https://qqin.page/sitemap",
+            content_type="text/plain"
+        ),
+    ),
 ]
 
 # Add URLs of apps.
