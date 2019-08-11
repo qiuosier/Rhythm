@@ -11,7 +11,6 @@ from django.conf import settings
 from google.cloud import error_reporting
 from Aries.strings import AString
 from Aries.files import File
-from rhythm import private
 from nest.lib import get_markdown_title, search_file
 from nest import transform
 
@@ -189,13 +188,15 @@ def proxy(request):
         request: HTTP GET request.
             The GET request should include two query strings, token and url.
             token: For authorization, this must be the same as the string stored in private.PROXY_TOKEN.
-            url: The URL to be visited, including ("http://" or "https://")
+            url: The URL to be visited, including ("http://" or "https://").
+                The URL should be percent encoded for characters like "=" and "&".
     
     Returns:
         [type]: [description]
     """
+    from rhythm.private import PROXY_TOKEN
     token = request.GET.get("token")
-    if token != private.PROXY_TOKEN:
+    if token != PROXY_TOKEN:
         return HttpResponseBadRequest("Invalid Token.")
     url = request.GET.get("url")
     if not url:
