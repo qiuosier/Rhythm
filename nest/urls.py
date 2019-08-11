@@ -6,6 +6,7 @@ app_name = 'nest'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^sitemap/$', views.sitemap, name='sitemap'),
+    url(r'^proxy/$', views.proxy, name='proxy'),
     url(r'^exception/$', views.view_exception, name='view_exception'),
     # Basic page rendering
     url(r'^page/(?P<filename>.*?)/$', views.page, name='page'),

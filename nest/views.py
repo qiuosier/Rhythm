@@ -2,6 +2,7 @@ import os
 import json
 import markdown
 import datetime
+import requests
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound, HttpResponseServerError, JsonResponse
 from django.template.loader import get_template, render_to_string
@@ -10,6 +11,7 @@ from django.conf import settings
 from google.cloud import error_reporting
 from Aries.strings import AString
 from Aries.files import File
+from rhythm import private
 from nest.lib import get_markdown_title, search_file
 from nest import transform
 
@@ -171,7 +173,39 @@ def view_exception(request):
 
 
 def sitemap(request):
+    """Returns site map as a text file.
+    """
     sitemap_file = os.path.join(settings.BASE_DIR, "sitemap.txt")
     with open(sitemap_file, 'r') as f:
         content = f.read()
     return HttpResponse(content, content_type="text/plain")
+
+
+def proxy(request):
+    """Returns the GET request response of a URL.
+    This is a proxy for HTTP GET request.
+    
+    Args:
+        request: HTTP GET request.
+            The GET request should include two query strings, token and url.
+            token: For authorization, this must be the same as the string stored in private.PROXY_TOKEN.
+            url: The URL to be visited, including ("http://" or "https://")
+    
+    Returns:
+        [type]: [description]
+    """
+    token = request.GET.get("token")
+    if token != private.PROXY_TOKEN:
+        return HttpResponseBadRequest("Invalid Token.")
+    url = request.GET.get("url")
+    if not url:
+        return HttpResponseBadRequest("Invalid URL.")
+    try:
+        response = requests.get(url)
+    except Exception as ex:
+        return HttpResponseBadRequest("%s: %s" % (type(ex), str(ex)))
+    return HttpResponse(
+        content=response.content,
+        status=response.status_code,
+        content_type=response.headers['Content-Type']
+    )
