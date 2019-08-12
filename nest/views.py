@@ -3,6 +3,7 @@ import json
 import markdown
 import datetime
 import requests
+import logging
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound, HttpResponseServerError, JsonResponse
 from django.template.loader import get_template, render_to_string
@@ -13,6 +14,7 @@ from Aries.strings import AString
 from Aries.files import File
 from nest.lib import get_markdown_title, search_file
 from nest import transform
+logger = logging.getLogger(__name__)
 
 
 def render_template(request, html_name, json_name=None, transform_name=None):
@@ -202,7 +204,9 @@ def proxy(request):
     if not url:
         return HttpResponseBadRequest("Invalid URL.")
     try:
+        logger.debug("Sending reqeust to %s" % url)
         response = requests.get(url)
+        logger.debug("Response code: %s" % response.status_code)
     except Exception as ex:
         return HttpResponseBadRequest("%s: %s" % (type(ex), str(ex)))
     return HttpResponse(
