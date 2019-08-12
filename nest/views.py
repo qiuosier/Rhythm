@@ -4,11 +4,12 @@ import markdown
 import datetime
 import requests
 import logging
+from django.conf import settings
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound, HttpResponseServerError, JsonResponse
 from django.template.loader import get_template, render_to_string
 from django.template import TemplateDoesNotExist
-from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
 from google.cloud import error_reporting
 from Aries.strings import AString
 from Aries.files import File
@@ -182,6 +183,7 @@ def sitemap(request):
     return HttpResponse(content, content_type="text/plain")
 
 
+@csrf_exempt
 def proxy(request):
     """Returns the GET request response of a URL.
     This is a proxy for HTTP GET request.
