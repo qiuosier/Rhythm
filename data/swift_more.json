@@ -1,0 +1,197 @@
+{
+    "title": "The Swift Blog - More",
+    "blogs": [
+        {
+            "title": "Carolina Beach",
+            "summary": "Catching the end of summer......",
+            "date": "October 1, 2017",
+            "link": "swan/20171001_CarolinaBeach",
+            "image": "/static/images/swan/1710CarolinaBeach/20170930_IMGP9967.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Myrtle Beach",
+            "summary": "",
+            "date": "September 3, 2017",
+            "link": "swan/20170903_MyrtleBeach",
+            "image": "/static/images/swan/1709MyrtleBeach/20170903_IMGP9878.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Birds @ Outer Banks",
+            "summary": "Birds and \"First in Flight\"....",
+            "date": "July 3, 2017",
+            "link": "swan/20170704_OuterBanks",
+            "image": "/static/images/swan/1707OuterBanks/IMG_0348.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Hong Kong",
+            "summary": "",
+            "date": "May 3, 2017",
+            "link": "swan/20170503_HongKong",
+            "image": "/static/images/swan/1705HongKong/20170503_IMGP9364.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Duke Gardens",
+            "summary": "The 15-minute walk through the Garden to my work is the perfect way to start a day....",
+            "date": "2017",
+            "link": "swan/20170000_DukeGardens",
+            "image": "/static/images/swan/NC/DukeGarden.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Blue Ridge Parkway",
+            "summary": "",
+            "date": "October 16, 2016",
+            "link": "swan/20161000_BlueRidgePkwy",
+            "image": "/static/images/swan/1610BlueRidgePkwy/20161016_IMGP8864_HDR.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Python IDE?",
+            "summary": "Lack of a good IDE means less productive....",
+            "date": "August 6, 2016",
+            "link": "swift/20160806_PythonIDE",
+            "image": "/static/images/swift/20160806_PythonKeyboard.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Gateway to the West",
+            "summary": "Life is running like a machine....",
+            "date": "May 4, 2016",
+            "link": "swift/20160504_GatewayArch",
+            "image": "/static/images/swift/20160424_GatewayArch.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "TopCoder, LeetCode and HackerRank",
+            "summary": "Tried all of them, still think TopCoder is the best, technically....",
+            "date": "March 8, 2016",
+            "link": "swift/20160308_TopCoder",
+            "image": null,
+            "class": "col-md-3"
+        },
+        {
+            "title": "Change is not Easy",
+            "summary": "I believe, for most people, once they get used to something, they don't like changes. Or, I...",
+            "date": "Feburary 18, 2016",
+            "link": "swift/20160218_ChangeIsNotEasy",
+            "image": "/static/images/swift/20160108_EllisIslandBuilding.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Live in My Life",
+            "summary": "Met an old friend after more than ten years...We didn't have a lot to talk, but I was impressed...",
+            "date": "Feburary 5, 2016",
+            "link": "swift/20160205_LiveInMyLife",
+            "image": "/static/images/swift/20160129_GoldenGateBridge.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Playing with Top Coder",
+            "summary": "After someone from Mountain View visited this website, I realized that it is not a good idea...",
+            "date": "January 20, 2016",
+            "link": "swift/20160120_PlayingTopCoder",
+            "image": "/static/images/swift/20160114_MorningEagle.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Washington DC",
+            "summary": "Photo taken at the top of Washington Monument...",
+            "date": "January 2nd, 2016",
+            "link": "swan/20160102_WashingtonDC",
+            "image": "/static/images/swan/journeys/IMG_20160102_161210-01.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "North Carolina",
+            "summary": "Started my first job after PhD at Duke, I walk through the Duke Gardens almost every day. I...",
+            "date": "2016-",
+            "link": "swan/20160000_NC",
+            "image": "/static/images/swan/NC/DukeGarden.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Milan",
+            "summary": "Photo taken at Milan Cathedral...",
+            "date": "September 5, 2015",
+            "link": "swan/20150905_Milan",
+            "image": "/static/images/swan/journeys/IMGP7399.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Paris",
+            "summary": "Photo taken at Arc de Triomphe...",
+            "date": "September 4, 2015",
+            "link": "swan/20150904_Paris",
+            "image": "/static/images/swan/journeys/IMGP7245.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Denver",
+            "summary": "Photo taken at Denver Art Museum...",
+            "date": "July 6, 2015",
+            "link": "swan/20150706_Denver",
+            "image": "/static/images/swan/journeys/IMGP5557.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Shenandoah National Park",
+            "summary": "",
+            "date": "October 05th, 2014",
+            "link": "swan/20141005_Shenandoah",
+            "image": "/static/images/swan/journeys/20141005_IMGP3288.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Beijing",
+            "summary": "Photo taken at Jingshan Park...",
+            "date": "September 12, 2014",
+            "link": "swan/20140912_Beijing",
+            "image": "/static/images/swan/journeys/IMGP2714.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Shanghai",
+            "summary": "Photo taken at Park Hyatt Shanghai...",
+            "date": "September 8, 2014",
+            "link": "swan/20140908_Shanghai",
+            "image": "/static/images/swan/journeys/IMGP2438.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Toronto",
+            "summary": "Photo taken at rooftop of Park Hyatt Toronto...",
+            "date": "May 4, 2014",
+            "link": "swan/20140504_Toronto",
+            "image": "/static/images/swan/journeys/IMGP1466.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "The Year in Tibet",
+            "summary": "",
+            "date": "2010-2011",
+            "link": "swan/20110700_Tibet",
+            "image": "/static/images/swan/Tibet/Tibet_Page_01.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Biking Across the Himalayas",
+            "summary": "After working as a volunteer in Tibet for a year, it was time to say goodbye. After a little...",
+            "date": "July 2011",
+            "link": "swan/20110700_AcrossTheHimalayas",
+            "image": "/static/images/swan/LK/Swan_LK_AtBaseCamp.jpg",
+            "class": "col-md-3"
+        },
+        {
+            "title": "Xi'an",
+            "summary": "",
+            "date": "2007-2010",
+            "link": "swan/20100700_Xian",
+            "image": "/static/images/swan/xian/0.jpg",
+            "class": "col-md-3"
+        }
+    ]
+}

@@ -6,10 +6,11 @@
 
 {% block content %}
 <div class="spacer-15px"></div>
-<h1>The Swift Blog</h1>
+<h1>{{ title }}</h1>
+
 <div class="row">
     {% for blog in blogs %}
-    <div class="{{ blog.class }} md-container">
+    <div class="{{ blog.class|default:'col-md-3' }} md-container">
         <div class="md-raised-6px full-height">
             {% if blog.image %}
             <div class="md-image">
@@ -28,4 +29,7 @@
     </div>
     {% endfor %}
 </div>
+{% if has_more %}
+<div class="float-right"><a href="{% url 'nest:render_template' 'swift' 'swift_more' %}">See More...</a></div>
+{% endif %}
 {% endblock %}
