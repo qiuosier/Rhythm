@@ -1,7 +1,28 @@
 import os
-from google.cloud import logging
-client = logging.Client()
-client.setup_logging()
+
+
+LOG_HANDLERS = {
+    'console': {
+        'level': 'DEBUG',
+        'filters': ['require_debug_true', 'project_packages'],
+        'class': 'logging.StreamHandler',
+        'formatter': 'Aries'
+    }
+}
+HANDLER_NAMES = ['console']
+LOGGING_LEVEL = 'DEBUG'
+
+
+if os.getenv('GAE_RUNTIME', '') == "python37":
+    from google.cloud import logging
+    client = logging.Client()
+    client.setup_logging()
+    LOG_HANDLERS['stackdriver'] = {
+        'class': 'google.cloud.logging.handlers.CloudLoggingHandler',
+        'client': client
+    }
+    HANDLER_NAMES = ['stackdriver']
+    LOGGING_LEVEL = 'INFO'
 
 
 RHYTHM_CONFIG = {
@@ -21,22 +42,11 @@ RHYTHM_CONFIG = {
             'folder_path': os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         },
     },
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'filters': ['require_debug_true', 'project_packages'],
-            'class': 'logging.StreamHandler',
-            'formatter': 'Aries'
-        },
-        'stackdriver': {
-            'class': 'google.cloud.logging.handlers.CloudLoggingHandler',
-            'client': client
-        }
-    },
+    'handlers': LOG_HANDLERS,
     'loggers': {
         '': {
-            'handlers': ['console'] if os.getenv('GAE_RUNTIME', '') != "python37" else ['stackdriver'],
-            'level': 'INFO' if os.getenv('GAE_RUNTIME', '') else 'DEBUG',
+            'handlers': HANDLER_NAMES,
+            'level': LOGGING_LEVEL,
             'propagate': True,
             'name': 'Django:Rhythm'
         },
