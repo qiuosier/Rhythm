@@ -2,12 +2,20 @@
     "title": "The Swift Blog",
     "blogs": [
         {
+            "title": "Meet the Thunderbolt 3 and USB-C",
+            "summary": "Thunderbolt 3 enables us to connect dual 4K monitors at 60Hz, power supply and a bunch of other...",
+            "date": "July 20, 2019",
+            "link": "swift/20190720_Thunderbolt3",
+            "image": "/static/images/swift/20190720_Thunderbolt3.png",
+            "class": "col-md-8"
+        },
+        {
             "title": "Making Git Repository Partially Public",
             "summary": "Now both GitHub and GitLab offer private or public repositories to free accounts, but what...",
             "date": "May 16, 2019",
             "link": "swift/20190516_MakingGitPartiallyPublic",
             "image": "/static/images/swift/20190516_GitBranches.png",
-            "class": "col-md-8"
+            "class": "col-md-4"
         },
         {
             "title": "New York",
@@ -39,7 +47,7 @@
             "date": "February 14, 2019",
             "link": "swan/20190214_KeyWest",
             "image": "/static/images/swan/1902KeyWest/20190214_IMG_2608.jpg",
-            "class": "col-md-4"
+            "class": "col-md-6"
         },
         {
             "title": "Orlando",
@@ -55,7 +63,7 @@
             "date": "December 20, 2018",
             "link": "swan/20181220_SanFrancisco",
             "image": "/static/images/swan/1812SanFrancisco/20180726_IMGP0677.jpg",
-            "class": "col-md-6"
+            "class": "col-md-4"
         },
         {
             "title": "Which Credit Card I Should Use to Get Max Rewards?",
@@ -79,7 +87,7 @@
             "date": "July 29, 2018",
             "link": "swift/20180729_Decoupling_on_the_Cloud",
             "image": "/static/images/swift/20180724_IMG_3727.jpg",
-            "class": "col-md-4"
+            "class": "col-md-6"
         },
         {
             "title": "Seattle",
@@ -87,14 +95,6 @@
             "date": "January 2018",
             "link": "swan/20180116_Seattle",
             "image": "/static/images/swan/1801Seattle/20180115_IMGP0313.jpg",
-            "class": "col-md-6"
-        },
-        {
-            "title": "The Turkish Experience",
-            "summary": "I like to try different experiences when travelling. Some people like non-stop flights. For...",
-            "date": "November, 2017",
-            "link": "swan/20171100_Istanbul",
-            "image": "/static/images/swan/1711Istanbul/20171031_IMGP0105.jpg",
             "class": "col-md-6"
         }
     ],

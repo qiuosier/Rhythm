@@ -2,6 +2,14 @@
     "title": "The Swift Blog - More",
     "blogs": [
         {
+            "title": "The Turkish Experience",
+            "summary": "I like to try different experiences when travelling. Some people like non-stop flights. For...",
+            "date": "November, 2017",
+            "link": "swan/20171100_Istanbul",
+            "image": "/static/images/swan/1711Istanbul/20171031_IMGP0105.jpg",
+            "class": "col-md-3"
+        },
+        {
             "title": "Carolina Beach",
             "summary": "Catching the end of summer......",
             "date": "October 1, 2017",
