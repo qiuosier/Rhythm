@@ -20,7 +20,7 @@
         },
         {
             "name": "python:3.7",
-            "args": ["PYTHONPATH=./lib", "python", "manage.py", "collectstatic", "--noinput"],
+            "args": ["PYTHONPATH=$(pwd)/lib", "python", "manage.py", "collectstatic", "--noinput"],
             "timeout": "600s"
         },
         {
