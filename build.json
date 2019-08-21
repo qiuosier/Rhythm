@@ -15,7 +15,7 @@
         },
         {
             "name": "python:3.7",
-            "args": ["-m", "pip", "install", "-t", ".", "-r", "requirements.txt"],
+            "args": ["pip", "install", "-t", ".", "-r", "requirements.txt"],
             "timeout": "600s"
         },
         {
