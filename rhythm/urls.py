@@ -17,6 +17,7 @@ import os
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.http import HttpResponse, HttpResponseRedirect
+from django.views.generic import RedirectView
 from Aries.storage import LocalFolder
 
 urlpatterns = [
@@ -28,6 +29,7 @@ urlpatterns = [
             content_type="text/plain"
         ),
     ),
+    url(r'^favicon\.ico$', RedirectView.as_view(url='/static/sparrow.ico')),
 ]
 
 # Add URLs of apps.
