@@ -9,23 +9,18 @@
             "args": ["clone", "--depth", "1", "https://github.com/qiuosier/Pisces.git"]
         },
         {
+            "name": "python:3.7",
+            "args": ["cp", "-a", "./nest/static/.", "./static/"],
+            "timeout": "600s"
+        },
+        {
+            "name": "python:3.7",
+            "args": ["cp", "-a", "./Pisces/static/.", "./static/"],
+            "timeout": "600s"
+        },
+        {
             "name": "gcr.io/cloud-builders/gsutil",
             "args": ["cp", "gs://qiu-nest.appspot.com/private.py", "rhythm/private.py"],
-            "timeout": "600s"
-        },
-        {
-            "name": "python:3.7",
-            "args": ["pip", "install", "-t", "./lib", "-r", "requirements.txt"],
-            "timeout": "600s"
-        },
-        {
-            "name": "python:3.7",
-            "args": ["ls"],
-            "timeout": "600s"
-        },
-        {
-            "name": "python:3.7",
-            "args": ["PYTHONPATH=$(pwd)", "python", "manage.py", "collectstatic", "--noinput"],
             "timeout": "600s"
         },
         {
