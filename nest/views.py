@@ -137,29 +137,20 @@ def skylark_image(request, collection, title):
     return HttpResponseNotFound("Image not found.")
 
 
-def swan_journeys(request, start, size):
-    try:
-        start = int(start)
-        size = int(size)
-    except Exception as ex:
-        print(ex)
-        return JsonResponse({
-            "html": "",
-            "more": False
-        })
+def swan_journeys(request, start, size=0):
+    start = int(start)
+    size = int(size)
 
     json_file = os.path.join(settings.BASE_DIR, "data", "swan.json")
     journeys = File.load_json(json_file).get("journeys", [])
-    if start + size < len(journeys):
+    if size == 0:
+        journeys = journeys[start:]
+    elif start + size < len(journeys):
         journeys = journeys[start:start + size]
-        more = True
     else:
         journeys = journeys[start:]
-        more = False
-    html = render_to_string("nest/swan_journeys.html", {"journeys": journeys})
-    return JsonResponse({
-        "html": html,
-        "more": more,
+    return render(request, "nest/swan_journeys.html", {
+        "journeys": journeys,
     })
 
 

@@ -1,5 +1,18 @@
-{% for entry in journeys %}
-<div class="col-md-3 md-container">
-    {% include "nest/cards/card_swan.html" %}
+{% extends "nest/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<h1>Swan's Footprint</h1>
+<h2>Journeys
+<small class="text-muted"><i>Traveling to infinity...</i></small>
+</h2>
+<div class="row">
+    {% for entry in journeys %}
+    <div class="col-md-3 md-container">
+        {% include "nest/cards/card_swan.html" %}
+    </div>
+    {% endfor %}
 </div>
-{% endfor %}
+
+{% endblock %}
+

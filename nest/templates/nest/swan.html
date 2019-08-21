@@ -25,7 +25,7 @@
     {% endfor %}
 </div>
 <div class="text-center" id="load-more-journeys" style="padding-top: 10px;">
-    <button class="btn btn-sm btn-outline-primary" style="cursor:pointer" onclick="loadMoreJourneys();">Load More...</button>
+    <a href="{% url 'nest:swan_journeys' 6 0 %}">More...</a>
 </div>
 
 <h2>Memories</h2>
@@ -50,22 +50,4 @@
     {% endfor %}
 </div>
 
-<script>
-    function loadMoreJourneys() {
-        var journeys_div = $("#swan-journeys")
-        // The starting index for loading journeys (0-based)
-        var start = journeys_div.children().length + 2;
-        // The number of journeys to be loaded
-        var size = 8;
-        $.getJSON("/swan/journeys/" + start + "/" + size + "/", function (data) {
-            if (data.html.length) {
-                journeys_div.append(data.html);
-            }
-            if (!data.more) {
-                // Hide the "Load More" button if there is no more journeys.
-                $("#load-more-journeys").addClass("d-none");
-            }
-        })
-    }
-</script>
 {% endblock %}
