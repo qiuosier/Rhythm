@@ -1,13 +1,12 @@
 <div class="md-raised-6px no-margin no-padding">
-    <div class="nest-card-image" style="background-image: url(/static/images/{{ card.image }});">
-        <div class="nest-card-image-caption">{{ card.caption }}</div>
+    <div class="nest-card-image" style="background-image: url(/static/images/{{ image }});">
+        <div class="nest-card-image-caption">{{ caption }}</div>
     </div>
     <div class="padding-15px">
-        <h4 class="nest-card-title no-spacing">{{ card.title }}</h4>
-        <p>{{ card.description }}</p>
+        <p>{{ description }}</p>
         <div>
             <ul class="timeline left-axis">
-                {% for project in card.events %}
+                {% for project in projects %}
                 <li>
                     {% if project.summary %}
                     <div class="timeline-badge mdl-shadow--2dp {{ project.name }}">

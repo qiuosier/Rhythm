@@ -2,6 +2,9 @@
 ## A PDF reader for Windows 10
 *Last Updated on May 2018.*
 
+This app is available in [Windows store](https://www.microsoft.com/en-us/store/apps/q-pdf-pages/9nblggh68vck).
+The source code is available at [GitHub](https://github.com/qiuosier/Libra).
+
 Q PDF Pages is a PDF viewer designed for windows tablets with stylus (e.g. the surface pen). It is not intended to be a powerful PDF application. Instead, it is an app for reading PDF files and taking some simple notes with the stylus.
 
 The key features include:
@@ -22,7 +25,4 @@ The PDF pages are rendered using the APIs provided by Microsoft (Windows.Data.Pd
 Unfortunately, I have no intention to purchase commercial PDF APIs. Therefore, these issues will remain for a while.
 
 ### The App
-![Screenshots of Q PDF Pages App](../../static/images/markdown/Q_PDF_Interface.jpg)
-
-This app is available in [Windows store](https://www.microsoft.com/en-us/store/apps/q-pdf-pages/9nblggh68vck).
-The source code is available at [GitHub](https://github.com/qiuosier/Libra).
+![Screenshots of Q PDF Pages App](../../../static/images/markdown/Q_PDF_Interface.jpg)

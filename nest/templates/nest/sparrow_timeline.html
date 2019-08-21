@@ -1,0 +1,14 @@
+{% extends "nest/base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'nest/timeline.css' %}" />
+<link rel="stylesheet" href="{% static 'nest/astrology.css' %}" />
+{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<div>
+    {% include "nest/cards/card_astrology.html" with items=astrology.events %}
+</div>
+{% endblock %}

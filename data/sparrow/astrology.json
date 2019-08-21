@@ -1,0 +1,93 @@
+{
+    "title": "The Astrology Collection",
+    "description": "From small scripts to home automation and pattern recognition, I like to make life easier with my engineering knowledge.",
+    "image": "sparrow/IMGP9686.jpg",
+    "caption": "Seagull at Outer Banks, NC",
+    "projects": [
+        {
+            "name": "Aries",
+            "summary": "My Personal Python Library",
+            "year": "2017-2019",
+            "link": "https://github.com/qiuosier/Aries",
+            "image": ""
+        },
+        {
+            "name": "Taurus",
+            "link": "sparrow/Taurus",
+            "summary": "A windows PE application to backup/restore system images.",
+            "year": "2009",
+            "tags": [
+                "C++"
+            ]
+        },
+        {
+            "name": "Gemini",
+            "summary": "Small programs doing small things.",
+            "link": "https://github.com/qiuosier/SleepTight",
+            "year": "2015-2019",
+            "tags": [
+                "Python"
+            ]
+        },
+        {
+            "name": "Cancer",
+            "summary": ""
+        },
+        {
+            "name": "Leo",
+            "summary": "Home Automation Solution with the Azure Functions",
+            "link": "https://github.com/qiuosier/Leo",
+            "year": "2019"
+        },
+        {
+            "name": "Virgo",
+            "summary": "Exploring Data, Big or Small",
+            "year": "2019",
+            "link": "https://github.com/qiuosier/Virgo",
+            "image": "images/sparrow/astrology/Virgo.png"
+        },
+        {
+            "name": "Libra",
+            "summary": "A universal Windows platform app for viewing/annotating PDFs.",
+            "link": "sparrow/Libra",
+            "year": "2016-2018",
+            "tags": [
+                "C#",
+                "Windows App",
+                "PDF",
+                "Inking"
+            ]
+        },
+        {
+            "name": "Scorpio",
+            "summary": ""
+        },
+        {
+            "name": "Sagittarius",
+            "summary": "Adobe Lightroom plugin to GeoTag photos with Google location history data.",
+            "year": "2017",
+            "tags": [
+                "Lua",
+                "Lightroom"
+            ]
+        },
+        {
+            "name": "Capricorn",
+            "summary": "Snake, the once-popular game in grandfather's Nokia cellphone.",
+            "year": "2006",
+            "tags": [
+                "C#"
+            ]
+        },
+        {
+            "name": "Aquarius",
+            "summary": ""
+        },
+        {
+            "name": "Pisces",
+            "summary": "Visualizing Medical Records from FHIR.",
+            "year": "2019",
+            "link": "sparrow/Pisces"
+        }
+    ]
+}

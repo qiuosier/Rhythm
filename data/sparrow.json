@@ -4,10 +4,10 @@
         {
             "title": "The Astrology Collection",
             "summary": "Astrology is a collection of my ideas and applications",
-            "description": "From small scripts to home automation and pattern recognition, I like to make life easier with my engineering knowledge. However, solution is more than just coding...",
+            "description": "From small scripts to home automation and pattern recognition, I like to make life easier with my engineering knowledge.",
             "image": "sparrow/cards/NationalHarbor.jpg",
             "caption": "National Harbor, MD",
-            "link": ""
+            "link": "/render/sparrow_timeline/data/sparrow/astrology/"
         },
         {
             "title": "Bioinformatics and Medicine",
@@ -28,101 +28,14 @@
         {
             "title": "Simulation and Modeling",
             "summary": "The first step of my research",
-            "description": "Started my research with connecting distributed simulations of manufacturing system, then I moved on to building my own pedestrians simulation system with artificial intelligence.",
+            "description": "Started my research with connecting distributed simulations of manufacturing system, then I moved on to building my own pedestrians simulation system with Artificial Intelligence.",
             "image": "sparrow/cards/XiAn.jpg",
             "caption": "Xi'an, China",
             "link": ""
         }
 
     ],
-    "astrology_card": {
-        "title": "The Astrology Collection",
-        "description": "Astrology is a collection of my ideas and personal projects. I like to make lives easier when there is a chance. There is no doubt that computers have played a key role in automation. However, solution is more than just coding...",
-        "image": "cards/MontaukPoint.jpg",
-        "caption": "Montauk Point, NY",
-        "link": "",
-        "events": [
-            {
-                "name": "Aries",
-                "summary": "My Personal Python Library",
-                "year": "2017-2019",
-                "link": "https://github.com/qiuosier/Aries"
-            },
-            {
-                "name": "Taurus",
-                "link": "sparrow/Taurus",
-                "summary": "A windows PE application to backup/restore system images.",
-                "year": "2009",
-                "tags": [
-                    "C++"
-                ]
-            },
-            {
-                "name": "Gemini",
-                "summary": "Small programs doing small things.",
-                "link": "https://github.com/qiuosier/SleepTight",
-                "year": "2015-2019",
-                "tags": [
-                    "Python"
-                ]
-            },
-            {
-                "name": "Cancer",
-                "summary": ""
-            },
-            {
-                "name": "Leo",
-                "summary": ""
-            },
-            {
-                "name": "Virgo",
-                "summary": "Exploring Data, Big or Small",
-                "year": "2019",
-                "link": "https://github.com/qiuosier/Virgo"
-            },
-            {
-                "name": "Libra",
-                "summary": "A universal Windows platform app for viewing/annotating PDFs.",
-                "link": "sparrow/Libra",
-                "year": "2016-2018",
-                "tags": [
-                    "C#",
-                    "Windows App",
-                    "PDF",
-                    "Inking"
-                ]
-            },
-            {
-                "name": "Scorpio",
-                "summary": ""
-            },
-            {
-                "name": "Sagittarius",
-                "summary": "Adobe Lightroom plugin to GeoTag photos with Google location history data.",
-                "year": "2017",
-                "tags":[
-                    "Lua",
-                    "Lightroom"
-                ]
-            },
-            {
-                "name": "Capricorn",
-                "summary": "Snake, the once-popular game in grandfather's Nokia cellphone.",
-                "year": "2006",
-                "tags":[
-                    "C#"
-                ]
-            },
-            {
-                "name": "Aquarius",
-                "summary": ""
-            },
-            {
-                "name": "Pisces",
-                "summary": ""
-            }
-        ]
-    },
+    
     "work_card": {
         "title": "At Work...",
         "description": "I worked with different people to implement reliable applications, like databases and websites. I also worked on exploratory research projects. These projects may not become applications eventually. However, they help us explore the unknown territories",

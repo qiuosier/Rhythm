@@ -52,7 +52,7 @@ def render_template(request, html_name, json_name=None, transform_name=None):
     html_file = search_file(html_dirs, html_name + ".html", root=html_root)
     if not html_file:
         return HttpResponseNotFound("Template \"%s\" not found." % html_name)
-
+    logger.debug("Found template: %s" % html_file)
     # Load data
     # Get data file path.
     if json_name is None:
@@ -70,7 +70,6 @@ def render_template(request, html_name, json_name=None, transform_name=None):
     else:
         # No data file exists.
         context = {}
-
     # Return response
     return render(request, html_file, context)
 

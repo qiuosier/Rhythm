@@ -1,26 +1,39 @@
+{% load staticfiles %}
 <ul class="timeline center-axis" id="swan-timeline">
-    {% for entry in journeys %}
+    {% for entry in items %}
     <li class="{% cycle 'left-panel' 'right-panel' %}">
-        <a href="{% url 'nest:render_template' 'entry.key' %}">
+        {% if entry.link %}
+        <a href="{% url 'nest:render_template' entry.link %}">
+        {% endif %}
             <div class="timeline-badge mdl-shadow--2dp">
                 <p>{{ entry.year }}</p>
             </div>
+        {% if entry.link %}
         </a>
+        {% endif %}
+        
         <div class="center-axis-line"></div>
-        <a href="{% url 'nest:render_template' 'entry.key' %}">
+        {% if entry.link %}
+        <a href="{% url 'nest:render_template' entry.link %}">
+        {% endif %}
             <div class="timeline-panel mdl-shadow--2dp">
                 <div class="timeline-image">
-                    <img src="{% static 'images/swan/home/Small_'|add:entry.key|add:'.jpg' %}" />
+                    {% if entry.image %}
+                    <img src="{% static entry.image %}" />
+                    {% else %}
+                    <div style="font-size: 50px; padding: 25%">{{ entry.name }}</div>
+                    {% endif %}
                 </div>
                 <div class="image-caption">
                     <h4>
-                        {{ entry.title }}
+                        {{ entry.name }}
                     </h4>
-                    <p>{{ entry.location }}</p>
-                    <p>{{ entry.description }}</p>
+                    <p>{{ entry.summary }}</p>
                 </div>
             </div>
+        {% if entry.link %}
         </a>
+        {% endif %}
     </li>
     {% endfor %}
 </ul>

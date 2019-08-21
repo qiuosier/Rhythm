@@ -4,7 +4,13 @@
         <div class="nest-card-image-caption">{{ card.caption }}</div>
     </div>
     <div class="padding-15px">
+        {% if card.link %}
+        <h4 class="nest-card-title no-spacing">
+            <a href="{{ card.link }}">{{ card.title }}</a>
+        </h4>
+        {% else %}
         <h4 class="nest-card-title no-spacing">{{ card.title }}</h4>
+        {% endif %}
         <p><i>{{ card.summary|default:"" }}</i></p>
         <p class="text-justify">{{ card.description }}</p>
         {% if card.events %}
