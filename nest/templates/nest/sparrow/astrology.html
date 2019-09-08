@@ -1,0 +1,63 @@
+{% extends "nest/base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'nest/timeline.css' %}" />
+<link rel="stylesheet" href="{% static 'nest/astrology.css' %}" />
+{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<div class="md-raised-6px no-margin no-padding">
+    <div class="nest-card-image" style="background-image: url(/static/images/{{ image }});">
+        <div class="nest-card-image-caption">{{ caption }}</div>
+    </div>
+    <div class="padding-15px">
+        <p>{{ description }}</p>
+        <div>
+            <ul class="timeline left-axis">
+                {% for project in projects %}
+                <li>
+                    {% if project.summary %}
+                    <div class="timeline-badge mdl-shadow--2dp {{ project.title }}">
+                        <img src="/static/images/zodiac/icon-zodiac-{{ project.title }}.png" />
+                    </div>
+                    <div class="timeline-panel mdl-shadow--2dp">
+                        <div>
+                            <h4 class="no-spacing timeline-panel-title">
+                                {% if project.link %}
+                                    {% if "http" in project.link %}
+                                    <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+                                    {% else %}
+                                    <a href="{% url 'nest:page' project.link %}">{{ project.title }}</a>
+                                    {% endif %}
+                                {% else %}
+                                <span class="text-primary">{{ project.title }}</span>
+                                {% endif %}
+                                <small>, <i>{{ project.year }}</i></small>
+                            </h4>
+                            
+                        </div>
+                        <div>
+                            {% for tag in project.tags %}
+                            <span class="badge badge-success">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        <div>
+                            <p>{{ project.summary|linebreaks }}</p>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="timeline-badge">
+                        <img src="/static/images/zodiac/icon-zodiac-{{ project.title }}.png" />
+                    </div>
+                    <div class="timeline-empty-panel"></div>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

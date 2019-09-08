@@ -7,15 +7,15 @@
             "description": "From small scripts to home automation and pattern recognition, I like to make life easier with my engineering knowledge.",
             "image": "sparrow/cards/NationalHarbor.jpg",
             "caption": "National Harbor, MD",
-            "link": "/render/sparrow_timeline/data/sparrow/astrology/"
+            "link": "/render/sparrow/astrology/"
         },
         {
             "title": "Bioinformatics and Medicine",
             "summary": "Exploring DNA, clinical data and medical imaging",
-            "description": "I built cloud-based applications for tracking patient samples, clinical data, pathology images, genomic sequencing data and analysis pipelines.",
+            "description": "Building cloud-based applications for tracking samples, clinical data, pathology images, genomic sequencing data and analysis pipelines.",
             "image": "sparrow/cards/Duke.jpg",
             "caption": "Duke University",
-            "link": ""
+            "link": "/render/sparrow/projects/data/sparrow/duke/"
         },
         {
             "title": "Power Systems and Fault-Tolerant Control",
@@ -42,48 +42,6 @@
         "image": "cards/Lavender.jpg",
         "caption": "Bronx, NY",
         "events": [
-            {
-                "title": "Managing Bioinformatics Pipelines",
-                "summary": "Develops a smart pipeline management system with Intelligence and Insights.",
-                "year": "2019",
-                "tags": [
-                    "Python",
-                    "Django",
-                    "Javascript"
-                ]
-            },
-            {
-                "title": "CrowdSeq: Collecting Annotations for Genes and Variants",
-                "summary": "Develops a unified database for storing annotations from crowdsourcing.",
-                "year": "2018",
-                "tags": [
-                    "Python",
-                    "Django",
-                    "Javascript",
-                    "REST API"
-                ]
-            },
-            {
-                "title": "Database for Genomic Sequencing and Analysis",
-                "summary": "Develops a database, web interface and APIs for tracking patient samples throughout genomic sequencing and analysis process.",
-                "year": "2017",
-                "tags": [
-                    "Python",
-                    "Django",
-                    "Javascript",
-                    "REST API"
-                ]
-            },
-            {
-                "title": "Pathology and Clinical Data Collection/Review System",
-                "summary": "A website designed for collaborators from 20+ labs/hospitals around the world to upload and review pathology/clinical data, including high resolution images and reports.",
-                "year": "2016",
-                "tags": [
-                    "Python",
-                    "Django",
-                    "Javascript"
-                ]
-            },
             {
                 "title": "Smart Grid Fault Diagnosis and Mitigation",
                 "summary": "Investigated the modeling, simulation and control of electric power transmission systems, we built a hybrid simulation model to incorporate discrete events and the fluctuations on continuous states. Based on the simulation model, we designed fault diagnosis algorithm and proposed a data-driven decision making model to improve the reliability.",

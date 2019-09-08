@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<ul class="timeline center-axis" id="swan-timeline">
+    {% for entry in items %}
+    <li class="{% cycle 'left-panel' 'right-panel' %}">
+        {% if entry.link %}
+        <a href="{% url 'nest:render_template' entry.link %}">
+        {% endif %}
+            <div class="timeline-badge mdl-shadow--2dp">
+                <p>{{ entry.year }}</p>
+            </div>
+        {% if entry.link %}
+        </a>
+        {% endif %}
+        
+        <div class="center-axis-line"></div>
+        {% if entry.link %}
+        <a href="{% url 'nest:render_template' entry.link %}">
+        {% endif %}
+            <div class="timeline-panel mdl-shadow--2dp">
+                <div class="timeline-image">
+                    {% if entry.image %}
+                    <img src="{% static entry.image %}" width="100%"/>
+                    {% else %}
+                    <div style="font-size: 50px; padding: 25%">{{ entry.name }}</div>
+                    {% endif %}
+                </div>
+                <div class="image-caption">
+                    <h4>
+                        {{ entry.title }}
+                    </h4>
+                    <p>{{ entry.summary }}</p>
+                </div>
+            </div>
+        {% if entry.link %}
+        </a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

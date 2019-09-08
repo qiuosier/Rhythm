@@ -240,7 +240,10 @@
 }
 /* Image caption */
 .timeline.center-axis > li .image-caption {
-    width:300px;
+    width: 100%;
+}
+.timeline.center-axis > li .image-caption p{
+    font-size: 14px;
 }
 .timeline.center-axis > li.right-panel .image-caption {
     right: 0px;
