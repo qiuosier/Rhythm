@@ -1,0 +1,32 @@
+{% extends "nest/base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'nest/timeline.css' %}" />
+<link rel="stylesheet" href="{% static 'nest/astrology.css' %}" />
+{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<p class="text-justify">{{ description|safe }}</p>
+<p></p>
+{% for project in projects %}
+<div class="md-raised-6px">
+    <h2>{{ project.title }}</h2>
+    <i>{{ project.year }}</i>
+    <div class="row">
+        <div class="col-sm-6">
+            <p>{{ project.summary }}</p>
+            {% for paper in project.publications %}
+            <p><small>
+                <a href="{{ paper.link }}" title="{{ paper.paper }}">{{ paper.paper }}</a>
+            </small></p>
+            {% endfor %}
+        </div>
+        <div class="col-sm-6">
+            <img class="image-responsive" src="{% static project.image %}" alt="{{ project.caption }}"/>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

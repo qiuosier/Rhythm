@@ -23,7 +23,7 @@
             "description": "Working with NYSERDA and NYSEG, we explored the future fault diagnosis, mitigation and optimization solutions for making our electric power transmission and distribution system smarter and more reliable.",
             "image": "sparrow/cards/Vestal.jpg",
             "caption": "Vestal, NY",
-            "link": ""
+            "link": "/render/sparrow/binghamton/"
         },
         {
             "title": "Simulation and Modeling",
@@ -31,7 +31,7 @@
             "description": "Started my research with connecting distributed simulations of manufacturing system, then I moved on to building my own pedestrians simulation system with Artificial Intelligence.",
             "image": "sparrow/cards/XiAn.jpg",
             "caption": "Xi'an, China",
-            "link": ""
+            "link": "/page/sparrow/chaos/"
         }
 
     ],
@@ -42,41 +42,6 @@
         "image": "cards/Lavender.jpg",
         "caption": "Bronx, NY",
         "events": [
-            {
-                "title": "Smart Grid Fault Diagnosis and Mitigation",
-                "summary": "Investigated the modeling, simulation and control of electric power transmission systems, we built a hybrid simulation model to incorporate discrete events and the fluctuations on continuous states. Based on the simulation model, we designed fault diagnosis algorithm and proposed a data-driven decision making model to improve the reliability.",
-                "year": "2015",
-                "tags": [
-                    "MATLAB",
-                    "Simulink",
-                    "Fault-Tolerant Control",
-                    "Signal Processing",
-                    "Markov Model",
-                    "Optimization"
-                ]
-            },
-            {
-                "title": "Power Distribution Reliability",
-                "summary": "Working with New York State Electric & Gas (NYSEG), I built simulation models to evaluate the standard indices (SAIFI, SAIDI and CAIDI). In addition, I proposed a cost-effective strategy for installing equipments with an optimization program.",
-                "year": "2014",
-                "tags": [
-                    "MATLAB",
-                    "Simulation",
-                    "Optimization"
-                ]
-            },
-            {
-                "title": "Small Signal Controllability and Observability of Power Systems",
-                "summary": "Power system is a non-linear complex system. However, around the normal operating point, we can develop small signal model and investigate our ability to control and observe the system. My first journey to the American Control Conference presented the idea of improving the combination of fault-tolerance, controllability and observability.",
-                "year": "2013",
-                "tags": [
-                    "MATLAB",
-                    "Simulink",
-                    "Fault-Tolerant Control",
-                    "Principle Component Analysis",
-                    "Optimization"
-                ]
-            },
             {
                 "title": "Access Database Development",
                 "summary": "Developed Microsoft Access database with SQL, VBA and Google Maps Javascript API.",

@@ -1,0 +1,66 @@
+{
+    "title": "Power System and Fault-Tolerant Control",
+    "description": "I received my PhD in Electrical Engineering, with a focus on data-driven power system control and optimization. Working with NYSERDA and NYSEG, my advisor Prof. Wu guided me to explore the future fault diagnosis, mitigation and optimization solutions for making our electric power transmission and distribution system smarter and more reliable. We published 7 peer-reviewed papers during my PhD. Three papers are published in the proceedings of the American Control Conference (ACC) and two papers are published in the proceedings of IEEE Power & Energy Society General Meeting (PESGM). Google Scholar listed ACC as one of the <a target='_blank' href='https://scholar.google.com/citations?view_op=top_venues&hl=en&vq=eng_automationcontroltheory'>top publications in the Automation and Control Theory</a> and PESGM as one of the <a target='_blank' href='https://scholar.google.com/citations?view_op=top_venues&hl=en&vq=eng_powerengineering'>top publications in the Power Engineering</a>.",
+    "image": "sparrow/IMGP9686.jpg",
+    "caption": "Seagull, Outer Banks, NC",
+    "projects": [
+        {
+            "title": "Smart Grid Fault Diagnosis and Mitigation",
+            "summary": "We built a hybrid simulation model to incorporate discrete events (Markov Process) and the fluctuations on continuous states (Differential Equations). Based on the simulation model, we designed fault diagnosis algorithm and proposed a data-driven decision making model to improve the reliability. The fault diagnosis algorithm includes a Multiple Model Filtering structure, which essentially implemented Kalman Filters in parallel for system state estimation.",
+            "image": "/images/sparrow/Binghamton/MMStructure.PNG",
+            "caption": "Multiple Model Filtering System Structure",
+            "publications": [
+                {
+                    "paper": "N. Eva Wu; Qiu Qin; Mustafa Salman, “Maximally secure mitigation of protection misoperations in power systems”, Proceedings of 2015 American Control Conference (ACC), Jul. 2015, Chicago, IL.",
+                    "link": "/static/papers/ACC2015.pdf",
+                    "note": "Acceptance Rate 63%"
+                },
+                {
+                    "paper": "N. Eva Wu; Qiu Qin, “Secondary protective control for mitigation of protection misoperations in electric power systems”, Journal of Modern Power Systems and Clean Energy, Volume 4, July 2016, Issue 3, pp 427–439.",
+                    "link": "/static/papers/MPCE2016.pdf"
+                },
+                {
+                    "paper": "Qiu Qin; N. Eva Wu, “A multiple model filtering approach to transmission line fault diagnosis”, Control Engineering Practice, Volume 52, July 2016, Pages 93-102.",
+                    "link": "/static/papers/CEP2016.pdf"
+                }
+            ],
+            "year": "2014-2016"
+        },
+        {
+            "title": "Power Distribution Reliability",
+            "summary": "Working with New York State Electric & Gas (NYSEG), we designed simulation models to evaluate the standard performance indices (SAIFI, SAIDI and CAIDI). In addition, we proposed a hierarchical framework for optimizing the allocation and locations of equipments. The optimization problem is solved by Monte Carlo and Discrete Event Simulation.",
+            "image": "/images/sparrow/Binghamton/Recloser3Level.PNG",
+            "caption": "Hierarchical optimization of recloser and sectionalizer placement",
+            "publications": [
+                {
+                    "paper": "Qiu Qin; N. Eva Wu, “Recloser and sectionalizer placement for reliability improvement using discrete event simulation”, Proceedings of 2014 IEEE Power & Energy Society General Meeting, Jul. 2014, National Harbor, MD.",
+                    "link": "/static/papers/PESGM2014.pdf"
+                },
+                {
+                    "paper": "Qiu Qin; N. Eva Wu, “Recloser allocation and placement for rural distribution system”, Proceedings of 2015 IEEE Power & Energy Society General Meeting, Jul. 2015, Denver, CO.",
+                    "link": "/static/papers/PESGM2015.pdf"
+                }
+            ],
+            "year": "2014-2015"
+        },
+        {
+            "title": "Small Signal Controllability and Observability of Power Systems",
+            "summary": "Power system is a non-linear complex system. However, around the normal operating point, we can develop small signal model and investigate our ability to control and observe the system. We proposed the concept of measuring the combination of fault-tolerance, controllability and observability based on Principal Component Analysis and Model Reduction. My first journey to the American Control Conference presented the idea of improving the combination of fault-tolerance, controllability and observability.",
+            "image": "/images/sparrow/Binghamton/MinimumHSV.png",
+            "caption": "Minimum Hankel Singular Valuess of System Dynamics",
+            "publications": [
+                {
+                    "paper": "Qiu Qin; N. Eva Wu, “Control reconfigurability-based placement strategy for FACTS devices”, Proceedings of 2013 American Control Conference (ACC), Jun. 2013, Washington DC.",
+                    "link": "/static/papers/ACC2013.pdf",
+                    "note": "Acceptance Rate 61%"
+                },
+                {
+                    "paper": "Qiu Qin; N. Eva Wu, “Control effectiveness of FACTS devices in power systems”, Proceedings of 2016 American Control Conference, July 2016, Boston, MA.",
+                    "link": "/static/papers/ACC2016.pdf",
+                    "note": "Acceptance Rate 68%"
+                }
+            ],
+            "year": "2013-2016"
+        }
+    ]
+}

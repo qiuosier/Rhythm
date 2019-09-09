@@ -8,7 +8,7 @@
             "title": "Test, Visualize and Manage Bioinformatics Pipelines",
             "summary": "Develops a smart pipeline management system with Intelligence and Insights.",
             "year": "2019",
-            "image": "images/sparrow/duke/pipelines.png",
+            "image": "images/sparrow/Duke/pipelines.png",
             "tags": [
                 "Python",
                 "Javascript"
@@ -18,7 +18,7 @@
             "title": "CrowdSeq: Linking Discoveries for Genes and Variants",
             "summary": "Develops a unified database for storing annotations from crowdsourcing.",
             "year": "2018",
-            "image": "images/sparrow/duke/CrowdSeq.png",
+            "image": "images/sparrow/Duke/CrowdSeq.png",
             "tags": [
                 "Python",
                 "Javascript"
@@ -28,7 +28,7 @@
             "title": "Clinical Data Collection System",
             "summary": "A website using forms and templates to collect patient clinical data and reports from collaborators.",
             "year": "2018",
-            "image": "images/sparrow/duke/Clinical.png",
+            "image": "images/sparrow/Duke/Clinical.png",
             "tags": [
                 "Python",
                 "Javascript"
@@ -38,7 +38,7 @@
             "title": "Sequencing Data Monitoring and Automation System",
             "summary": "A cloud-based system to monitor and automatically import/match sequencing data from Illumina BaseSpace and other sequencing service providers.",
             "year": "2018",
-            "image": "images/sparrow/duke/Flowcells.png",
+            "image": "images/sparrow/Duke/Flowcells.png",
             "tags": [
                 "Python"
             ]
@@ -47,7 +47,7 @@
             "title": "Sample Tracking for Genomic Sequencing",
             "summary": "Develops a database, web interface and APIs for tracking patient samples throughout genomic sequencing and analysis process.",
             "year": "2017",
-            "image": "images/sparrow/duke/Samples.png",
+            "image": "images/sparrow/Duke/Samples.png",
             "tags": [
                 "Python",
                 "Javascript"
@@ -57,7 +57,7 @@
             "title": "Pathology Data Collection and Review System",
             "summary": "A website designed for collaborators from 20+ labs/hospitals around the world to upload and review pathology data, including high resolution images and reports.",
             "year": "2016",
-            "image": "images/sparrow/duke/pathology.png",
+            "image": "images/sparrow/Duke/pathology.png",
             "tags": [
                 "Python",
                 "Javascript"
