@@ -10,12 +10,12 @@
         },
         {
             "name": "python:3.7",
-            "args": ["cp", "-a", "./nest/static/.", "./static/"],
+            "args": ["cp", "-arv", "./nest/static/.", "./static/"],
             "timeout": "600s"
         },
         {
             "name": "python:3.7",
-            "args": ["cp", "-a", "-v", "./Pisces/static/.", "./static/"],
+            "args": ["cp", "-arv", "./Pisces/static/.", "./static/"],
             "timeout": "600s"
         },
         {

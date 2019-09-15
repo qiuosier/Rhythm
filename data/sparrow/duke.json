@@ -8,7 +8,7 @@
             "title": "Test, Visualize and Manage Bioinformatics Pipelines",
             "summary": "Develops a smart pipeline management system with Intelligence and Insights.",
             "year": "2019",
-            "image": "images/sparrow/Duke/pipelines.png",
+            "image": "images/sparrow/Duke/Pipelines.png",
             "tags": [
                 "Python",
                 "Javascript"
@@ -57,7 +57,7 @@
             "title": "Pathology Data Collection and Review System",
             "summary": "A website designed for collaborators from 20+ labs/hospitals around the world to upload and review pathology data, including high resolution images and reports.",
             "year": "2016",
-            "image": "images/sparrow/Duke/pathology.png",
+            "image": "images/sparrow/Duke/Pathology.png",
             "tags": [
                 "Python",
                 "Javascript"
