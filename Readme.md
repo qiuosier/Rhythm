@@ -79,6 +79,9 @@ The URL pattern for displaying a "page" is `www.example.com/page/<file_path>/`, 
 The `build.json` file contains steps for deploying the website to Google App Engine using Google Cloud Build.
 Some pages, like the index page of the "Swift Blog" displays "JSON" data summarized from "Markdown" files. A few management commands are designed to update such "JSON" data automatically.
 
+### Google Cloud Platform
+In order to use Google Cloud Build to deploy code to App Engine, the Cloud Build service account needs "App Engine Admin" role. The roles can be configured in the "IAM & Admin" page.
+
 ### Credentials
 This website loads credentials from `rhythm/private.py`. This file is NOT included in the Git repository. The file is simply a python file with constants. It should look like:
 ```

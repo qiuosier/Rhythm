@@ -39,7 +39,7 @@ RHYTHM_CONFIG = {
         },
         'project_packages': {
             '()': 'Aries.outputs.PackageLogFilter',
-            'folder_path': os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            'package_root': os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         },
     },
     'handlers': LOG_HANDLERS,
