@@ -20,7 +20,7 @@
         },
         {
             "name": "gcr.io/cloud-builders/gsutil",
-            "args": ["cp", "gs://qiu-nest.appspot.com/private.py", "rhythm/private.py"],
+            "args": ["cp", "gs://qqin.page/Rhythm/private.py", "rhythm/private.py"],
             "timeout": "600s"
         },
         {
