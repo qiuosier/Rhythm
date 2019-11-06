@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 # Add folder as an app if it contains "admin.py"
 root_folders = LocalFolder(BASE_DIR).folders
 for folder in root_folders:
-    if "admin.py" in folder.file_names:
+    if "apps.py" in folder.file_names:
         INSTALLED_APPS.append(folder.name)
 
 MIDDLEWARE = [
