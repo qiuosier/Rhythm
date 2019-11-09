@@ -36,6 +36,11 @@
             "name": "gcr.io/cloud-builders/gcloud",
             "args": ["app", "deploy"],
             "timeout": "600s"
+        },
+        {
+            "name": "gcr.io/cloud-builders/gcloud",
+            "args": ["app", "deploy", "corn.yaml"],
+            "timeout": "600s"
         }
     ]
 }
