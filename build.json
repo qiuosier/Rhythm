@@ -23,6 +23,11 @@
             "timeout": "600s"
         },
         {
+            "name": "python:3.7",
+            "args": ["cp", "./Virgo/cron.yaml", "./cron.yaml"],
+            "timeout": "600s"
+        },
+        {
             "name": "gcr.io/cloud-builders/gsutil",
             "args": ["cp", "gs://qqin.page/Rhythm/private.py", "rhythm/private.py"],
             "timeout": "600s"
