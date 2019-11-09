@@ -24,7 +24,7 @@
         },
         {
             "name": "python:3.7",
-            "args": ["cp", "./Virgo/cron.yaml", "./cron.yaml"],
+            "args": ["cp", "-v", "./Virgo/cron.yaml", "."],
             "timeout": "600s"
         },
         {
