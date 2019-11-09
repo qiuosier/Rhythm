@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import os
 from Aries.storage import LocalFolder
 from rhythm.logs import RHYTHM_CONFIG
+from rhythm.private import ENV
+
+for k, v in ENV.items():
+    os.environ[k] = v
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
