@@ -10,17 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 import os
-import rhythm
 from Aries.storage import LocalFolder
 from rhythm.logs import RHYTHM_CONFIG
 
 
-if hasattr(rhythm, "private"):
-    for k, v in rhythm.private.ENV.items():
-        os.environ[k] = v
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if os.path.exists(os.path.join(BASE_DIR, "rhythm", "private.py")):
+    from rhythm import private
+    for k, v in private.ENV.items():
+        os.environ[k] = v
+else:
+    print("Rhythm/private.py not found. No system environment variable is loaded.")
 
 
 # Quick-start development settings - unsuitable for production
