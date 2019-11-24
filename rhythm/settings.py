@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 import os
+import sys
 from Aries.storage import LocalFolder
 from rhythm.logs import RHYTHM_CONFIG
 
@@ -35,7 +36,14 @@ else:
 SECRET_KEY = DJANGO_SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('GAE_RUNTIME', '') != "python37"
+# DEBUG will be set to True if
+#   There is a file called "DEBUG" in the project root, or
+#   The website is running by using the runserver command.
+if os.path.exists(os.path.join(BASE_DIR, "DEBUG")) or 'runserver' in sys.argv:
+    print("DEBUG = True")
+    DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
