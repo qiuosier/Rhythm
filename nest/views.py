@@ -173,7 +173,6 @@ def sitemap(request):
     return HttpResponse(content, content_type="text/plain")
 
 
-@csrf_exempt
 def proxy(request):
     """Returns the GET request response of a URL.
     This is a proxy for HTTP GET request.

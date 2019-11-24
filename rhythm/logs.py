@@ -20,13 +20,18 @@ LOGGING_LEVEL = 'DEBUG'
 #   The website is running by using the runserver command.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if not os.path.exists(os.path.join(BASE_DIR, "DEBUG")) and not 'runserver' in sys.argv:
+    logger_name = socket.gethostname()
+    # Check if the website is running in Google App Engine
+    if logger_name == 'localhost' and os.getenv('GAE_RUNTIME', '') == "python37":
+        logger_name = 'AppEngine'
+
     from google.cloud import logging
     client = logging.Client()
     client.setup_logging()
     LOG_HANDLERS['stackdriver'] = {
         'class': 'google.cloud.logging.handlers.CloudLoggingHandler',
         'client': client,
-        'name': socket.gethostname()
+        'name': logger_name
     }
     HANDLER_NAMES = ['stackdriver']
     LOGGING_LEVEL = 'DEBUG'
