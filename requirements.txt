@@ -1,5 +1,5 @@
 Django~=2.2
-openpyxl
+openpyxl==2.4.8
 gcloud
 google-cloud-logging
 google-cloud-error-reporting

@@ -9,10 +9,6 @@
             "args": ["clone", "--depth", "1", "https://github.com/qiuosier/Pisces.git"]
         },
         {
-            "name": "gcr.io/cloud-builders/git",
-            "args": ["clone", "--depth", "1", "https://github.com/qiuosier/Virgo.git"]
-        },
-        {
             "name": "python:3.7",
             "args": ["cp", "-arv", "./nest/static/.", "./static/"],
             "timeout": "600s"
@@ -37,10 +33,5 @@
             "args": ["app", "deploy"],
             "timeout": "600s"
         },
-        {
-            "name": "gcr.io/cloud-builders/gcloud",
-            "args": ["app", "deploy", "cron.yaml"],
-            "timeout": "600s"
-        }
     ]
 }
