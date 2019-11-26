@@ -196,7 +196,7 @@ def proxy(request):
         return HttpResponseBadRequest("Invalid URL.")
     try:
         logger.debug("Sending reqeust to %s" % url)
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)
         logger.debug("Response code: %s" % response.status_code)
     except Exception as ex:
         return HttpResponseBadRequest("%s: %s" % (type(ex), str(ex)))
