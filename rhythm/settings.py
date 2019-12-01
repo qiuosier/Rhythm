@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 import os
 import sys
+import random
+import string
 from Aries.storage import LocalFolder
 from rhythm.logs import RHYTHM_CONFIG
 
@@ -30,10 +32,14 @@ else:
 
 # SECURITY WARNING: keep the secret key used in production secret!
 if os.environ.get("DJANGO_SECRET_KEY"):
-    DJANGO_SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+    SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 else:
-    from rhythm.private import DJANGO_SECRET_KEY
-SECRET_KEY = DJANGO_SECRET_KEY
+    # Generate security key if one is not found in environment variable
+    SECRET_KEY = ''.join([
+        random.SystemRandom().choice(
+            "{}{}{}".format(string.ascii_letters, string.digits, string.punctuation)
+        ) for i in range(50)
+    ])
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG will be set to True if
