@@ -40,13 +40,14 @@ This project does not use external database for content data. The data for rende
 Contents of the website are often displayed as "entries". For example, the "Carousel" of the home page is displaying a list of "entries". Similar "entries" are used in different pages. This website uses the following data model for most entries.
 ```
 {
-    "title": "",
-    "summary": "",
-    "description: "",
-    "date": "",
-    "link": "",
-    "image": "",
-    "class": "",
+    "title": "The title of the entry",
+    "summary": "A short summary",
+    "description: "A longer description",
+    "date": "Date in string format",
+    "link": "A link to another page",
+    "image": "A absolute link to the image",
+    "caption": "A short description of the image for the alt attribute",
+    "class": "CSS class to be used on the entry",
 }
 ```
 

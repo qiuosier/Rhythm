@@ -1,32 +1,37 @@
 {
     "title": "Home",
+    "description": "This is Qiu Qin's website. It includes Qiu's original work, photos, and blogs, as well as footprints.",
     "carousel_data": [
         {
             "title": "Sarah P. Duke Gardens",
             "summary": "A Pleasant Walk to Work",
             "date": "March 9, 2017",
             "image": "/static/images/carousel/DukeGardens.jpg",
+            "caption": "Cherry Blossom at Duke Gardens",
             "link": "page/swan/20170000_DukeGardens/"
         },
         {
             "title": "New York",
             "summary": "Where Dreams Begin",
             "date": "April 26, 2015",
-            "image": "/static/images/carousel/NYCDowntown.jpg"
+            "image": "/static/images/carousel/NYCDowntown.jpg",
+            "caption": "Downtown Manhattan Skyline"
         },
         {
             "title": "Mt. Everest",
             "summary": "Spectacular Sunset while Biking Across the Himalayas",
             "date": "July 17, 2011",
             "image": "/static/images/carousel/MtEverest.jpg",
-            "link": "page/swan/20110700_AcrossTheHimalayas/"
+            "link": "page/swan/20110700_AcrossTheHimalayas/",
+            "caption": "Mt. Everest at Dusk"
         },
         {
             "title": "Xi'an",
             "summary": "My Journey from The Ancient City",
             "date": "November 28, 2008",
             "image": "/static/images/carousel/Xian.jpg",
-            "link": "page/swan/20100700_Xian/"
+            "link": "page/swan/20100700_Xian/",
+            "caption": "Xi'an City Wall"
         }
     ],
 

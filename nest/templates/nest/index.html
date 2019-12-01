@@ -22,14 +22,14 @@
             {% else %}
             <div class="carousel-item">
             {% endif %}
-            <img src="{{ entry.image }}" alt="" class="d-block img-fluid" />
+            <img src="{{ entry.image }}" alt="{{ entry.caption }}" class="d-block img-fluid" />
                 <div class="carousel-caption">
                     <p>
                         {{ entry.title }} - {{ entry.summary}} <br />
                         <small>{{ entry.date }}</small>
                     </p>
                     {% if entry.link %}
-                    <a class="btn btn-sm btn-default" href="{{ entry.link }}">
+                    <a class="btn btn-sm btn-default text-primary" href="{{ entry.link }}">
                         More
                     </a>
                     {% endif %}
