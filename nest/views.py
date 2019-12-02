@@ -161,6 +161,10 @@ def handler500(request):
 
 
 def view_exception(request):
+    from rhythm.private import PROXY_TOKEN
+    token = request.GET.get("token")
+    if token != PROXY_TOKEN:
+        return HttpResponseBadRequest("Invalid Token.")
     raise Exception("This is an uncaught exception")
 
 
