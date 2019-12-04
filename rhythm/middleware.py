@@ -1,10 +1,13 @@
 import traceback
 import logging
 import json
+import socket
 from collections import OrderedDict
 from django.utils import timezone
 from django.contrib.auth import login, logout
 from django.utils.deprecation import MiddlewareMixin
+from django.conf import settings
+from google.cloud import error_reporting
 logger = logging.getLogger(__name__)
 
 
@@ -76,6 +79,17 @@ class StackdriverRequestLoggingMiddleware(MiddlewareMixin):
         Remarks:
         Any request without a activity_record attribute will be skipped.
         """
+        if not settings.DEBUG:
+            client = error_reporting.Client(service=socket.gethostname())
+            client.report_exception(error_reporting.HTTPContext(
+                url=request.get_raw_uri(),
+                method=request.method,
+                user_agent=request.headers.get("User-Agent"),
+                referrer=request.headers.get("Referer"),
+                response_status_code=500,
+                remote_ip=get_client_ip(request),
+            ))
+
         self.__process_response(request)
         logger.error("Exception: %s: %s\n%s" % (
             type(exception), 

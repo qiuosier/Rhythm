@@ -46,4 +46,4 @@ urlpatterns += [
     url(r'^', include('nest.urls')),
 ]
 
-handler500 = 'nest.views.handler500'
+# handler500 = 'nest.views.handler500'

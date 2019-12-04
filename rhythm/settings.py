@@ -50,7 +50,7 @@ if os.path.exists(os.path.join(BASE_DIR, "DEBUG")) or 'runserver' in sys.argv:
     DEBUG = True
 else:
     DEBUG = False
-
+# DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 

@@ -33,6 +33,7 @@ if not os.path.exists(os.path.join(BASE_DIR, "DEBUG")) and not 'runserver' in sy
         'client': client,
         'name': logger_name
     }
+    print("Using Stackdriver logging...")
     HANDLER_NAMES = ['stackdriver']
     LOGGING_LEVEL = 'DEBUG'
 

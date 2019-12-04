@@ -10,7 +10,6 @@ from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFou
 from django.template.loader import get_template, render_to_string
 from django.template import TemplateDoesNotExist
 from django.views.decorators.csrf import csrf_exempt
-from google.cloud import error_reporting
 from Aries.strings import AString
 from Aries.files import File
 from nest.lib import get_markdown_title, search_file
@@ -154,20 +153,6 @@ def swan_journeys(request, start, size=0):
     })
 
 
-def handler500(request):
-    client = error_reporting.Client()
-    client.report_exception()
-    return HttpResponseServerError()
-
-
-def view_exception(request):
-    from rhythm.private import PROXY_TOKEN
-    token = request.GET.get("token")
-    if token != PROXY_TOKEN:
-        return HttpResponseBadRequest("Invalid Token.")
-    raise Exception("This is an uncaught exception")
-
-
 def sitemap(request):
     """Returns site map as a text file.
     """
@@ -199,7 +184,7 @@ def proxy(request):
     if not url:
         return HttpResponseBadRequest("Invalid URL.")
     try:
-        logger.debug("Sending reqeust to %s" % url)
+        logger.debug("Sending request to %s" % url)
         response = requests.get(url, timeout=10)
         logger.debug("Response code: %s" % response.status_code)
     except Exception as ex:
@@ -209,3 +194,11 @@ def proxy(request):
         status=response.status_code,
         content_type=response.headers['Content-Type']
     )
+
+
+def view_exception(request):
+    from rhythm.private import PROXY_TOKEN
+    token = request.GET.get("token")
+    if token != PROXY_TOKEN:
+        return HttpResponseBadRequest("Invalid Token.")
+    raise Exception("This is an uncaught exception")
