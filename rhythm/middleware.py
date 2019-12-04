@@ -2,6 +2,7 @@ import traceback
 import logging
 import json
 import socket
+import os
 from collections import OrderedDict
 from django.utils import timezone
 from django.contrib.auth import login, logout
@@ -79,7 +80,7 @@ class StackdriverRequestLoggingMiddleware(MiddlewareMixin):
         Remarks:
         Any request without a activity_record attribute will be skipped.
         """
-        if not settings.DEBUG:
+        if os.getenv('GAE_RUNTIME', '') == "python37":
             client = error_reporting.Client(service=socket.gethostname())
             client.report_exception(error_reporting.HTTPContext(
                 url=request.get_raw_uri(),
@@ -91,7 +92,7 @@ class StackdriverRequestLoggingMiddleware(MiddlewareMixin):
             ))
 
         self.__process_response(request)
-        logger.error("Exception: %s: %s\n%s" % (
+        logger.critical("Exception: %s: %s\n%s" % (
             type(exception), 
             str(exception), 
             traceback.format_exc
