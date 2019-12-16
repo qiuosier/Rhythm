@@ -11,7 +11,7 @@ config_dict = LoggingConfigDict().add_logger("", LOGGING_LEVEL)
 #   There is a file called "DEBUG" in the project root, or
 #   The website is running by using the runserver command.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if True: # not os.path.exists(os.path.join(BASE_DIR, "DEBUG")) and not 'runserver' in sys.argv:
+if not os.path.exists(os.path.join(BASE_DIR, "DEBUG")) and not 'runserver' in sys.argv:
     logger_name = socket.gethostname()
     # Check if the website is running in Google App Engine
     if os.getenv('GAE_RUNTIME', '') == "python37":
