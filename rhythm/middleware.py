@@ -80,7 +80,8 @@ class StackdriverRequestLoggingMiddleware(MiddlewareMixin):
         Remarks:
         Any request without a activity_record attribute will be skipped.
         """
-        if os.getenv('GAE_RUNTIME', '') == "python37":
+        # Send error to Stackdriver error reporting when DEBUG is false.
+        if not settings.DEBUG:
             client = error_reporting.Client(service=socket.gethostname())
             client.report_exception(error_reporting.HTTPContext(
                 url=request.get_raw_uri(),

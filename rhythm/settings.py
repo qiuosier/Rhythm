@@ -45,7 +45,7 @@ else:
 # DEBUG will be set to True if
 #   There is a file called "DEBUG" in the project root, or
 #   The website is running by using the runserver command.
-if os.path.exists(os.path.join(BASE_DIR, "DEBUG")) or 'runserver' in sys.argv:
+if os.path.exists(os.path.join(BASE_DIR, "DEBUG")) or 'runserver' in sys.argv or 'manage.py' in sys.argv:
     print("DEBUG = True")
     DEBUG = True
 else:
