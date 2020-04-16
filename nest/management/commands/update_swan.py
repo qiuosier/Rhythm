@@ -7,7 +7,7 @@ import re
 from operator import itemgetter
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from Aries.storage import LocalFolder
+from Aries.storage import StorageFolder
 from nest.lib import summarize_markdown, resize_image
 
 # The folder storing the Markdown files.
@@ -50,7 +50,7 @@ def update_swan_thumbnails():
 
     """
     image_pattern = r"!\[.*\]\(.*/%s/.*jpg\)" % IMAGE_SUB_FOLDER
-    markdown_files = LocalFolder(SWAN_FOLDER).file_names
+    markdown_files = StorageFolder(SWAN_FOLDER).file_names
     for markdown_file in markdown_files:
         thumbnail_name = markdown_file.replace(".md", ".jpg")
         thumbnail_file = os.path.join(THUMBNAIL_FOLDER, thumbnail_name)
@@ -73,7 +73,7 @@ class Command(BaseCommand):
         add_journeys()
 
         # Load all swan markdown entries.
-        files = LocalFolder(SWAN_FOLDER).file_names
+        files = StorageFolder(SWAN_FOLDER).file_names
         entries = []
         for filename in files:
             entry_dict = summarize_markdown(os.path.join(SWAN_FOLDER, filename), base_dir=MARKDOWN_FOLDER)

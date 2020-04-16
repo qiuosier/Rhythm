@@ -33,10 +33,6 @@ class StackdriverRequestLoggingMiddleware(MiddlewareMixin):
     However, the POST request data is saved after the view is processed (in process_response).
     See https://docs.djangoproject.com/en/1.10/topics/http/middleware/#process-view for more details.
 
-    The activity_record attribute added the request in the process_request method indicates that
-        the request is processed by this middleware.
-    The process_response method will skip the processing if activity_record is not found in the request.
-
     Remarks:
         __init__() is called only once, when the Web server starts.
         The attributes added to a middleware instance are preserved across multiple request/response.
@@ -82,6 +78,7 @@ class StackdriverRequestLoggingMiddleware(MiddlewareMixin):
         """
         # Send error to Stackdriver error reporting when DEBUG is false.
         if not settings.DEBUG:
+            logger.debug("Sending exception to GCP error reporting...")
             client = error_reporting.Client(service=socket.gethostname())
             client.report_exception(error_reporting.HTTPContext(
                 url=request.get_raw_uri(),
@@ -92,7 +89,7 @@ class StackdriverRequestLoggingMiddleware(MiddlewareMixin):
                 remote_ip=get_client_ip(request),
             ))
 
-        self.__process_response(request)
+        # self.__process_response(request)
         logger.critical("Exception: %s: %s\n%s" % (
             type(exception), 
             str(exception), 

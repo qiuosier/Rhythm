@@ -5,7 +5,7 @@ import os
 import json
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from Aries.storage import LocalFolder
+from Aries.storage import StorageFolder
 from nest.lib import summarize_markdown
 
 # The folder storing the Markdown blog files.
@@ -31,7 +31,7 @@ class Command(BaseCommand):
         # Load all file names.
         files = []
         for folder in BLOG_FOLDERS:
-            files.extend([os.path.join(folder, f) for f in LocalFolder(folder).file_names])
+            files.extend([os.path.join(folder, f) for f in StorageFolder(folder).file_names])
         entries = []
         for filename in files:
             entry = summarize_markdown(filename, MARKDOWN_FOLDER)

@@ -18,7 +18,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import RedirectView
-from Aries.storage import LocalFolder
+from Aries.storage import StorageFolder
 
 urlpatterns = [
     url(
@@ -34,7 +34,7 @@ urlpatterns = [
 
 # Add URLs of apps.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-root_folders = LocalFolder(BASE_DIR).folders
+root_folders = StorageFolder(BASE_DIR).folders
 for folder in root_folders:
     if "urls.py" in folder.file_names and folder.name not in ['nest', 'rhythm']:
         urlpatterns.append(

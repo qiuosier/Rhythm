@@ -12,7 +12,7 @@ import os
 import json
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from Aries.storage import LocalFolder
+from Aries.storage import StorageFolder
 from Aries.files import File
 from nest.lib import resize_image
 
@@ -26,14 +26,14 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         folder = SKYLARK_IMAGE_FOLDER
-        for collection in LocalFolder(folder).folder_names:
+        for collection in StorageFolder(folder).folder_names:
             # Skip the home folder
             if collection == "home":
                 continue
             collection_folder = os.path.join(folder, collection)
             thumbnails_dir = os.path.join(collection_folder, "thumbnails")
             # Create the thumbnails folder in case it does not exist
-            LocalFolder(thumbnails_dir).create()
+            StorageFolder(thumbnails_dir).create()
             
             index_path = os.path.join(SKYLARK_DATA_FOLDER, "%s.json" % collection)
             index_dict = File.load_json(
@@ -46,7 +46,7 @@ class Command(BaseCommand):
             )
 
             photo_entries = index_dict.get("photos", [])
-            images = LocalFolder(collection_folder).file_names
+            images = StorageFolder(collection_folder).file_names
             # Generate thumbnail for each image
             for image in images:
                 image_path = os.path.join(collection_folder, image)

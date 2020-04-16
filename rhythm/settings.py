@@ -13,7 +13,7 @@ import os
 import sys
 import random
 import string
-from Aries.storage import LocalFolder
+from Aries.storage import StorageFolder
 from rhythm.logs import RHYTHM_CONFIG
 
 
@@ -66,7 +66,7 @@ INSTALLED_APPS = [
 ]
 
 # Add folder as an app if it contains "admin.py"
-root_folders = LocalFolder(BASE_DIR).folders
+root_folders = StorageFolder(BASE_DIR).folders
 for folder in root_folders:
     if "admin.py" in folder.file_names:
         INSTALLED_APPS.append(folder.name)
