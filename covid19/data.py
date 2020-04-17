@@ -5,12 +5,17 @@ from django.conf import settings
 
 
 class ECDCDataSet:
+    """Data Set from European Centre for Disease Prevention and Control
+    
+    Returns:
+        [type]: [description]
+    """
     __covid_data = None
     __expiration = None
 
     @property
     def covid_data(self):
-        if self.__covid_data is None:
+        if self.__covid_data is None or self.__expiration > datetime.datetime.now():
             local_file = os.path.join(settings.BASE_DIR, 'covid.csv')
             if os.path.exists(local_file):
                 uri = local_file
