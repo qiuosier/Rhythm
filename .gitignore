@@ -105,8 +105,9 @@ client_secrets.json
 /static/node_modules/
 
 \.DS_Store
+cron.yaml
 
 DEBUG
-Pisces
-Virgo
-cron.yaml
+Pisces/
+Virgo/
+covid19/
