@@ -10,7 +10,4 @@ google-cloud-logging
 google-cloud-error-reporting
 google-cloud-datastore
 markdown
-numpy
-pandas
 pillow
-scipy
