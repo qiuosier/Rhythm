@@ -39,9 +39,8 @@ def canonical_link_tag(request):
         str: A string of HTML <link /> tag or empty string.
     """
     canonical_domain = os.environ.get("DOMAIN")
-    if canonical_domain:
+    if canonical_domain and "HTTP_HOST" in request.META:
         domain = request.META['HTTP_HOST']
-        print(domain)
         if domain != canonical_domain:
             return "<link rel=\"canonical\" href=\"https://%s%s\" />" % (canonical_domain, request.path)
     return ""
