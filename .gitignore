@@ -108,6 +108,11 @@ client_secrets.json
 cron.yaml
 
 DEBUG
+
+# Other apps
 Pisces/
 Virgo/
 covid19/
+
+# Temp folder
+data/temp/
