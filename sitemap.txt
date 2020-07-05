@@ -11,7 +11,10 @@ https://qqin.page/swift/
 https://qqin.page/render/swift/data/swift_more/
 https://qqin.page/page/swan/20110700_AcrossTheHimalayas/
 https://qqin.page/sparrow/
-https://qqin.page/render/sparrow_timeline/data/sparrow/astrology/
+https://qqin.page/page/sparrow/chaos/
+https://qqin.page/render/sparrow/binghamton/
+https://qqin.page/render/sparrow/projects/data/sparrow/duke/
+https://qqin.page/render/sparrow/astrology/
 https://qqin.page/page/sparrow/Pisces/
 https://qqin.page/page/sparrow/Pisces_Privacy
 https://qqin.page/page/sparrow/Libra/
