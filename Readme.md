@@ -1,5 +1,5 @@
 # Rhythm - Qiu's Bird Nest Project
-[https://qiu-nest.appspot.com](https://qiu-nest.appspot.com)
+[https://qqin.page](https://qqin.page)
 
 This is Qiu's personal website, designed for Google App Engine standard environment.
 This project uses Python 3.7 and Django 2.2.
@@ -7,12 +7,19 @@ This project uses Python 3.7 and Django 2.2.
 [![Build Status](https://travis-ci.org/qiuosier/Rhythm.svg?branch=master)](https://travis-ci.org/qiuosier/Rhythm)
 [![Coverage Status](https://coveralls.io/repos/github/qiuosier/Rhythm/badge.svg?branch=master)](https://coveralls.io/github/qiuosier/Rhythm?branch=master)
 
-## Architecture
+## Design
 This website includes 4 components, each of them is named with a bird. That's why I called my website "Nest".
 * The Swift Blog: My blogs and posts along with pictures.
 * Swan's Footprint: My footprints around the world.
 * The Skylark Gallery: More about my pictures.
 * The Sparrow: My work and personal projects.
+
+This website is designed to be updated and deployed with minimum efforts:
+* In Django settings, new Django apps are detected automatically, this allows the website to host additional apps.
+* Web pages are rendered with two simple patterns. Contents are stored in JSON and Markdown.
+* Automatic deployment with Google Cloud build.
+
+![Website Design](static/Website_Design.png)
 
 ## Folders and Files
 Brief descriptions of the folders and files:

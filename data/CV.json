@@ -1,15 +1,21 @@
 {
     "title": "Qiu Qin",
     "address": [
-        "101 Science Drive",
-        "2195 CIEMAS, BOX 3382",
-        "Durham, NC 27708"
+        ""
     ],
     "experience": [
         {
+            "position": "Software Developer",
+            "employer": "Oracle",
+            "time": "October 2020-Present",
+            "location": "Reston, VA",
+            "description": "",
+            "image": "Oracle.png"
+        },
+        {
             "position": "Bioinformatician II",
             "employer": "Duke University",
-            "time": "June 2016-Present",
+            "time": "June 2016-October 2020",
             "location": "Durham, NC",
             "description": "",
             "image": "Duke.jpg"
@@ -32,7 +38,6 @@
         },
         {
             "position": "Volunteer",
-            "employer": "Tibet Department of Water Resources",
             "time": "July 2010-July 2011",
             "location": "Lhasa, Tibet, China",
             "description": "",
