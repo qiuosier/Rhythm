@@ -27,14 +27,13 @@
             "title": "Gemini",
             "summary": "A collection of small programs doing small things.",
             "link": "https://github.com/qiuosier/SleepTight",
-            "year": "2015-2019",
-            "tags": [
-                "Python"
-            ]
+            "year": "2015-2019"
         },
         {
             "title": "Cancer",
-            "summary": ""
+            "summary": "Python programs for processing FASTQ (genomic sequence) files on multiprocessor computer.",
+            "link": "https://github.com/qiuosier/Cancer",
+            "year": "2017-2020"
         },
         {
             "title": "Leo",
@@ -53,11 +52,7 @@
             "title": "Libra",
             "summary": "A universal Windows platform app for viewing/annotating PDFs.",
             "link": "sparrow/Libra",
-            "year": "2016-2018",
-            "tags": [
-                "C#",
-                "UWP"
-            ]
+            "year": "2016-2018"
         },
         {
             "title": "Scorpio",
@@ -66,11 +61,7 @@
         {
             "title": "Sagittarius",
             "summary": "Adobe Lightroom plugin to GeoTag photos with Google location history data.",
-            "year": "2017",
-            "tags": [
-                "Lua",
-                "Lightroom"
-            ]
+            "year": "2017"
         },
         {
             "title": "Capricorn",
@@ -88,7 +79,7 @@
             "title": "Pisces",
             "summary": "Visualizing Medical Records from FHIR.",
             "year": "2019",
-            "link": "sparrow/Pisces"
+            "link": "https://qqin.page/pisces"
         }
     ]
 }
