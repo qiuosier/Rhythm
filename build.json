@@ -5,17 +5,8 @@
             "args": ["submodule", "update", "--init", "--recursive"]
         },
         {
-            "name": "gcr.io/cloud-builders/git",
-            "args": ["clone", "--depth", "1", "https://github.com/qiuosier/Pisces.git"]
-        },
-        {
             "name": "python:3.7",
             "args": ["cp", "-arv", "./nest/static/.", "./static/"],
-            "timeout": "600s"
-        },
-        {
-            "name": "python:3.7",
-            "args": ["cp", "-arv", "./Pisces/static/.", "./static/"],
             "timeout": "600s"
         },
         {
